@@ -1,0 +1,1872 @@
+@import "tailwindcss";
+
+/* =========================================================
+   1. PALET WARNA EWF
+   Urutan prioritas:
+   1. Maroon
+   2. Cream
+   3. Shrimp Cocktail
+   4. Pale Canary
+   5. Red Poppy
+   6. Hawkbit
+   ========================================================= */
+
+@theme {
+    --color-ewf-maroon: #951A21;
+    --color-ewf-wine: #951A21;
+    --color-ewf-navy: #951A21;
+    --color-ewf-orange: #951A21;
+
+    --color-ewf-cream: #FFF9F0;
+
+    --color-ewf-shrimp: #FFA368;
+    --color-ewf-soft-orange: #FFA368;
+
+    --color-ewf-pale-canary: #EFBB55;
+    --color-ewf-pale-ganary: #EFBB55;
+
+    --color-ewf-red-poppy: #CF3021;
+    --color-ewf-hawkbit: #FFD66E;
+
+    --color-ewf-corporate: #722F37;
+    --color-ewf-soft-blue: #FFD66E;
+    --color-ewf-cinnamon: #9D4C1E;
+    --color-ewf-wine-dark: #6D1720;
+    --color-ewf-wine-soft: #F5E6E6;
+    --color-ewf-white: #FFFFFF;
+}
+
+:root {
+    /* Warna identitas utama */
+    --ewf-wine: #951A21;
+    --ewf-wine-dark: #6D1720;
+    --ewf-wine-light: #B64047;
+    --ewf-corporate: #722F37;
+
+    /* Warna latar */
+    --ewf-cream: #FFF9F0;
+    --ewf-white: #FFFFFF;
+
+    /* Warna pendukung sesuai urutan */
+    --ewf-orange-soft: #FFA368;
+    --ewf-gold: #EFBB55;
+    --ewf-red: #CF3021;
+    --ewf-hawkbit: #FFD66E;
+
+    /* Warna teks dan garis */
+    --ewf-text: #35282A;
+    --ewf-muted: #75676A;
+    --ewf-border: #EADCDD;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    background: var(--ewf-cream);
+    color: var(--ewf-text);
+    font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-wine-dark);
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+button {
+    transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.font-display,
+h1,
+h2,
+h3 {
+    font-family: "Manrope", sans-serif;
+}
+
+/* =========================================================
+   2. HEADER DAN NAVIGASI
+   ========================================================= */
+
+header.sticky {
+    background: rgba(255, 249, 240, 0.97);
+    border-bottom: 1px solid rgba(149, 26, 33, 0.15);
+    box-shadow: 0 4px 20px rgba(65, 23, 28, 0.05);
+    backdrop-filter: blur(12px);
+}
+
+header nav a {
+    color: var(--ewf-corporate);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+header nav a:hover {
+    color: var(--ewf-red);
+}
+
+header .nav-link {
+    position: relative;
+    padding-block: 10px;
+}
+
+header .nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    height: 2px;
+    content: "";
+    background: var(--ewf-wine);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+header .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+header .nav-link.active,
+header nav a[aria-current="page"] {
+    color: var(--ewf-wine);
+    font-weight: 800;
+}
+
+header .nav-link.active::after,
+header nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+#mobile-menu {
+    background: var(--ewf-cream);
+    border-top: 1px solid var(--ewf-border);
+    box-shadow: 0 15px 20px rgba(65, 23, 28, 0.05);
+}
+
+#mobile-menu a {
+    color: var(--ewf-corporate);
+}
+
+#mobile-menu a:hover {
+    background: var(--ewf-wine-soft);
+    color: var(--ewf-wine);
+}
+
+/* =========================================================
+   3. HERO
+   ========================================================= */
+/* =========================================================
+   HERO SECTION
+   Background gelap agar font terang lebih terbaca
+   ========================================================= */
+
+.hero-section,
+main > section:first-child {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 5% 5%,
+            rgba(255, 214, 110, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            ellipse at 95% 90%,
+            rgba(255, 163, 104, 0.13),
+            transparent 35%
+        ),
+        linear-gradient(
+            125deg,
+            #6D1720 0%,
+            #951A21 55%,
+            #722F37 100%
+        );
+}
+
+/* Decorative grid */
+.hero-section::before,
+.hero-background::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+    opacity: 0.18;
+
+    background-image: radial-gradient(
+        rgba(255, 249, 240, 0.35) 1px,
+        transparent 1px
+    );
+
+    background-size: 27px 27px;
+
+    mask-image: linear-gradient(
+        90deg,
+        black,
+        transparent 75%
+    );
+}
+
+/* Floating decoration */
+.hero-section::after,
+.hero-background::after {
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    right: -110px;
+    width: 340px;
+    height: 340px;
+    content: "";
+    pointer-events: none;
+
+    border: 1px solid rgba(255, 214, 110, 0.20);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 30px rgba(255, 249, 240, 0.025),
+        0 0 0 65px rgba(255, 163, 104, 0.05);
+
+    animation: ewf-float 9s ease-in-out infinite;
+}
+
+/* Hero typography */
+.hero-copy h1 {
+    color: #FFF9F0;
+    letter-spacing: -0.055em;
+    line-height: 1.08;
+}
+
+.hero-copy p {
+    color: rgba(255, 249, 240, 0.85);
+    line-height: 1.9;
+}
+
+/* Hero visual */
+.hero-visual {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-visual::before {
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    right: -20px;
+    width: 145px;
+    height: 145px;
+    content: "";
+    border-radius: 50%;
+    background: var(--ewf-hawkbit);
+    opacity: 0.7;
+    animation: ewf-float 7s ease-in-out infinite;
+}
+
+.hero-visual::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -25px;
+    left: -25px;
+    width: 110px;
+    height: 110px;
+    content: "";
+    border-radius: 30px;
+    background: var(--ewf-orange-soft);
+    transform: rotate(20deg);
+    opacity: 0.55;
+}
+
+/* =========================================================
+   4. SPACING DAN JUDUL BAGIAN
+   ========================================================= */
+
+.section-spacing {
+    padding-block: clamp(64px, 8vw, 104px);
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(149, 26, 33, 0.14);
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: var(--ewf-wine-soft);
+    color: var(--ewf-wine);
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+
+.section-label::before {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ewf-red);
+    content: "";
+}
+
+.section-title {
+    color: var(--ewf-wine);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: -0.045em;
+}
+
+.section-description {
+    max-width: 680px;
+    color: var(--ewf-muted);
+    line-height: 1.9;
+}
+
+.section-heading {
+    margin-bottom: 36px;
+}
+
+.section-heading .section-title {
+    margin-top: 16px;
+}
+
+.section-heading .section-description {
+    margin-top: 15px;
+}
+
+.section-light {
+    background: var(--ewf-cream);
+}
+
+.section-white {
+    background: var(--ewf-white);
+}
+
+.section-wine-soft {
+    background: #F8EBE9;
+}
+
+.section-gold-soft {
+    background: #FFF1C8;
+}
+
+.section-orange-soft {
+    background: #FFF0E6;
+}
+
+/* =========================================================
+   5. TOMBOL
+   ========================================================= */
+
+.button-orange,
+.button-outline,
+.button-gold {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 12px 21px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-orange {
+    border: 1px solid var(--ewf-wine);
+    background: var(--ewf-wine);
+    color: #FFFFFF;
+    box-shadow: 0 7px 17px rgba(149, 26, 33, 0.12);
+}
+
+.button-orange:hover {
+    transform: translateY(-2px);
+    border-color: var(--ewf-red);
+    background: var(--ewf-red);
+    color: #FFFFFF;
+    box-shadow: 0 12px 25px rgba(149, 26, 33, 0.20);
+}
+
+.button-outline {
+    border: 1px solid rgba(149, 26, 33, 0.35);
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--ewf-wine);
+}
+
+.button-outline:hover {
+    border-color: var(--ewf-wine);
+    background: var(--ewf-wine);
+    color: #FFFFFF;
+}
+
+.button-gold {
+    border: 1px solid var(--ewf-hawkbit);
+    background: var(--ewf-hawkbit);
+    color: #35282A;
+}
+
+.button-gold:hover {
+    transform: translateY(-2px);
+    border-color: var(--ewf-gold);
+    background: var(--ewf-gold);
+    color: #35282A;
+}
+
+/* =========================================================
+   6. RINGKASAN BERANDA
+   ========================================================= */
+
+.summary-item {
+    display: flex;
+    min-height: 125px;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 25px;
+    border-right: 1px solid var(--ewf-border);
+    background: #FFFFFF;
+}
+
+.summary-item:last-child {
+    border-right: 0;
+}
+
+.summary-item h2,
+.summary-item h3,
+.summary-item h4 {
+    color: var(--ewf-wine);
+    font-weight: 800;
+}
+
+.summary-item p {
+    color: var(--ewf-muted);
+    line-height: 1.75;
+}
+
+.summary-icon {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--ewf-gold);
+    color: var(--ewf-wine);
+    font-size: 0.83rem;
+    font-weight: 800;
+}
+
+.summary-item:nth-child(3n + 1) .summary-icon {
+    background: var(--ewf-orange-soft);
+    color: var(--ewf-text);
+}
+
+.summary-item:nth-child(3n + 2) .summary-icon {
+    background: var(--ewf-gold);
+    color: var(--ewf-text);
+}
+
+.summary-item:nth-child(3n) .summary-icon {
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-text);
+}
+
+/* =========================================================
+   7. KARTU LAYANAN
+   ========================================================= */
+
+.service-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #EDE1DF;
+    border-radius: 17px;
+    padding: 27px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 20px rgba(73, 27, 31, 0.035);
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease,
+        border-color 200ms ease;
+}
+
+.service-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--ewf-wine);
+    content: "";
+    transition: width 200ms ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(149, 26, 33, 0.25);
+    box-shadow: 0 17px 35px rgba(73, 27, 31, 0.09);
+}
+
+.service-card:hover::before {
+    width: 100%;
+}
+
+.service-card h3,
+.service-card h4 {
+    color: var(--ewf-wine);
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.service-card p {
+    color: var(--ewf-muted);
+    line-height: 1.8;
+}
+
+.service-icon {
+    display: inline-flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F1DCD5;
+    border-radius: 15px;
+    background: var(--ewf-orange-soft);
+    color: var(--ewf-wine);
+    font-size: 1.2rem;
+}
+
+.service-card:nth-child(3n + 1) .service-icon {
+    background: var(--ewf-orange-soft);
+    border-color: var(--ewf-orange-soft);
+}
+
+.service-card:nth-child(3n + 2) .service-icon {
+    background: var(--ewf-gold);
+    border-color: var(--ewf-gold);
+}
+
+.service-card:nth-child(3n) .service-icon {
+    background: var(--ewf-hawkbit);
+    border-color: var(--ewf-hawkbit);
+}
+
+/* =========================================================
+   8. TENTANG KAMI
+   ========================================================= */
+
+#tentang {
+    position: relative;
+    overflow: hidden;
+}
+
+#tentang > div > div:first-child {
+    position: relative;
+}
+
+#tentang > div > div:last-child > div {
+    background:
+        radial-gradient(
+            circle at 100% 0,
+            rgba(255, 163, 104, 0.48) 0,
+            transparent 42%
+        ),
+        linear-gradient(135deg, #FFF9F0, #F8EAE7);
+}
+
+#tentang .summary-icon {
+    box-shadow: inset 0 0 0 1px rgba(149, 26, 33, 0.05);
+}
+
+/* =========================================================
+   9. LEGALITAS
+   ========================================================= */
+
+#legalitas .overflow-hidden {
+    border-color: #E9CFCA;
+    background:
+        radial-gradient(
+            circle at 100% 0,
+            rgba(255, 163, 104, 0.40) 0,
+            transparent 35%
+        ),
+        linear-gradient(125deg, #F8EAE7 0%, #FFF8ED 72%);
+}
+
+.legal-card {
+    height: 100%;
+    border: 1px solid rgba(149, 26, 33, 0.12);
+    border-radius: 16px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 7px 22px rgba(73, 27, 31, 0.04);
+}
+
+.legal-card h3,
+.legal-card h4 {
+    color: var(--ewf-wine);
+    font-weight: 800;
+}
+
+.legal-card p {
+    color: var(--ewf-muted);
+    line-height: 1.75;
+}
+
+.legal-card .legal-icon {
+    display: inline-flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: var(--ewf-wine-soft);
+    color: var(--ewf-wine);
+}
+
+.legal-card:nth-child(3n + 1) .legal-icon {
+    background: var(--ewf-orange-soft);
+    color: var(--ewf-text);
+}
+
+.legal-card:nth-child(3n + 2) .legal-icon {
+    background: var(--ewf-gold);
+    color: var(--ewf-text);
+}
+
+.legal-card:nth-child(3n) .legal-icon {
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-text);
+}
+
+/* =========================================================
+   10. BERITA
+   ========================================================= */
+
+.news-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #EDE1DF;
+    border-radius: 17px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 20px rgba(73, 27, 31, 0.035);
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 17px 35px rgba(73, 27, 31, 0.10);
+}
+
+.news-card h3,
+.news-card h4 {
+    color: var(--ewf-wine);
+    font-weight: 800;
+}
+
+.news-card p {
+    color: var(--ewf-muted);
+    line-height: 1.75;
+}
+
+.news-card a {
+    color: var(--ewf-wine);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.news-card a:hover {
+    color: var(--ewf-red);
+}
+
+.news-visual {
+    position: relative;
+    display: flex;
+    min-height: 195px;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 22px;
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(255, 214, 110, 0.35),
+            transparent 30%
+        ),
+        linear-gradient(135deg, #951A21, #6D1720);
+    color: #FFFFFF;
+}
+
+.news-visual::before {
+    position: absolute;
+    top: -35px;
+    right: -15px;
+    width: 155px;
+    height: 155px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    content: "";
+}
+
+.news-visual::after {
+    position: absolute;
+    top: 14px;
+    right: 34px;
+    width: 105px;
+    height: 105px;
+    border: 1px solid rgba(255, 214, 110, 0.55);
+    border-radius: 50%;
+    content: "";
+}
+
+.news-visual-label {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-wine-dark);
+    font-size: 0.73rem;
+    font-weight: 800;
+}
+
+.news-visual-symbol {
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.90);
+    font-family: "Manrope", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+}
+
+/* Variasi aksen pada kartu berita kedua */
+.news-card:nth-child(3n + 2) .news-visual {
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(255, 214, 110, 0.55),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #FFA368, #EFBB55);
+    color: var(--ewf-text);
+}
+
+.news-card:nth-child(3n + 2) .news-visual-label {
+    background: var(--ewf-wine);
+    color: #FFFFFF;
+}
+
+.news-card:nth-child(3n + 2) .news-visual-symbol {
+    color: var(--ewf-text);
+}
+
+/* =========================================================
+   11. KARIER DAN MAGANG
+   ========================================================= */
+
+.opportunity-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--ewf-border);
+    border-radius: 19px;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0 7px 24px rgba(73, 27, 31, 0.045);
+}
+
+.opportunity-card h3,
+.opportunity-card h4 {
+    color: var(--ewf-wine);
+    font-weight: 800;
+}
+
+.opportunity-card p {
+    color: var(--ewf-muted);
+    line-height: 1.8;
+}
+
+.opportunity-card-orange {
+    border-color: var(--ewf-wine);
+    background:
+        radial-gradient(
+            circle at 100% 0,
+            rgba(255, 214, 110, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #951A21, #6D1720);
+    color: #FFFFFF;
+}
+
+.opportunity-card-orange h3,
+.opportunity-card-orange h4,
+.opportunity-card-orange p {
+    color: #FFFFFF;
+}
+
+.opportunity-card-orange > div:first-child {
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-wine);
+}
+
+.opportunity-card-orange .button-orange {
+    border-color: var(--ewf-hawkbit);
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-wine-dark);
+    box-shadow: none;
+}
+
+.opportunity-card-orange .button-orange:hover {
+    border-color: var(--ewf-gold);
+    background: var(--ewf-gold);
+    color: var(--ewf-wine-dark);
+}
+
+/* =========================================================
+   12. KONTAK
+   ========================================================= */
+
+#kontak {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 214, 110, 0.24),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(255, 163, 104, 0.16),
+            transparent 25%
+        ),
+        #FFFFFF;
+}
+
+#kontak::before {
+    position: absolute;
+    right: -65px;
+    bottom: -100px;
+    width: 240px;
+    height: 240px;
+    border: 1px solid rgba(149, 26, 33, 0.12);
+    border-radius: 50%;
+    content: "";
+}
+
+#kontak > div {
+    position: relative;
+}
+
+/* =========================================================
+   13. FOOTER
+   Maroon sebagai identitas utama
+   ========================================================= */
+
+#footer,
+footer {
+    background: var(--ewf-wine) !important;
+    color: #FFFFFF;
+}
+
+#footer::before {
+    display: block;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        var(--ewf-orange-soft) 0%,
+        var(--ewf-gold) 45%,
+        var(--ewf-hawkbit) 100%
+    );
+    content: "";
+}
+
+#footer h2,
+#footer h3,
+#footer h4,
+footer h2,
+footer h3,
+footer h4 {
+    color: #FFFFFF;
+}
+
+#footer p,
+#footer li,
+footer p,
+footer li {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+#footer a,
+footer a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+}
+
+#footer a:hover,
+footer a:hover {
+    color: var(--ewf-hawkbit);
+}
+
+#footer .footer-accent,
+footer .footer-accent {
+    color: var(--ewf-hawkbit);
+}
+
+#footer .footer-divider,
+footer .footer-divider {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+#footer .footer-link {
+    display: inline-block;
+}
+
+#footer .footer-link:hover {
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   14. FORM
+   ========================================================= */
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid rgba(149, 26, 33, 0.25);
+    outline-offset: 2px;
+    border-color: var(--ewf-wine);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--ewf-wine);
+}
+
+/* =========================================================
+   15. BADGE DAN AKSEN
+   ========================================================= */
+
+.badge-wine {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: var(--ewf-wine-soft);
+    color: var(--ewf-wine);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.badge-gold {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-text);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.badge-shrimp {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: var(--ewf-orange-soft);
+    color: var(--ewf-text);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.badge-pale-canary {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: var(--ewf-gold);
+    color: var(--ewf-text);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.accent-line {
+    width: 56px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--ewf-red);
+}
+
+.accent-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ewf-hawkbit);
+}
+
+.border-wine {
+    border-color: var(--ewf-wine);
+}
+
+.text-wine {
+    color: var(--ewf-wine);
+}
+
+.text-wine-dark {
+    color: var(--ewf-wine-dark);
+}
+
+.text-muted-ewf {
+    color: var(--ewf-muted);
+}
+
+.bg-wine {
+    background: var(--ewf-wine);
+}
+
+.bg-wine-soft {
+    background: var(--ewf-wine-soft);
+}
+
+.bg-gold-soft {
+    background: #FFF1C8;
+}
+
+.bg-shrimp-soft {
+    background: #FFF0E6;
+}
+
+.bg-pale-canary {
+    background: var(--ewf-gold);
+}
+
+.bg-hawkbit {
+    background: var(--ewf-hawkbit);
+}
+
+.text-ewf-red {
+    color: var(--ewf-red);
+}
+
+/* =========================================================
+   16. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.4rem, 7vw, 3.8rem);
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .section-spacing {
+        padding-block: 56px;
+    }
+
+    .hero-section::before {
+        width: 50%;
+        opacity: 0.45;
+    }
+
+    .hero-image {
+        min-height: 360px;
+        border-radius: 20px;
+    }
+
+    .hero-visual::before {
+        right: -7px;
+        bottom: 7px;
+        left: 7px;
+        border-radius: 22px;
+    }
+
+    .hero-visual::after {
+        right: -12px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .summary-item {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--ewf-border);
+        padding: 20px;
+    }
+
+    .summary-item:last-child {
+        border-bottom: 0;
+    }
+
+    .service-card,
+    .legal-card,
+    .opportunity-card {
+        padding: 23px;
+    }
+
+    .news-visual {
+        min-height: 165px;
+    }
+
+    .section-heading {
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-orange,
+    .button-outline,
+    .button-gold {
+        width: 100%;
+        padding-inline: 15px;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.45rem;
+    }
+
+    .hero-image {
+        min-height: 320px;
+    }
+
+    .news-visual-symbol {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================================
+   17. AKSESIBILITAS
+   ========================================================= */
+
+:focus-visible {
+    outline: 3px solid var(--ewf-hawkbit);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================================================
+   EWF MODERN CORPORATE DESIGN SYSTEM
+   Primary   : Maroon #951A21
+   Background: Cream  #FFF9F0
+   Accent    : Shrimp, Pale Canary, Red Poppy, Hawkbit
+========================================================= */
+
+/* 1. COLOR SYSTEM */
+:root {
+    --ewf-wine: #951A21;
+    --ewf-wine-dark: #6D1720;
+    --ewf-wine-light: #B64047;
+    --ewf-corporate: #722F37;
+
+    --ewf-cream: #FFF9F0;
+    --ewf-white: #FFFFFF;
+
+    --ewf-orange-soft: #FFA368;
+    --ewf-gold: #EFBB55;
+    --ewf-red: #CF3021;
+    --ewf-hawkbit: #FFD66E;
+
+    --ewf-text: #35282A;
+    --ewf-muted: #75676A;
+    --ewf-border: #EADCDD;
+
+    --ewf-shadow:
+        0 12px 35px rgba(109, 23, 32, 0.07);
+
+    --ewf-shadow-hover:
+        0 22px 48px rgba(109, 23, 32, 0.14);
+}
+
+@theme {
+    --color-ewf-maroon: #951A21;
+    --color-ewf-wine: #951A21;
+    --color-ewf-navy: #722F37;
+    --color-ewf-orange: #FFA368;
+
+    --color-ewf-cream: #FFF9F0;
+    --color-ewf-shrimp: #FFA368;
+    --color-ewf-soft-orange: #FFA368;
+
+    --color-ewf-pale-canary: #EFBB55;
+    --color-ewf-pale-ganary: #EFBB55;
+
+    --color-ewf-red-poppy: #CF3021;
+    --color-ewf-hawkbit: #FFD66E;
+
+    --color-ewf-corporate: #722F37;
+    --color-ewf-soft-blue: #FFF9F0;
+    --color-ewf-cinnamon: #9D4C1E;
+    --color-ewf-wine-dark: #6D1720;
+    --color-ewf-wine-soft: #F5E6E6;
+    --color-ewf-white: #FFFFFF;
+}
+
+/* 2. GLOBAL BACKGROUND */
+
+body {
+    background-color: var(--ewf-cream);
+    color: var(--ewf-text);
+    overflow-x: hidden;
+}
+
+main {
+    overflow: hidden;
+}
+
+::selection {
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-wine-dark);
+}
+
+/* Smooth transitions */
+a,
+button,
+.service-card,
+.news-card,
+.legal-card,
+.opportunity-card {
+    transition:
+        color .3s ease,
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+/* 3. HERO SECTION */
+
+.hero-section,
+main > section:first-child {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            ellipse at 5% 5%,
+            rgba(255, 214, 110, .16),
+            transparent 32%
+        ),
+        radial-gradient(
+            ellipse at 95% 90%,
+            rgba(255, 163, 104, .13),
+            transparent 35%
+        ),
+        linear-gradient(
+            125deg,
+            #4A1018 0%,
+            #6D1720 55%,
+            #951A21 100%
+        );
+}
+
+/* Decorative grid */
+.hero-section::before,
+.hero-background::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+    opacity: .18;
+    background-image: radial-gradient(
+        rgba(255, 249, 240, .35) 1px,
+        transparent 1px
+    );
+    background-size: 27px 27px;
+    mask-image: linear-gradient(
+        90deg,
+        black,
+        transparent 75%
+    );
+}
+
+/* Floating decoration */
+.hero-section::after,
+.hero-background::after {
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    right: -110px;
+    width: 340px;
+    height: 340px;
+    content: "";
+    pointer-events: none;
+    border: 1px solid rgba(255, 214, 110, .20);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 30px rgba(255, 249, 240, .025),
+        0 0 0 65px rgba(255, 163, 104, .05);
+    animation: ewf-float 9s ease-in-out infinite;
+}
+
+@keyframes ewf-float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-17px) rotate(8deg);
+    }
+}
+
+@keyframes ewf-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: .8;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+@keyframes ewf-shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Hero typography */
+.hero-copy h1 {
+    color: #FFF9F0;
+    letter-spacing: -.055em;
+    line-height: 1.08;
+}
+
+.hero-copy p {
+    color: rgba(255, 249, 240, .88);
+    line-height: 1.9;
+}
+
+/* Hero visual */
+.hero-visual {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-visual::before {
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    right: -20px;
+    width: 145px;
+    height: 145px;
+    content: "";
+    border-radius: 50%;
+    background: var(--ewf-hawkbit);
+    opacity: .7;
+    animation: ewf-float 7s ease-in-out infinite;
+}
+
+.hero-visual::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -25px;
+    left: -25px;
+    width: 110px;
+    height: 110px;
+    content: "";
+    border-radius: 30px;
+    background: var(--ewf-orange-soft);
+    transform: rotate(20deg);
+    opacity: .55;
+}
+
+/* 4. SECTION BACKGROUNDS */
+
+.section-light {
+    position: relative;
+    background: var(--ewf-cream);
+}
+
+.section-white {
+    position: relative;
+    background: var(--ewf-white);
+}
+
+.section-wine-soft {
+    position: relative;
+    background:
+        radial-gradient(
+            circle at 95% 10%,
+            rgba(255, 163, 104, .16),
+            transparent 30%
+        ),
+        #F8EBE9;
+}
+
+.section-gold-soft {
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(255, 163, 104, .17),
+            transparent 30%
+        ),
+        #FFF6DE;
+}
+
+.section-orange-soft {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 214, 110, .22),
+            transparent 35%
+        ),
+        #FFF0E6;
+}
+
+/* Decorative section divider */
+.section-decoration {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-decoration::before {
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 230px;
+    height: 230px;
+    content: "";
+    border: 1px solid rgba(149, 26, 33, .10);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 25px rgba(149, 26, 33, .025),
+        0 0 0 55px rgba(255, 163, 104, .035);
+    pointer-events: none;
+}
+
+/* 5. SECTION HEADINGS */
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid rgba(149, 26, 33, .14);
+    border-radius: 999px;
+    padding: 8px 14px;
+    background: #F5E6E6;
+    color: var(--ewf-wine);
+    font-size: .73rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.section-label::before {
+    width: 7px;
+    height: 7px;
+    content: "";
+    border-radius: 50%;
+    background: var(--ewf-red);
+    box-shadow: 0 0 0 4px rgba(207, 48, 33, .10);
+}
+
+.section-title {
+    color: var(--ewf-wine);
+    font-size: clamp(2rem, 3.5vw, 3.1rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -.045em;
+}
+
+.section-description {
+    max-width: 680px;
+    color: var(--ewf-muted);
+    line-height: 1.9;
+}
+
+/* 6. BUTTONS */
+
+.button-orange,
+.button-outline,
+.button-gold {
+    position: relative;
+    display: inline-flex;
+    min-height: 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 13px 23px;
+    font-size: .9rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.button-orange {
+    border: 1px solid var(--ewf-wine);
+    background: var(--ewf-wine);
+    color: white;
+    box-shadow: 0 8px 20px rgba(149, 26, 33, .17);
+}
+
+.button-orange:hover {
+    transform: translateY(-3px);
+    border-color: var(--ewf-red);
+    background: var(--ewf-red);
+    box-shadow: 0 14px 28px rgba(149, 26, 33, .22);
+}
+
+.button-outline {
+    border: 1px solid rgba(149, 26, 33, .35);
+    background: rgba(255, 255, 255, .75);
+    color: var(--ewf-wine);
+}
+
+.button-outline:hover {
+    transform: translateY(-3px);
+    background: var(--ewf-wine);
+    color: white;
+}
+
+.button-gold {
+    border: 1px solid var(--ewf-hawkbit);
+    background: var(--ewf-hawkbit);
+    color: var(--ewf-wine-dark);
+}
+
+.button-gold:hover {
+    transform: translateY(-3px);
+    background: var(--ewf-gold);
+    box-shadow: 0 10px 25px rgba(239, 187, 85, .25);
+}
+
+/* 7. SUMMARY CARDS */
+
+.summary-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(149, 26, 33, .08);
+    border-radius: 17px;
+    background: white;
+    box-shadow: var(--ewf-shadow);
+    transition: .35s ease;
+}
+
+.summary-item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(149, 26, 33, .24);
+    box-shadow: var(--ewf-shadow-hover);
+}
+
+.summary-item h2,
+.summary-item h3,
+.summary-item h4 {
+    color: var(--ewf-wine);
+}
+
+.summary-icon {
+    transition:
+        transform .35s ease,
+        border-radius .35s ease;
+}
+
+.summary-item:hover .summary-icon {
+    transform: rotate(-8deg) scale(1.08);
+    border-radius: 18px;
+}
+
+/* 8. SERVICE CARDS */
+
+.service-card,
+.legal-card,
+.news-card,
+.opportunity-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(149, 26, 33, .10);
+    border-radius: 20px;
+    background: white;
+    box-shadow: var(--ewf-shadow);
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.service-card:hover,
+.legal-card:hover,
+.news-card:hover,
+.opportunity-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(149, 26, 33, .32);
+    box-shadow: var(--ewf-shadow-hover);
+}
+
+/* Top animated accent */
+.service-card::before,
+.legal-card::before,
+.news-card::before,
+.opportunity-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    content: "";
+    background: linear-gradient(
+        90deg,
+        var(--ewf-wine),
+        var(--ewf-orange-soft),
+        var(--ewf-hawkbit)
+    );
+    transition: width .4s ease;
+}
+
+.service-card:hover::before,
+.legal-card:hover::before,
+.news-card:hover::before,
+.opportunity-card:hover::before {
+    width: 100%;
+}
+
+.service-icon,
+.legal-icon {
+    transition:
+        transform .4s ease,
+        border-radius .4s ease;
+}
+
+.service-card:hover .service-icon,
+.legal-card:hover .legal-icon {
+    transform: translateY(-4px) rotate(-7deg);
+    border-radius: 19px;
+}
+
+/* 9. NEWS VISUAL */
+
+.news-visual {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.news-visual::before {
+    transition: transform .7s ease;
+}
+
+.news-card:hover .news-visual::before {
+    transform: scale(1.25);
+}
+
+.news-visual-symbol {
+    transition: transform .4s ease;
+}
+
+.news-card:hover .news-visual-symbol {
+    transform: scale(1.1) translateY(-4px);
+}
+
+/* 10. NAVIGATION */
+
+header.sticky {
+    background: rgba(255, 249, 240, .94);
+    border-bottom: 1px solid rgba(149, 26, 33, .12);
+    box-shadow: 0 5px 25px rgba(65, 23, 28, .06);
+    backdrop-filter: blur(18px);
+}
+
+header nav a {
+    transition:
+        color .25s ease,
+        background-color .25s ease;
+}
+
+header nav a:hover {
+    color: var(--ewf-wine);
+}
+
+header .group > div {
+    transform-origin: top;
+}
+
+header .group > div a:hover {
+    transform: translateX(4px);
+}
+
+#mobile-menu {
+    background: var(--ewf-cream);
+    border-top: 1px solid var(--ewf-border);
+    box-shadow: 0 15px 30px rgba(65, 23, 28, .08);
+}
+
+/* 11. FOOTER */
+
+#footer,
+footer {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 163, 104, .15),
+            transparent 30%
+        ),
+        linear-gradient(
+            125deg,
+            #6D1720,
+            #951A21 65%,
+            #722F37
+        ) !important;
+    color: white;
+}
+
+#footer::after {
+    position: absolute;
+    right: -100px;
+    bottom: -170px;
+    width: 360px;
+    height: 360px;
+    content: "";
+    border: 1px solid rgba(255, 214, 110, .16);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(255, 255, 255, .025),
+        0 0 0 75px rgba(255, 255, 255, .02);
+    pointer-events: none;
+}
+
+#footer .footer-link {
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+#footer .footer-link:hover {
+    color: var(--ewf-hawkbit);
+    transform: translateX(5px);
+}
+
+/* 12. FORM */
+
+input,
+select,
+textarea {
+    border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(149, 26, 33, .12);
+    outline-offset: 1px;
+    border-color: var(--ewf-wine);
+}
+
+/* 13. SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ewf-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid var(--ewf-cream);
+    border-radius: 20px;
+    background: var(--ewf-wine);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ewf-red);
+}
+
+/* 14. RESPONSIVE */
+
+@media (max-width: 767px) {
+    .hero-section::after,
+    .hero-background::after {
+        width: 190px;
+        height: 190px;
+    }
+
+    .hero-visual::before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .section-decoration::before {
+        width: 150px;
+        height: 150px;
+    }
+
+    .service-card:hover,
+    .legal-card:hover,
+    .news-card:hover,
+    .opportunity-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* 15. ACCESSIBILITY */
+
+:focus-visible {
+    outline: 3px solid var(--ewf-hawkbit);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
