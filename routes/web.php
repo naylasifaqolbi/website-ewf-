@@ -2,10 +2,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicPageController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +19,7 @@ use App\Http\Controllers\NewsController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +54,7 @@ Route::get('/data-historis', [PublicPageController::class, 'historicalData'])
 Route::get('/kontak', [PublicPageController::class, 'contact'])
     ->name('contact');
 
+
 /*
 |--------------------------------------------------------------------------
 | BERITA
@@ -60,6 +66,7 @@ Route::get('/berita', [NewsController::class, 'index'])
 
 Route::get('/berita/{slug}', [NewsController::class, 'show'])
     ->name('news.show');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -79,12 +86,60 @@ Route::get('/karier/magang-mahasiswa', [CareerController::class, 'studentInterns
 Route::get('/karier/magang-sma-smk', [CareerController::class, 'schoolInternship'])
     ->name('careers.internship-school');
 
-// AUTH
-Route::view('/login', 'auth.login')->name('login');
 
-// BERITA
-Route::get('/berita', [NewsController::class, 'index'])
-    ->name('news.index');
+/*
+|--------------------------------------------------------------------------
+| AUTHENTICATION
+|--------------------------------------------------------------------------
+*/
 
-Route::get('/berita/{slug}', [NewsController::class, 'show'])
-    ->name('news.show');
+Route::controller(AuthController::class)->group(function () {
+
+    // Halaman Login.
+    Route::get('/login', 'showLogin')
+        ->name('login');
+
+    // Proses Login.
+    Route::post('/login', 'login')
+        ->name('login.process');
+
+    // Halaman Registrasi.
+    Route::get('/register', 'showRegister')
+        ->name('register');
+
+    // Logout sementara.
+    Route::get('/logout', 'logout')
+        ->name('logout');
+
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| DASHBOARD USER
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/dashboard/user', [DashboardController::class, 'user'])
+    ->name('dashboard.user');
+
+
+/*
+|--------------------------------------------------------------------------
+| DASHBOARD ADMIN
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/dashboard/admin', [DashboardController::class, 'admin'])
+    ->name('dashboard.admin');
+
+
+/*
+|--------------------------------------------------------------------------
+| DASHBOARD HR
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/dashboard/hr', [DashboardController::class, 'hr'])
+    ->name('dashboard.hr');
+

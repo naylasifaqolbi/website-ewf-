@@ -1,28 +1,33 @@
-
 @extends('layouts.public')
 
 @section('title', 'Lowongan Kerja | PT Equityworld Futures')
 
 @section('content')
+
 <main class="min-h-screen bg-[#FFF9F0]">
 
     {{-- ========================================== --}}
     {{-- HERO SECTION --}}
     {{-- ========================================== --}}
+
     <section class="relative overflow-hidden bg-[#6D1720] text-white">
+
         <div class="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-[#951A21] opacity-50 blur-3xl"></div>
+
         <div class="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#CF3021] opacity-20 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
 
             <a href="{{ route('careers') }}"
                class="inline-flex items-center gap-2 text-sm font-semibold text-[#FFD66E] transition hover:text-white">
+
                 <svg xmlns="http://www.w3.org/2000/svg"
                      class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
                           d="M15 19l-7-7 7-7"/>
                 </svg>
+
                 Kembali ke Karier
             </a>
 
@@ -44,6 +49,7 @@
                 <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white">
                     3 Posisi Tersedia
                 </span>
+
                 <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white">
                     Kesempatan Berkarier
                 </span>
@@ -382,9 +388,11 @@
                     </p>
                 </div>
 
-                <a href="{{ route('careers') }}"
+                {{-- TOMBOL DAFTAR SEKARANG --}}
+                <a href="{{ route('login') }}"
                    class="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#FFD66E] px-7 py-3.5 font-bold text-[#6D1720] transition hover:bg-white">
-                    Kembali ke Karier
+
+                    Daftar Sekarang
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                          class="h-4 w-4" fill="none" viewBox="0 0 24 24"
@@ -392,6 +400,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M9 5l7 7-7 7"/>
                     </svg>
+
                 </a>
 
             </div>
