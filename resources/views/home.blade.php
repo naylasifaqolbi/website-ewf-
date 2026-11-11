@@ -1,4 +1,3 @@
-
 @extends('layouts.public')
 
 @section('content')
@@ -151,7 +150,6 @@
         <div class="h-2 bg-gradient-to-r from-[#951A21] via-[#EFBB55] to-[#FFA368]"></div>
     </section>
 
-
     {{-- =====================================================
          2. QUICK NAVIGATION
     ====================================================== --}}
@@ -252,7 +250,6 @@
         </div>
     </section>
 
-
     {{-- =====================================================
          3. ABOUT COMPANY
     ====================================================== --}}
@@ -330,7 +327,6 @@
         </div>
     </section>
 
-
     {{-- =====================================================
          4. LATEST NEWS
     ====================================================== --}}
@@ -391,11 +387,14 @@
                                 </span>
 
                                 <h3 class="mt-4 line-clamp-2 text-lg font-extrabold leading-7 text-[#951A21]">
-                                    {{ $item['title'] ?? $item->title ?? 'Informasi terbaru' }}
+                                    {{ $item['title'] ?? 'Informasi terbaru' }}
                                 </h3>
 
                                 <p class="mt-4 line-clamp-3 text-sm leading-7 text-[#75676A]">
-                                    {{ \Illuminate\Support\Str::limit($item['excerpt'] ?? $item->excerpt ?? $item['content'] ?? $item->content ?? 'Baca informasi selengkapnya di halaman berita.', 120) }}
+                                    {{ \Illuminate\Support\Str::limit(
+                                        $item['description'] ?? $item['excerpt'] ?? $item['content'] ?? 'Baca informasi selengkapnya di halaman berita.',
+                                        120
+                                    ) }}
                                 </p>
 
                                 <a href="{{ route('news.index') }}"
@@ -438,7 +437,6 @@
 
         </div>
     </section>
-
 
     {{-- =====================================================
          5. CONTACT CTA

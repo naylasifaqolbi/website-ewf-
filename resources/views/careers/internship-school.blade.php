@@ -1,4 +1,3 @@
-
 @extends('layouts.public')
 
 @section('title', 'Magang SMA/SMK | PT Equityworld Futures')
@@ -114,9 +113,10 @@
                 dari perusahaan.
             </p>
 
-            <a href="{{ route('careers') }}"
+            {{-- TOMBOL DAFTAR SEKARANG --}}
+            <a href="{{ route('login') }}"
                class="mt-6 inline-flex rounded-full bg-[#951A21] px-6 py-3 font-bold text-white transition hover:bg-[#6D1720]">
-                Kembali ke Halaman Karier
+                Daftar Sekarang
             </a>
         </div>
     </section>
