@@ -1,4 +1,3 @@
-
 @extends('layouts.public')
 
 @section('title', 'Badan Regulasi | PT Equityworld Futures')
@@ -7,12 +6,12 @@
 <main class="min-h-screen bg-[#FFF9F0]">
 
     {{-- HERO --}}
-    <section class="relative overflow-hidden bg-[#6D1720] text-white">
-        <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#951A21] blur-3xl"></div>
+    <section class="relative overflow-hidden bg-[#951A21] text-white">
+        <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#7A1720] blur-3xl"></div>
         <div class="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-[#FFA368]/10 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-            <span class="inline-flex items-center gap-2 rounded-full border border-[#FFD66E]/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#FFD66E]">
+            <span class="inline-flex items-center gap-2 rounded-full border border-ewf-hawkbit/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/>
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
@@ -30,7 +29,7 @@
             </p>
 
             <a href="#profil-regulasi"
-               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3 font-bold text-[#6D1720] transition hover:bg-[#EFBB55]">
+               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 font-bold text-[#64151B] transition hover:bg-[#EFBB55]">
                 Kenali Badan Regulasi
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
@@ -49,7 +48,7 @@
                     Profil Badan Regulasi
                 </p>
 
-                <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#6D1720] sm:text-4xl">
+                <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#951A21] sm:text-4xl">
                     Mengenal Lembaga Pengawas dan Pendukung Industri Keuangan
                 </h2>
 
@@ -143,7 +142,7 @@
                                 {{ $regulator['short_name'] }}
                             </span>
 
-                            <h3 class="mt-3 text-xl font-extrabold leading-7 text-[#6D1720]">
+                            <h3 class="mt-3 text-xl font-extrabold leading-7 text-[#951A21]">
                                 {{ $regulator['name'] }}
                             </h3>
 
@@ -156,7 +155,7 @@
                                     href="{{ $regulator['url'] }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="mt-6 inline-flex w-fit items-center gap-2 rounded-xl bg-[#951A21] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]"
+                                    class="mt-6 inline-flex w-fit items-center gap-2 rounded-xl bg-[#951A21] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#7A1720]"
                                 >
                                     {{ $regulator['button'] }}
 
@@ -179,14 +178,14 @@
 
 
             {{-- CATATAN --}}
-            <div class="mt-8 rounded-2xl border border-[#EFBB55] bg-[#FFD66E]/20 p-5 sm:p-6">
+            <div class="mt-8 rounded-2xl border border-[#EFBB55] bg-ewf-hawkbit/20 p-5 sm:p-6">
                 <div class="flex items-start gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-6 w-6 shrink-0 text-[#951A21]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                     </svg>
 
                     <div>
-                        <h3 class="font-extrabold text-[#6D1720]">
+                        <h3 class="font-extrabold text-[#951A21]">
                             Catatan Informasi
                         </h3>
                         <p class="mt-2 text-sm leading-7 text-[#51413E]">
@@ -208,23 +207,23 @@
     <section class="bg-white px-5 py-14 lg:px-8 lg:py-16">
         <div class="mx-auto max-w-7xl">
             <div class="overflow-hidden rounded-3xl border border-[#E9B5AD] bg-white shadow-sm">
-                <div class="h-2 bg-[#CF3021]"></div>
+                <div class="h-2 bg-ewf-red-poppy"></div>
 
                 <div class="p-6 sm:p-9 lg:p-10">
                     <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
 
-                        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCE7E3] text-[#CF3021]">
+                        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCE7E3] text-ewf-red-poppy">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                             </svg>
                         </div>
 
                         <div class="flex-1">
-                            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#CF3021]">
+                            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-ewf-red-poppy">
                                 Pemberitahuan Penting
                             </p>
 
-                            <h2 class="mt-2 text-2xl font-extrabold text-[#6D1720] sm:text-3xl">
+                            <h2 class="mt-2 text-2xl font-extrabold text-[#951A21] sm:text-3xl">
                                 PERHATIAN
                             </h2>
 

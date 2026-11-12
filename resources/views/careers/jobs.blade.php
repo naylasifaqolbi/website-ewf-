@@ -10,16 +10,16 @@
     {{-- HERO SECTION --}}
     {{-- ========================================== --}}
 
-    <section class="relative overflow-hidden bg-[#6D1720] text-white">
+    <section class="relative overflow-hidden bg-ewf-wine-dark text-white">
 
         <div class="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-[#951A21] opacity-50 blur-3xl"></div>
 
-        <div class="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#CF3021] opacity-20 blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-ewf-red-poppy opacity-20 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
 
             <a href="{{ route('careers') }}"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-[#FFD66E] transition hover:text-white">
+               class="inline-flex items-center gap-2 text-sm font-semibold text-ewf-hawkbit transition hover:text-white">
 
                 <svg xmlns="http://www.w3.org/2000/svg"
                      class="h-4 w-4" fill="none" viewBox="0 0 24 24"
@@ -31,7 +31,7 @@
                 Kembali ke Karier
             </a>
 
-            <p class="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-[#FFD66E]">
+            <p class="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-ewf-hawkbit">
                 Peluang Karier
             </p>
 
@@ -70,7 +70,7 @@
                 Informasi Rekrutmen
             </span>
 
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+            <h2 class="mt-3 text-3xl font-extrabold text-ewf-wine-dark sm:text-4xl">
                 Posisi yang Tersedia
             </h2>
 
@@ -104,11 +104,11 @@
                 </div>
 
                 <div class="mt-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-[#CF3021]">
+                    <span class="text-xs font-bold uppercase tracking-wider text-ewf-red-poppy">
                         Posisi 01
                     </span>
 
-                    <h3 class="mt-2 text-2xl font-extrabold text-[#6D1720]">
+                    <h3 class="mt-2 text-2xl font-extrabold text-ewf-wine-dark">
                         Staf
                     </h3>
 
@@ -122,21 +122,21 @@
 
                 <div class="mt-6 border-t border-[#F0E4DB] pt-5">
 
-                    <h4 class="text-sm font-bold text-[#6D1720]">
+                    <h4 class="text-sm font-bold text-ewf-wine-dark">
                         Gambaran Pekerjaan
                     </h4>
 
                     <ul class="mt-3 space-y-2 text-sm leading-6 text-[#786662]">
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Mendukung kegiatan operasional perusahaan.
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Melaksanakan tugas administrasi sesuai tanggung jawab.
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Berkoordinasi dengan tim dan bagian terkait.
                         </li>
                     </ul>
@@ -173,11 +173,11 @@
                 </div>
 
                 <div class="mt-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-[#CF3021]">
+                    <span class="text-xs font-bold uppercase tracking-wider text-ewf-red-poppy">
                         Posisi 02
                     </span>
 
-                    <h3 class="mt-2 text-2xl font-extrabold text-[#6D1720]">
+                    <h3 class="mt-2 text-2xl font-extrabold text-ewf-wine-dark">
                         Konsultan Bisnis
                     </h3>
 
@@ -191,21 +191,21 @@
 
                 <div class="mt-6 border-t border-[#F0E4DB] pt-5">
 
-                    <h4 class="text-sm font-bold text-[#6D1720]">
+                    <h4 class="text-sm font-bold text-ewf-wine-dark">
                         Gambaran Pekerjaan
                     </h4>
 
                     <ul class="mt-3 space-y-2 text-sm leading-6 text-[#786662]">
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Memberikan informasi mengenai produk dan layanan perusahaan.
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Membangun dan menjaga hubungan dengan nasabah.
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Melakukan komunikasi dan tindak lanjut kepada calon nasabah.
                         </li>
                     </ul>
@@ -243,11 +243,11 @@
                 </div>
 
                 <div class="mt-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-[#CF3021]">
+                    <span class="text-xs font-bold uppercase tracking-wider text-ewf-red-poppy">
                         Posisi 03
                     </span>
 
-                    <h3 class="mt-2 text-2xl font-extrabold text-[#6D1720]">
+                    <h3 class="mt-2 text-2xl font-extrabold text-ewf-wine-dark">
                         Pengemudi
                     </h3>
 
@@ -261,21 +261,21 @@
 
                 <div class="mt-6 border-t border-[#F0E4DB] pt-5">
 
-                    <h4 class="text-sm font-bold text-[#6D1720]">
+                    <h4 class="text-sm font-bold text-ewf-wine-dark">
                         Gambaran Pekerjaan
                     </h4>
 
                     <ul class="mt-3 space-y-2 text-sm leading-6 text-[#786662]">
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Mengantar dan menjemput sesuai kebutuhan perusahaan.
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Menjaga kebersihan dan kondisi kendaraan.
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-[#CF3021]">✓</span>
+                            <span class="text-ewf-red-poppy">✓</span>
                             Mematuhi peraturan lalu lintas dan keselamatan berkendara.
                         </li>
                     </ul>
@@ -319,7 +319,7 @@
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-extrabold text-[#6D1720] sm:text-2xl">
+                    <h2 class="text-xl font-extrabold text-ewf-wine-dark sm:text-2xl">
                         Persyaratan dan Proses Seleksi
                     </h2>
 
@@ -334,7 +334,7 @@
                     <div class="mt-5 grid gap-4 sm:grid-cols-2">
 
                         <div class="rounded-xl bg-[#FFF9F0] p-5">
-                            <h3 class="font-bold text-[#6D1720]">
+                            <h3 class="font-bold text-ewf-wine-dark">
                                 Dokumen Lamaran
                             </h3>
                             <p class="mt-2 text-sm leading-7 text-[#786662]">
@@ -345,7 +345,7 @@
                         </div>
 
                         <div class="rounded-xl bg-[#FFF9F0] p-5">
-                            <h3 class="font-bold text-[#6D1720]">
+                            <h3 class="font-bold text-ewf-wine-dark">
                                 Tahapan Seleksi
                             </h3>
                             <p class="mt-2 text-sm leading-7 text-[#786662]">
@@ -366,14 +366,14 @@
         {{-- ========================================== --}}
         {{-- CTA SECTION --}}
         {{-- ========================================== --}}
-        <div class="relative mt-10 overflow-hidden rounded-2xl bg-[#6D1720] p-8 text-white sm:p-10">
+        <div class="relative mt-10 overflow-hidden rounded-2xl bg-ewf-wine-dark p-8 text-white sm:p-10">
 
             <div class="absolute -right-10 -top-20 h-64 w-64 rounded-full bg-[#951A21] opacity-60 blur-3xl"></div>
 
             <div class="relative flex flex-col items-start justify-between gap-7 md:flex-row md:items-center">
 
                 <div class="max-w-2xl">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#FFD66E]">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
                         Bergabung Bersama Kami
                     </span>
 
@@ -390,7 +390,7 @@
 
                 {{-- TOMBOL DAFTAR SEKARANG --}}
                 <a href="{{ route('login') }}"
-                   class="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#FFD66E] px-7 py-3.5 font-bold text-[#6D1720] transition hover:bg-white">
+                   class="inline-flex shrink-0 items-center gap-2 rounded-full bg-ewf-hawkbit px-7 py-3.5 font-bold text-ewf-wine-dark transition hover:bg-white">
 
                     Daftar Sekarang
 

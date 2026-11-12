@@ -10,10 +10,10 @@
     {{-- =====================================================
          HEADER DASHBOARD ADMIN
     ====================================================== --}}
-    <section class="relative overflow-hidden bg-gradient-to-r from-[#6D1720] via-[#951A21] to-[#CF3021] text-white">
+    <section class="relative overflow-hidden bg-linear-to-r from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy text-white">
 
         <div class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
-        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-[#FFD66E]/10 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-ewf-hawkbit/10 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
 
@@ -23,9 +23,9 @@
 
                     <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
 
-                        <span class="h-2 w-2 rounded-full bg-[#FFD66E]"></span>
+                        <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
 
-                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#FFD66E]">
+                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
                             Administrator Area
                         </span>
 
@@ -51,14 +51,14 @@
                             Akses pengguna
                         </p>
 
-                        <p class="mt-1 font-bold text-[#FFD66E]">
+                        <p class="mt-1 font-bold text-ewf-hawkbit">
                             Administrator
                         </p>
 
                     </div>
 
                     <a href="{{ route('logout') }}"
-                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3 text-sm font-bold text-[#6D1720] shadow-sm transition hover:bg-white">
+                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 text-sm font-bold text-ewf-wine-dark shadow-sm transition hover:bg-white">
 
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -279,7 +279,7 @@
 
                     <div class="flex items-center justify-between">
 
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FCE8E8] text-[#CF3021]">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FCE8E8] text-ewf-red-poppy">
 
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -288,7 +288,7 @@
 
                         </div>
 
-                        <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-[#CF3021]">
+                        <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-ewf-red-poppy">
                             Nonaktif
                         </span>
 
@@ -359,7 +359,7 @@
 
                 <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
 
-                    <div class="h-2 w-10 rounded-full bg-[#CF3021]"></div>
+                    <div class="h-2 w-10 rounded-full bg-ewf-red-poppy"></div>
 
                     <p class="mt-4 text-sm text-[#786662]">
                         HR / Recruitment
@@ -784,7 +784,7 @@
 
                 <div class="overflow-x-auto">
 
-                    <table class="w-full min-w-[650px] text-left text-sm">
+                    <table class="w-full min-w-162.5 text-left text-sm">
 
                         <thead class="bg-[#FFF9F0] text-xs uppercase tracking-wider text-[#786662]">
 
@@ -1027,7 +1027,7 @@
 
                     <div class="flex gap-3">
 
-                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#CF3021]"></span>
+                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-ewf-red-poppy"></span>
 
                         <p class="text-sm leading-6 text-[#786662]">
                             Tinjau kembali permission setiap kategori role.
@@ -1045,13 +1045,13 @@
         {{-- =====================================================
              AKSES EXECUTIVE DASHBOARD
         ====================================================== --}}
-        <div class="mt-10 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6D1720] via-[#951A21] to-[#CF3021] p-6 text-white shadow-sm sm:p-8">
+        <div class="mt-10 overflow-hidden rounded-2xl bg-linear-to-r from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy p-6 text-white shadow-sm sm:p-8">
 
             <div class="flex flex-col justify-between gap-6 md:flex-row md:items-center">
 
                 <div class="max-w-2xl">
 
-                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#FFD66E]">
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
                         Akses Pemantauan
                     </span>
 
@@ -1071,7 +1071,7 @@
                 <div class="shrink-0">
 
                     <a href="#"
-                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3 text-sm font-bold text-[#6D1720] transition hover:bg-white">
+                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 text-sm font-bold text-ewf-wine-dark transition hover:bg-white">
 
                         Lihat Executive Dashboard
 
@@ -1095,7 +1095,7 @@
         <div class="mt-10 border-t border-[#EAD8CB] pt-6">
 
             <a href="{{ url('/') }}"
-               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-[#CF3021]">
+               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
 
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

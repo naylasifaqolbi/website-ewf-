@@ -7,15 +7,19 @@
 <main class="min-h-screen bg-[#FFF9F0]">
 
     {{-- HERO --}}
-    <section class="relative overflow-hidden bg-[#6D1720] text-white">
+    <section class="relative overflow-hidden bg-ewf-wine-dark text-white">
+
         <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#951A21] blur-3xl"></div>
         <div class="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-[#FFA368]/10 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-            <span class="inline-flex items-center gap-2 rounded-full border border-[#FFD66E]/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#FFD66E]">
+
+            <span class="inline-flex items-center gap-2 rounded-full border border-ewf-hawkbit/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
+
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m6-10a4 4 0 100-8 4 4 0 000 8zm10 10v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
                 </svg>
+
                 Informasi Perusahaan
             </span>
 
@@ -29,25 +33,32 @@
             </p>
 
             <a href="#daftar-wakil-pialang"
-               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3 font-bold text-[#6D1720] transition hover:bg-[#EFBB55]">
+               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 font-bold text-ewf-wine-dark transition hover:bg-[#EFBB55]">
+
                 Lihat Daftar Wakil Pialang
+
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
                 </svg>
+
             </a>
+
         </div>
     </section>
 
 
     {{-- PENJELASAN --}}
     <section class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+
         <div class="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+
             <div>
+
                 <p class="text-sm font-bold uppercase tracking-[0.15em] text-[#951A21]">
                     Informasi Wakil Pialang
                 </p>
 
-                <h2 class="mt-3 text-2xl font-extrabold text-[#6D1720] sm:text-3xl">
+                <h2 class="mt-3 text-2xl font-extrabold text-ewf-wine-dark sm:text-3xl">
                     Daftar Wakil Pialang Berjangka
                 </h2>
 
@@ -56,23 +67,43 @@
                     (WPB), dan status sebagaimana tercantum dalam data yang diberikan.
                     Gunakan pencarian untuk menemukan nama atau nomor izin tertentu.
                 </p>
+
             </div>
 
             <div class="rounded-2xl border border-[#EAD8CB] bg-white p-5 md:min-w-52">
-                <p class="text-sm text-[#786662]">Lokasi Kantor</p>
+
+                <p class="text-sm text-[#786662]">
+                    Lokasi Kantor
+                </p>
+
                 <div class="mt-2 flex items-center gap-3">
+
                     <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21]">
+
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01M15 12v.01M15 15v.01M15 18v.01"/>
                         </svg>
+
                     </div>
+
                     <div>
-                        <p class="font-extrabold text-[#6D1720]">Surabaya</p>
-                        <p class="text-sm text-[#786662]">Trillium</p>
+
+                        <p class="font-extrabold text-ewf-wine-dark">
+                            Surabaya
+                        </p>
+
+                        <p class="text-sm text-[#786662]">
+                            Trillium
+                        </p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 
@@ -151,41 +182,58 @@
         ];
     @endphp
 
+
+    {{-- DAFTAR WAKIL PIALANG --}}
     <section id="daftar-wakil-pialang" class="scroll-mt-24 pb-16">
+
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
 
             <div class="overflow-hidden rounded-3xl border border-[#EAD8CB] bg-white shadow-sm">
 
                 {{-- HEADER TABEL --}}
                 <div class="border-b border-[#EAD8CB] bg-white p-5 sm:p-7">
+
                     <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+
                         <div>
-                            <h2 class="text-xl font-extrabold text-[#6D1720] sm:text-2xl">
+
+                            <h2 class="text-xl font-extrabold text-ewf-wine-dark sm:text-2xl">
                                 Surabaya – Trillium
                             </h2>
+
                             <p class="mt-2 text-sm text-[#786662]">
                                 Daftar nama dan nomor izin Wakil Pialang Berjangka
                             </p>
+
                         </div>
 
                         <div class="rounded-xl bg-[#FBE5D6] px-4 py-3">
+
                             <p class="text-xs font-semibold text-[#786662]">
                                 Jumlah data
                             </p>
+
                             <p class="mt-1 text-2xl font-extrabold text-[#951A21]">
                                 {{ count($brokers) }}
-                                <span class="text-sm font-semibold">Wakil Pialang</span>
+                                <span class="text-sm font-semibold">
+                                    Wakil Pialang
+                                </span>
                             </p>
+
                         </div>
+
                     </div>
+
 
                     {{-- PENCARIAN --}}
                     <div class="mt-6">
-                        <label for="brokerSearch" class="mb-2 block text-sm font-bold text-[#6D1720]">
+
+                        <label for="brokerSearch" class="mb-2 block text-sm font-bold text-ewf-wine-dark">
                             Cari nama atau nomor izin
                         </label>
 
                         <div class="relative max-w-xl">
+
                             <svg xmlns="http://www.w3.org/2000/svg" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#951A21]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                 <circle cx="11" cy="11" r="7"/>
                                 <path stroke-linecap="round" d="M16 16l4 4"/>
@@ -197,47 +245,60 @@
                                 placeholder="Contoh: TAN JIMMY atau BAPPEBTI..."
                                 class="w-full rounded-xl border border-[#EAD8CB] bg-[#FFF9F0] py-3 pl-12 pr-4 text-sm text-[#51413E] outline-none transition placeholder:text-[#A4938D] focus:border-[#951A21] focus:ring-2 focus:ring-[#951A21]/10"
                             />
+
                         </div>
 
                         <p class="mt-2 text-xs text-[#786662]">
                             Pencarian tidak membedakan huruf besar dan huruf kecil.
                         </p>
+
                     </div>
+
                 </div>
 
 
                 {{-- TABEL --}}
                 <div class="overflow-x-auto">
-                    <table class="w-full min-w-[760px] border-collapse text-left">
+
+                    <table class="w-full min-w-190 border-collapse text-left">
+
                         <thead>
-                            <tr class="bg-[#6D1720] text-white">
+                            <tr class="bg-ewf-wine-dark text-white">
+
                                 <th class="w-20 px-5 py-4 text-center text-xs font-bold uppercase tracking-wider">
                                     No.
                                 </th>
+
                                 <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">
                                     Nama
                                 </th>
+
                                 <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">
                                     Nomor Izin WPB
                                 </th>
+
                                 <th class="w-36 px-5 py-4 text-center text-xs font-bold uppercase tracking-wider">
                                     Status
                                 </th>
+
                             </tr>
                         </thead>
 
                         <tbody id="brokerTableBody" class="divide-y divide-[#F0E4DC]">
+
                             @foreach ($brokers as $index => $broker)
+
                                 <tr
                                     class="broker-row transition hover:bg-[#FFF5E8]"
                                     data-search="{{ strtolower($broker['name'] . ' ' . $broker['license'] . ' ' . $broker['status']) }}"
                                 >
+
                                     <td class="px-5 py-4 text-center text-sm text-[#786662]">
                                         {{ $index + 1 }}
                                     </td>
 
                                     <td class="px-5 py-4">
-                                        <span class="font-bold text-[#6D1720]">
+                                        <span class="font-bold text-ewf-wine-dark">
                                             {{ $broker['name'] }}
                                         </span>
                                     </td>
@@ -249,19 +310,31 @@
                                     </td>
 
                                     <td class="px-5 py-4 text-center">
+
                                         <span class="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-3 py-1.5 text-xs font-bold text-green-700">
+
                                             <span class="h-2 w-2 rounded-full bg-green-500"></span>
+
                                             {{ $broker['status'] }}
+
                                         </span>
+
                                     </td>
+
                                 </tr>
+
                             @endforeach
+
                         </tbody>
+
                     </table>
+
                 </div>
+
 
                 {{-- HASIL PENCARIAN --}}
                 <div class="flex flex-col gap-2 border-t border-[#EAD8CB] bg-[#FFF9F0] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+
                     <p id="brokerResultCount" class="text-sm text-[#675653]" aria-live="polite">
                         Menampilkan {{ count($brokers) }} data wakil pialang.
                     </p>
@@ -273,7 +346,9 @@
                     >
                         Reset pencarian
                     </button>
+
                 </div>
+
             </div>
 
             <p class="mt-4 text-xs leading-6 text-[#786662]">
@@ -282,28 +357,36 @@
             </p>
 
         </div>
+
     </section>
 
 
     {{-- PERINGATAN PENIPUAN --}}
     <section class="mx-auto max-w-7xl px-5 pb-16 lg:px-8">
+
         <div class="overflow-hidden rounded-3xl border border-[#E9B5AD] bg-white shadow-sm">
-            <div class="h-2 bg-[#CF3021]"></div>
+
+            <div class="h-2 bg-ewf-red-poppy"></div>
 
             <div class="p-6 sm:p-9">
+
                 <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
-                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCE7E3] text-[#CF3021]">
+
+                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCE7E3] text-ewf-red-poppy">
+
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                         </svg>
+
                     </div>
 
                     <div class="flex-1">
-                        <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#CF3021]">
+
+                        <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-ewf-red-poppy">
                             Pemberitahuan Penting
                         </p>
 
-                        <h2 class="mt-2 text-2xl font-extrabold text-[#6D1720] sm:text-3xl">
+                        <h2 class="mt-2 text-2xl font-extrabold text-ewf-wine-dark sm:text-3xl">
                             PERHATIAN
                         </h2>
 
@@ -316,16 +399,23 @@
                         </p>
 
                         <div class="mt-5 rounded-xl bg-[#FFF4F1] p-4">
+
                             <p class="text-sm leading-7 text-[#8D2921]">
                                 Pastikan identitas pihak yang menghubungi kamu dan
                                 informasi rekening melalui saluran resmi perusahaan
                                 sebelum melakukan transaksi atau penyetoran dana.
                             </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 </main>

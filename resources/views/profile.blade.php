@@ -9,12 +9,12 @@
      HERO / HEADER PROFIL PERUSAHAAN
 ========================================================= --}}
 <section class="relative isolate overflow-hidden bg-[#951A21] text-white">
-    <div class="absolute -right-20 -top-24 -z-10 h-80 w-80 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
-    <div class="absolute -bottom-32 -left-20 -z-10 h-72 w-72 rounded-full bg-[#FFD66E]/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute -right-20 -top-24 -z-10 h-80 w-80 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-32 -left-20 -z-10 h-72 w-72 rounded-full bg-ewf-hawkbit/10 blur-3xl"></div>
 
     <div class="mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div class="max-w-3xl">
-            <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-[#FFD66E]">
+            <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-ewf-hawkbit">
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -33,8 +33,9 @@
             </p>
 
             <a href="#tentang-perusahaan"
-               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3.5 font-bold text-[#6D1720] transition hover:bg-[#EFBB55]">
+               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3.5 font-bold text-[#951A21] transition duration-300 hover:bg-[#EFBB55] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#951A21]">
                 Kenali Perusahaan
+
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -57,7 +58,7 @@
                 Tentang Kami
             </p>
 
-            <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#6D1720] sm:text-4xl">
+            <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#951A21] sm:text-4xl">
                 Mengenal PT Equityworld Futures
             </h2>
 
@@ -85,8 +86,9 @@
             </div>
 
             <a href="{{ route('legality') }}"
-               class="mt-7 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:text-[#CF3021]">
+               class="mt-7 inline-flex items-center gap-2 font-bold text-[#951A21] transition duration-300 hover:text-ewf-red-poppy">
                 Lihat Informasi Legalitas
+
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -94,6 +96,7 @@
                 </svg>
             </a>
         </div>
+
 
         {{-- IDENTITAS PERUSAHAAN --}}
         <aside class="overflow-hidden rounded-3xl border border-[#951A21]/10 bg-white shadow-sm">
@@ -109,6 +112,7 @@
                 <h3 class="mt-5 text-2xl font-extrabold">
                     Identitas Perusahaan
                 </h3>
+
                 <p class="mt-2 text-sm leading-6 text-white/80">
                     Informasi umum PT Equityworld Futures.
                 </p>
@@ -117,28 +121,29 @@
             <dl class="divide-y divide-[#951A21]/10 px-7 sm:px-8">
                 <div class="py-5">
                     <dt class="text-sm text-gray-500">Nama perusahaan</dt>
-                    <dd class="mt-1 font-bold text-[#6D1720]">
+                    <dd class="mt-1 font-bold text-[#951A21]">
                         PT Equityworld Futures
                     </dd>
                 </div>
 
                 <div class="py-5">
                     <dt class="text-sm text-gray-500">Tahun mulai beroperasi</dt>
-                    <dd class="mt-1 font-bold text-[#6D1720]">2005</dd>
+                    <dd class="mt-1 font-bold text-[#951A21]">2005</dd>
                 </div>
 
                 <div class="py-5">
                     <dt class="text-sm text-gray-500">Bidang usaha</dt>
-                    <dd class="mt-1 font-bold text-[#6D1720]">
+                    <dd class="mt-1 font-bold text-[#951A21]">
                         Perdagangan berjangka
                     </dd>
                 </div>
 
                 <div class="py-5">
                     <dt class="text-sm text-gray-500">Kota kantor operasional yang disebutkan</dt>
-                    <dd class="mt-1 font-bold leading-7 text-[#6D1720]">
+                    <dd class="mt-1 font-bold leading-7 text-[#951A21]">
                         Jakarta, Surabaya, Semarang, dan Cirebon
                     </dd>
+
                     <p class="mt-2 text-xs leading-5 text-gray-500">
                         Deskripsi perusahaan menyebutkan enam kantor operasional.
                         Silakan verifikasi daftar lengkap lokasi kantor melalui
@@ -147,6 +152,7 @@
                 </div>
             </dl>
         </aside>
+
     </div>
 </section>
 
@@ -157,7 +163,7 @@
 <section class="bg-white px-6 py-16 sm:py-20 lg:px-8">
     <div class="mx-auto max-w-5xl">
         <article class="relative overflow-hidden rounded-3xl border border-[#951A21]/10 bg-[#FFF9F0] p-8 sm:p-10 lg:p-12">
-            <div class="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-[#FFA368]/15"></div>
+            <div class="pointer-events-none absolute -right-8 -top-8 h-36 w-36 rounded-full bg-[#FFA368]/15"></div>
 
             <div class="relative">
                 <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#951A21] text-white shadow-sm">
@@ -173,7 +179,7 @@
                     Arah dan Tujuan
                 </p>
 
-                <h2 class="mt-2 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+                <h2 class="mt-2 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
                     Visi
                 </h2>
 
@@ -198,9 +204,11 @@
             <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-[#951A21]">
                 Langkah Strategis
             </p>
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+
+            <h2 class="mt-3 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
                 Misi Perusahaan
             </h2>
+
             <p class="mt-4 leading-7 text-[#51413E]">
                 Komitmen yang menjadi pedoman dalam memberikan layanan dan
                 mengembangkan kegiatan usaha.
@@ -245,41 +253,48 @@
         <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($missions as $mission)
                 <article class="group rounded-2xl border border-[#951A21]/10 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-[#FFA368] hover:shadow-lg">
+
                     <div class="flex items-center justify-between">
                         <span class="text-sm font-extrabold tracking-widest text-[#951A21]">
                             {{ $mission['number'] }}
                         </span>
 
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#951A21]/5 text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#951A21]/5 text-[#951A21] transition duration-300 group-hover:bg-[#951A21] group-hover:text-white">
+
                             @if ($mission['icon'] === 'service')
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3 5 6v5c0 4.5 3 7.5 7 10 4-2.5 7-5.5 7-10V6l-7-3Z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/>
                                 </svg>
+
                             @elseif ($mission['icon'] === 'people')
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <circle cx="9" cy="8" r="3"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 20v-2a6 6 0 0 1 12 0v2M16 5.5a3 3 0 0 1 0 5.8M18 14a4 4 0 0 1 3 4v2"/>
                                 </svg>
+
                             @elseif ($mission['icon'] === 'governance')
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V8l7-4 7 4v13M9 12h1m4 0h1m-6 4h1m4 0h1"/>
                                 </svg>
+
                             @elseif ($mission['icon'] === 'education')
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m2 9 10-5 10 5-10 5L2 9Z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 11v5c4 3 8 3 12 0v-5M22 9v6"/>
                                 </svg>
+
                             @else
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <rect x="3" y="4" width="18" height="13" rx="2"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4M7 9h4m-4 4h10"/>
                                 </svg>
                             @endif
+
                         </div>
                     </div>
 
-                    <h3 class="mt-6 text-xl font-extrabold text-[#6D1720]">
+                    <h3 class="mt-6 text-xl font-extrabold text-[#951A21]">
                         {{ $mission['title'] }}
                     </h3>
 
@@ -302,9 +317,11 @@
             <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-[#951A21]">
                 Prinsip dan Budaya Kerja
             </p>
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+
+            <h2 class="mt-3 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
                 Nilai-Nilai Perusahaan
             </h2>
+
             <p class="mt-4 leading-7 text-[#51413E]">
                 Nilai-nilai yang menggambarkan prinsip kerja dan komitmen
                 perusahaan dalam menjalankan kegiatan usahanya.
@@ -339,31 +356,37 @@
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             @foreach ($values as $value)
                 <article class="group rounded-2xl border border-[#951A21]/10 bg-[#FFF9F0] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#FFA368] hover:shadow-lg">
-                    <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#951A21] text-white transition group-hover:bg-[#CF3021]">
+
+                    <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#951A21] text-white transition duration-300 group-hover:bg-ewf-red-poppy">
+
                         @if ($value['icon'] === 'integrity')
                             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 3 5 6v5c0 4.5 3 7.5 7 10 4-2.5 7-5.5 7-10V6l-7-3Z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/>
                             </svg>
+
                         @elseif ($value['icon'] === 'customer')
                             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <circle cx="9" cy="8" r="3"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 20v-2a6 6 0 0 1 12 0v2m1-10 2 2 4-4"/>
                             </svg>
+
                         @elseif ($value['icon'] === 'compliance')
                             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 3 5 6v5c0 4.5 3 7.5 7 10 4-2.5 7-5.5 7-10V6l-7-3Z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6"/>
                             </svg>
+
                         @else
                             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <rect x="3" y="4" width="18" height="13" rx="2"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4M7 9h4m-4 4h10"/>
                             </svg>
                         @endif
+
                     </div>
 
-                    <h3 class="mt-6 text-lg font-extrabold leading-7 text-[#6D1720]">
+                    <h3 class="mt-6 text-lg font-extrabold leading-7 text-[#951A21]">
                         {{ $value['title'] }}
                     </h3>
 
@@ -382,8 +405,10 @@
 ========================================================= --}}
 <section class="bg-[#FFF9F0] px-6 py-16 sm:py-20 lg:px-8">
     <div class="mx-auto max-w-7xl">
-        <div class="overflow-hidden rounded-3xl border border-[#CF3021]/20 bg-white shadow-sm">
+        <div class="overflow-hidden rounded-3xl border border-ewf-red-poppy/20 bg-white shadow-sm">
+
             <div class="grid lg:grid-cols-[auto_1fr]">
+
                 <div class="flex items-center justify-center bg-[#951A21] p-8 text-white lg:px-10">
                     <div class="flex h-20 w-20 items-center justify-center rounded-full border border-white/25 bg-white/10">
                         <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none"
@@ -397,11 +422,11 @@
                 </div>
 
                 <div class="p-7 sm:p-10 lg:p-12">
-                    <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-[#CF3021]">
+                    <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-ewf-red-poppy">
                         Perhatian
                     </p>
 
-                    <h2 class="mt-3 text-2xl font-extrabold text-[#6D1720] sm:text-3xl">
+                    <h2 class="mt-3 text-2xl font-extrabold text-[#951A21] sm:text-3xl">
                         Waspada Penipuan yang Mengatasnamakan EWF
                     </h2>
 
@@ -414,7 +439,7 @@
                         PT Equityworld Futures, bukan perseorangan.
                     </p>
 
-                    <div class="mt-6 flex items-start gap-3 rounded-xl border border-[#EFBB55]/60 bg-[#FFD66E]/20 p-4">
+                    <div class="mt-6 flex items-start gap-3 rounded-xl border border-[#EFBB55]/60 bg-ewf-hawkbit/20 p-4">
                         <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#951A21]"
                              viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -422,7 +447,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 11v5m0-8h.01"/>
                         </svg>
 
-                        <p class="text-sm leading-6 text-[#6D1720]">
+                        <p class="text-sm leading-6 text-[#951A21]">
                             Verifikasi informasi rekening dan saluran komunikasi
                             melalui kontak resmi perusahaan sebelum melakukan
                             penyetoran dana. Jangan mentransfer dana ke rekening
@@ -431,8 +456,9 @@
                     </div>
 
                     <a href="{{ route('contact') }}"
-                       class="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#951A21] px-5 py-3 font-bold text-white transition hover:bg-[#6D1720]">
+                       class="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#951A21] px-5 py-3 font-bold text-white transition duration-300 hover:bg-[#74141A] focus:outline-none focus:ring-2 focus:ring-[#951A21]/30 focus:ring-offset-2">
                         Hubungi Kami
+
                         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -440,6 +466,7 @@
                         </svg>
                     </a>
                 </div>
+
             </div>
         </div>
     </div>

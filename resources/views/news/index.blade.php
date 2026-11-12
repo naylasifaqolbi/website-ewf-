@@ -8,7 +8,7 @@
     {{-- ========================================== --}}
     {{-- HERO SECTION --}}
     {{-- ========================================== --}}
-    <section class="relative overflow-hidden bg-gradient-to-br from-[#4A1018] via-[#6D1720] to-[#951A21]">
+    <section class="relative overflow-hidden bg-linear-to-br from-[#4A1018] via-ewf-wine-dark to-[#951A21]">
 
         <div class="absolute left-0 top-0 h-full w-2 bg-[#FFA368]"></div>
 
@@ -17,7 +17,7 @@
 
         <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
 
-            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#FFD66E]">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-ewf-hawkbit">
                 <span class="h-1.5 w-7 rounded-full bg-[#FFA368]"></span>
                 Kabar dan Wawasan
             </span>
@@ -67,7 +67,7 @@
                     Kabar dan Informasi Pasar
                 </span>
 
-                <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720]">
+                <h2 class="mt-3 text-3xl font-extrabold text-ewf-wine-dark">
                     {{ $language === 'id' ? 'Informasi Terbaru' : 'Latest News' }}
                 </h2>
 
@@ -96,7 +96,7 @@
                class="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition
                {{ $language === 'id'
                     ? 'bg-[#951A21] text-white shadow-md'
-                    : 'border border-[#EAD8CB] bg-white text-[#6D1720] hover:bg-[#951A21]/5' }}">
+                    : 'border border-[#EAD8CB] bg-white text-ewf-wine-dark hover:bg-[#951A21]/5' }}">
 
                 <span>ID</span>
                 <span>Berita Indonesia</span>
@@ -108,7 +108,7 @@
                class="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition
                {{ $language === 'en'
                     ? 'bg-[#951A21] text-white shadow-md'
-                    : 'border border-[#EAD8CB] bg-white text-[#6D1720] hover:bg-[#951A21]/5' }}">
+                    : 'border border-[#EAD8CB] bg-white text-ewf-wine-dark hover:bg-[#951A21]/5' }}">
 
                 <span>EN</span>
                 <span>International News</span>
@@ -131,7 +131,7 @@
                         class="group flex flex-col overflow-hidden rounded-2xl border border-[#EAD8CB] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
                         {{-- NEWS IMAGE --}}
-                        <div class="relative h-52 overflow-hidden bg-gradient-to-br from-[#6D1720] via-[#951A21] to-[#CF3021]">
+                        <div class="relative h-52 overflow-hidden bg-linear-to-br from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy">
 
                             @if (!empty($article['image']))
 
@@ -163,7 +163,7 @@
 
                             {{-- CATEGORY --}}
                             <div class="absolute bottom-4 left-4">
-                                <span class="rounded-full bg-[#FFD66E] px-3 py-1.5 text-xs font-bold text-[#6D1720] shadow-sm">
+                                <span class="rounded-full bg-ewf-hawkbit px-3 py-1.5 text-xs font-bold text-ewf-wine-dark shadow-sm">
                                     {{ $article['category'] }}
                                 </span>
                             </div>
@@ -189,7 +189,7 @@
 
 
                             {{-- TITLE --}}
-                            <h3 class="mt-4 text-lg font-extrabold leading-7 text-[#6D1720] transition group-hover:text-[#951A21]">
+                            <h3 class="mt-4 text-lg font-extrabold leading-7 text-ewf-wine-dark transition group-hover:text-[#951A21]">
 
                                 <a href="{{ route('news.show', ['slug' => $article['slug']]) }}">
                                     {{ $article['title'] }}
@@ -208,7 +208,7 @@
                             <div class="mt-6 border-t border-[#F0E5DE] pt-4">
 
                                 <a href="{{ route('news.show', ['slug' => $article['slug']]) }}"
-                                   class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:gap-3 hover:text-[#CF3021]">
+                                   class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:gap-3 hover:text-ewf-red-poppy">
 
                                     {{ $language === 'id' ? 'Baca selengkapnya' : 'Read more' }}
 
@@ -235,7 +235,7 @@
                     <span>!</span>
                 </div>
 
-                <h3 class="mt-5 text-xl font-extrabold text-[#6D1720]">
+                <h3 class="mt-5 text-xl font-extrabold text-ewf-wine-dark">
                     {{ $language === 'id'
                         ? 'Berita belum tersedia'
                         : 'No News Available' }}
@@ -248,7 +248,7 @@
                 </p>
 
                 <a href="{{ route('news.index', ['language' => $language]) }}"
-                   class="mt-6 inline-flex rounded-lg bg-[#951A21] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]">
+                   class="mt-6 inline-flex rounded-lg bg-[#951A21] px-5 py-3 text-sm font-bold text-white transition hover:bg-ewf-wine-dark">
 
                     {{ $language === 'id' ? 'Muat Ulang Berita' : 'Reload News' }}
 
@@ -262,7 +262,7 @@
         {{-- NEWS SOURCE INFORMATION --}}
         <div class="mt-12 rounded-xl border border-[#EAD8CB] bg-white p-5">
 
-            <h3 class="text-sm font-extrabold text-[#6D1720]">
+            <h3 class="text-sm font-extrabold text-ewf-wine-dark">
                 Sumber Informasi
             </h3>
 

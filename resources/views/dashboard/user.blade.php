@@ -10,24 +10,24 @@
     {{-- ================================================
          HEADER DASHBOARD
     ================================================= --}}
-    <section class="relative overflow-hidden bg-gradient-to-r from-[#6D1720] via-[#951A21] to-[#CF3021] text-white">
+    <section class="relative overflow-hidden bg-linear-to-r from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy text-white">
 
         <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-white/10 blur-3xl"></div>
-        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-[#FFD66E]/10 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-ewf-hawkbit/10 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
 
             <div class="flex flex-col justify-between gap-8 md:flex-row md:items-center">
 
                 <div>
-                    <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#FFD66E]">
-                        <span class="h-2 w-2 rounded-full bg-[#FFD66E]"></span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
+                        <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
                         Applicant Portal
                     </span>
 
                     <h1 class="mt-5 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
                         Selamat Datang,<br>
-                        <span class="text-[#FFD66E]">User!</span>
+                        <span class="text-ewf-hawkbit">User!</span>
                     </h1>
 
                     <p class="mt-4 max-w-xl text-sm leading-7 text-white/85 sm:text-base">
@@ -39,7 +39,7 @@
                     <div class="mt-6 flex flex-wrap gap-3">
 
                         <a href="#lowongan"
-                           class="inline-flex items-center justify-center rounded-full bg-[#FFD66E] px-6 py-3 text-sm font-bold text-[#6D1720] transition hover:bg-white">
+                           class="inline-flex items-center justify-center rounded-full bg-ewf-hawkbit px-6 py-3 text-sm font-bold text-ewf-wine-dark transition hover:bg-white">
                             Lihat Peluang
                             <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7 7 7-7 7"/>
@@ -59,14 +59,14 @@
 
                     <div class="flex items-center gap-4">
 
-                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#FFD66E] text-xl font-extrabold text-[#6D1720]">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-ewf-hawkbit text-xl font-extrabold text-ewf-wine-dark">
                             U
                         </div>
 
                         <div>
                             <p class="text-xs text-white/70">Akun Pengguna</p>
                             <h2 class="mt-1 text-lg font-bold">User</h2>
-                            <span class="mt-1 inline-flex rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold text-[#FFD66E]">
+                            <span class="mt-1 inline-flex rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold text-ewf-hawkbit">
                                 Applicant
                             </span>
                         </div>
@@ -78,7 +78,7 @@
                         <p class="text-xs text-white/70">Status akun</p>
 
                         <div class="mt-2 flex items-center gap-2 text-sm font-semibold">
-                            <span class="h-2 w-2 rounded-full bg-[#FFD66E]"></span>
+                            <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
                             Aktif
                         </div>
 
@@ -412,7 +412,7 @@
                 </div>
 
                 <a href="{{ url('/riwayat-pengajuan') }}"
-                   class="text-sm font-bold text-[#951A21] transition hover:text-[#CF3021]">
+                   class="text-sm font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
                     Lihat Semua Riwayat →
                 </a>
 
@@ -423,7 +423,7 @@
 
                 <div class="overflow-x-auto">
 
-                    <table class="w-full min-w-[650px] text-left text-sm">
+                    <table class="w-full min-w-162.5 text-left text-sm">
 
                         <thead class="bg-[#FFF9F0] text-[#401C20]">
                             <tr>
@@ -456,7 +456,7 @@
                                     </p>
 
                                     <a href="#lowongan"
-                                       class="mt-5 inline-flex rounded-full bg-[#951A21] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#6D1720]">
+                                       class="mt-5 inline-flex rounded-full bg-[#951A21] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-ewf-wine-dark">
                                         Mulai Pendaftaran
                                     </a>
 
@@ -499,7 +499,7 @@
             </div>
 
             <a href="{{ url('/karier') }}"
-               class="text-sm font-bold text-[#951A21] transition hover:text-[#CF3021]">
+               class="text-sm font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
                 Lihat Semua Peluang →
             </a>
 
@@ -511,7 +511,7 @@
             {{-- PROGRAM MAGANG --}}
             <div class="relative overflow-hidden rounded-2xl border border-[#EAD8CB] bg-white p-7 shadow-sm">
 
-                <div class="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[#FFD66E]/20"></div>
+                <div class="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-ewf-hawkbit/20"></div>
 
                 <div class="relative">
 
@@ -529,7 +529,7 @@
                     </p>
 
                     <a href="{{ url('/pendaftaran-magang') }}"
-                       class="mt-6 inline-flex items-center justify-center rounded-full bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]">
+                       class="mt-6 inline-flex items-center justify-center rounded-full bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-ewf-wine-dark">
                         Daftar Program Magang →
                     </a>
 
@@ -559,7 +559,7 @@
                     </p>
 
                     <a href="{{ url('/karier') }}"
-                       class="mt-6 inline-flex items-center justify-center rounded-full bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]">
+                       class="mt-6 inline-flex items-center justify-center rounded-full bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-ewf-wine-dark">
                         Lihat Lowongan Kerja →
                     </a>
 
@@ -597,7 +597,7 @@
                     </p>
 
                     <a href="{{ url('/pendaftaran-magang') }}"
-                       class="mt-6 inline-flex items-center rounded-full bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]">
+                       class="mt-6 inline-flex items-center rounded-full bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-ewf-wine-dark">
                         Mulai Pengajuan →
                     </a>
 
@@ -649,7 +649,7 @@
     {{-- ================================================
          FOOTER DASHBOARD
     ================================================= --}}
-    <section class="bg-[#6D1720]">
+    <section class="bg-ewf-wine-dark">
 
         <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-5 py-8 sm:flex-row sm:items-center lg:px-8">
 
@@ -665,19 +665,19 @@
 
             <div class="flex flex-wrap gap-5 text-sm font-medium text-white/80">
 
-                <a href="{{ url('/') }}" class="transition hover:text-[#FFD66E]">
+                <a href="{{ url('/') }}" class="transition hover:text-ewf-hawkbit">
                     Beranda
                 </a>
 
-                <a href="{{ url('/karier') }}" class="transition hover:text-[#FFD66E]">
+                <a href="{{ url('/karier') }}" class="transition hover:text-ewf-hawkbit">
                     Karier
                 </a>
 
-                <a href="{{ url('/profil-perusahaan') }}" class="transition hover:text-[#FFD66E]">
+                <a href="{{ url('/profil-perusahaan') }}" class="transition hover:text-ewf-hawkbit">
                     Tentang Perusahaan
                 </a>
 
-                <a href="{{ route('logout') }}" class="transition hover:text-[#FFD66E]">
+                <a href="{{ route('logout') }}" class="transition hover:text-ewf-hawkbit">
                     Keluar
                 </a>
 

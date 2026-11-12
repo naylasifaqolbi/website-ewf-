@@ -7,9 +7,9 @@
 <main class="min-h-screen bg-[#FFF9F0]">
 
     {{-- HERO --}}
-    <section class="bg-[#6D1720] text-white">
+    <section class="bg-ewf-wine-dark text-white">
         <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-            <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#FFD66E]">
+            <span class="text-xs font-bold uppercase tracking-[0.22em] text-ewf-hawkbit">
                 Kami Siap Membantu
             </span>
 
@@ -32,7 +32,7 @@
                 Informasi Kontak
             </span>
 
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+            <h2 class="mt-3 text-3xl font-extrabold text-ewf-wine-dark sm:text-4xl">
                 Kantor Cabang
             </h2>
 
@@ -66,7 +66,7 @@
                         </div>
 
                         <div>
-                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#FFD66E]">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
                                 Kantor Cabang
                             </p>
 
@@ -96,7 +96,7 @@
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-[#6D1720]">
+                            <h4 class="font-bold text-ewf-wine-dark">
                                 Alamat Kantor
                             </h4>
 
@@ -126,7 +126,7 @@
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-[#6D1720]">
+                            <h4 class="font-bold text-ewf-wine-dark">
                                 Telepon
                             </h4>
 
@@ -156,7 +156,7 @@
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-[#6D1720]">
+                            <h4 class="font-bold text-ewf-wine-dark">
                                 Fax
                             </h4>
 
@@ -187,12 +187,12 @@
                         </div>
 
                         <div class="min-w-0">
-                            <h4 class="font-bold text-[#6D1720]">
+                            <h4 class="font-bold text-ewf-wine-dark">
                                 Email
                             </h4>
 
                             <a href="mailto:corporate@equityworld-futures.co.id"
-                               class="mt-2 inline-block break-all leading-7 text-[#951A21] transition hover:text-[#CF3021] hover:underline">
+                               class="mt-2 inline-block break-all leading-7 text-[#951A21] transition hover:text-ewf-red-poppy hover:underline">
                                 corporate@equityworld-futures.co.id
                             </a>
                         </div>
@@ -203,7 +203,7 @@
                         <a href="https://www.google.com/maps/search/?api=1&query=Trillium+Office+Residence+Jl+Pemuda+108-116+Surabaya"
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#951A21] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#6D1720] sm:w-auto">
+                           class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#951A21] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-ewf-wine-dark sm:w-auto">
 
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  class="h-5 w-5"
@@ -249,7 +249,7 @@
                         Perhatian
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-[#6D1720]">
+                    <h2 class="mt-2 text-2xl font-extrabold text-ewf-wine-dark">
                         Waspada terhadap Penipuan
                     </h2>
 
