@@ -13,7 +13,7 @@
     <div class="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-3xl bg-white shadow-[0_20px_70px_rgba(80,30,30,0.10)] lg:grid-cols-2">
 
         {{-- LEFT PANEL --}}
-        <section class="relative flex min-h-[300px] flex-col justify-between overflow-hidden bg-gradient-to-br from-[#951A21] via-[#801820] to-[#5F1119] p-7 text-white sm:p-10 lg:min-h-[560px] lg:p-10">
+        <section class="relative flex min-h-75 flex-col justify-between overflow-hidden bg-linear-to-br from-[#951A21] via-[#801820] to-[#5F1119] p-7 text-white sm:p-10 lg:min-h-140 lg:p-10">
 
             {{-- DECORATION --}}
             <div class="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border border-white/10"></div>
@@ -30,7 +30,7 @@
                     <h2 class="text-lg font-extrabold tracking-wide">
                         EQUITYWORLD
                     </h2>
-                    <p class="text-xs font-medium tracking-[0.25em] text-[#FFD66E]">
+                    <p class="text-xs font-medium tracking-[0.25em] text-ewf-hawkbit">
                         FUTURES
                     </p>
                 </div>
@@ -39,14 +39,14 @@
             {{-- INTRODUCTION --}}
             <div class="relative z-10 my-6 lg:my-5">
 
-                <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-wider text-[#FFD66E]">
-                    <span class="h-2 w-2 rounded-full bg-[#FFD66E]"></span>
+                <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-wider text-ewf-hawkbit">
+                    <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
                     OFFICIAL MEMBER AREA
                 </span>
 
                 <h1 class="max-w-md text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
                     Selamat Datang
-                    <span class="mt-2 block text-[#FFD66E]">
+                    <span class="mt-2 block text-ewf-hawkbit">
                         Kembali!
                     </span>
                 </h1>
@@ -59,7 +59,7 @@
 
                 {{-- DECORATIVE LINE --}}
                 <div class="mt-6 flex items-center gap-3">
-                    <div class="h-1 w-14 rounded-full bg-[#FFD66E]"></div>
+                    <div class="h-1 w-14 rounded-full bg-ewf-hawkbit"></div>
                     <div class="h-1 w-5 rounded-full bg-white/40"></div>
                     <div class="h-1 w-5 rounded-full bg-white/20"></div>
                 </div>
@@ -86,7 +86,7 @@
                 {{-- FORM HEADING --}}
                 <div class="mb-6">
 
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#CF3021]">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-ewf-red-poppy">
                         Account Access
                     </span>
 
@@ -234,7 +234,7 @@
                     {{-- LOGIN BUTTON --}}
                     <button
                         type="submit"
-                        class="group flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#951A21] to-[#722F37] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#951A21]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#951A21]/25 active:translate-y-0"
+                        class="group flex w-full items-center justify-center gap-3 rounded-xl bg-linear-to-r from-[#951A21] to-[#722F37] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#951A21]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#951A21]/25 active:translate-y-0"
                     >
                         Masuk ke Akun
 
@@ -272,7 +272,7 @@
                         Belum memiliki akun?
                         <a
                             href="{{ route('register') }}"
-                            class="font-bold text-[#951A21] transition duration-300 hover:text-[#CF3021] hover:underline"
+                            class="font-bold text-[#951A21] transition duration-300 hover:text-ewf-red-poppy hover:underline"
                         >
                             Daftar Sekarang
                         </a>
@@ -292,7 +292,7 @@
 
                     <a
                         href="{{ url('/') }}"
-                        class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#951A21] transition hover:text-[#CF3021]"
+                        class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#951A21] transition hover:text-ewf-red-poppy"
                     >
                         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

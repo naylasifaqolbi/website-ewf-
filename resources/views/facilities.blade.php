@@ -9,11 +9,11 @@
     HERO SECTION
 ========================================================= --}}
 <section class="relative overflow-hidden bg-[#951A21] text-white">
-    <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#CF3021]/40 blur-3xl"></div>
+    <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-ewf-red-poppy/40 blur-3xl"></div>
     <div class="absolute -bottom-24 left-1/3 h-64 w-64 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
 
     <div class="relative mx-auto max-w-7xl px-6 py-20 lg:py-24">
-        <p class="text-sm font-bold uppercase tracking-[0.2em] text-[#FFD66E]">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
             Dukungan dan Kemudahan Nasabah
         </p>
 
@@ -28,7 +28,7 @@
         </p>
 
         <a href="#daftar-layanan"
-           class="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3.5 font-bold text-[#6D1720] transition hover:bg-[#EFBB55]">
+           class="mt-8 inline-flex items-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3.5 font-bold text-[#951A21] transition hover:bg-[#EFBB55]">
             Jelajahi Fasilitas
             <span aria-hidden="true">&darr;</span>
         </a>
@@ -46,7 +46,7 @@
                 Informasi Layanan
             </p>
 
-            <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#6D1720] sm:text-4xl">
+            <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#951A21] sm:text-4xl">
                 Fasilitas untuk Mendukung Kebutuhan Nasabah
             </h2>
 
@@ -150,8 +150,11 @@
                         {{ $service['number'] }}
                     </div>
 
-                    <div class="flex h-14 w-14 items-center justify-center rounded-2xl"
-                         style="background-color: {{ $service['color'] }}30; color: #951A21;">
+                    <div @class([
+                        'flex h-14 w-14 items-center justify-center rounded-2xl text-[#951A21]',
+                        'bg-[#FFA368]/20' => $service['color'] === '#FFA368',
+                        'bg-[#EFBB55]/20' => $service['color'] === '#EFBB55',
+                    ])>
 
                         @if ($service['icon'] === 'user-check')
                             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -208,7 +211,7 @@
                         @endif
                     </div>
 
-                    <h3 class="mt-6 text-xl font-extrabold leading-snug text-[#6D1720]">
+                    <h3 class="mt-6 text-xl font-extrabold leading-snug text-[#951A21]">
                         {{ $service['title'] }}
                     </h3>
 
@@ -235,7 +238,7 @@
                 Keunggulan Layanan
             </p>
 
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+            <h2 class="mt-3 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
                 Mengapa Memilih Kami?
             </h2>
 
@@ -272,8 +275,12 @@
             @foreach ($advantages as $advantage)
                 <article class="rounded-2xl border border-[#951A21]/10 bg-[#FFF9F0] p-8 text-center transition hover:-translate-y-1 hover:shadow-lg">
 
-                    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl"
-                         style="background-color: {{ $advantage['color'] }}50; color: #951A21;">
+                    <div @class([
+                        'mx-auto flex h-16 w-16 items-center justify-center rounded-2xl text-[#951A21]',
+                        'bg-[#FFA368]/30' => $advantage['color'] === '#FFA368',
+                        'bg-[#EFBB55]/30' => $advantage['color'] === '#EFBB55',
+                        'bg-[#FFD66E]/30' => $advantage['color'] === '#FFD66E',
+                    ])>
 
                         @if ($advantage['icon'] === 'shield')
                             <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -295,7 +302,7 @@
                         @endif
                     </div>
 
-                    <h3 class="mt-5 text-xl font-extrabold text-[#6D1720]">
+                    <h3 class="mt-5 text-xl font-extrabold text-[#951A21]">
                         {{ $advantage['title'] }}
                     </h3>
 
@@ -314,11 +321,11 @@
 ========================================================= --}}
 <section class="bg-[#FFF9F0] px-6 py-16">
     <div class="mx-auto max-w-7xl">
-        <div class="overflow-hidden rounded-3xl border border-[#CF3021]/20 bg-white shadow-sm">
+        <div class="overflow-hidden rounded-3xl border border-ewf-red-poppy/20 bg-white shadow-sm">
 
-            <div class="flex flex-col gap-5 border-b border-[#CF3021]/10 bg-[#CF3021]/[0.06] p-7 sm:flex-row sm:items-center sm:p-9">
+            <div class="flex flex-col gap-5 border-b border-ewf-red-poppy/10 bg-ewf-red-poppy/6 p-7 sm:flex-row sm:items-center sm:p-9">
 
-                <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#CF3021]/10 text-[#951A21]">
+                <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ewf-red-poppy/10 text-[#951A21]">
                     <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                         <path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z"/>
                         <path d="M12 9v4M12 17h.01"/>
@@ -326,11 +333,11 @@
                 </div>
 
                 <div>
-                    <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#CF3021]">
+                    <p class="text-sm font-bold uppercase tracking-[0.18em] text-ewf-red-poppy">
                         Informasi Penting
                     </p>
 
-                    <h2 class="mt-1 text-2xl font-extrabold text-[#6D1720] sm:text-3xl">
+                    <h2 class="mt-1 text-2xl font-extrabold text-[#951A21] sm:text-3xl">
                         PERHATIAN
                     </h2>
                 </div>
@@ -346,8 +353,8 @@
                     bukan perseorangan.
                 </p>
 
-                <div class="mt-6 rounded-xl border-l-4 border-[#CF3021] bg-[#FFF9F0] p-5">
-                    <p class="text-sm leading-7 text-[#6D1720]">
+                <div class="mt-6 rounded-xl border-l-4 border-ewf-red-poppy bg-[#FFF9F0] p-5">
+                    <p class="text-sm leading-7 text-[#951A21]">
                         <strong>Tips keamanan:</strong> verifikasi identitas
                         pihak yang menghubungi Anda dan konfirmasikan informasi
                         rekening melalui kanal resmi perusahaan sebelum

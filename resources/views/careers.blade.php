@@ -7,9 +7,9 @@
 <main class="min-h-screen bg-[#FFF9F0]">
 
     {{-- HERO --}}
-    <section class="bg-[#6D1720] text-white">
+    <section class="bg-ewf-wine-dark text-white">
         <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-            <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#FFD66E]">
+            <span class="text-xs font-bold uppercase tracking-[0.22em] text-ewf-hawkbit">
                 Bergabung Bersama Kami
             </span>
 
@@ -33,7 +33,7 @@
                 Peluang Bergabung
             </span>
 
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720]">
+            <h2 class="mt-3 text-3xl font-extrabold text-ewf-wine-dark">
                 Pilih Jalur yang Sesuai
             </h2>
 
@@ -61,7 +61,7 @@
                     </svg>
                 </div>
 
-                <h3 class="mt-5 text-xl font-extrabold text-[#6D1720]">
+                <h3 class="mt-5 text-xl font-extrabold text-ewf-wine-dark">
                     Lowongan Kerja
                 </h3>
 
@@ -72,7 +72,7 @@
                 </p>
 
                 <a href="{{ route('careers.jobs') }}"
-                   class="mt-6 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:gap-3 hover:text-[#CF3021]">
+                   class="mt-6 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:gap-3 hover:text-ewf-red-poppy">
                     Lihat Lowongan Kerja
                     <span aria-hidden="true">→</span>
                 </a>
@@ -94,7 +94,7 @@
                     </svg>
                 </div>
 
-                <h3 class="mt-5 text-xl font-extrabold text-[#6D1720]">
+                <h3 class="mt-5 text-xl font-extrabold text-ewf-wine-dark">
                     Magang Mahasiswa
                 </h3>
 
@@ -105,7 +105,7 @@
                 </p>
 
                 <a href="{{ route('careers.internship-student') }}"
-                   class="mt-6 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:gap-3 hover:text-[#CF3021]">
+                   class="mt-6 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:gap-3 hover:text-ewf-red-poppy">
                     Lihat Magang Mahasiswa
                     <span aria-hidden="true">→</span>
                 </a>
@@ -127,7 +127,7 @@
                     </svg>
                 </div>
 
-                <h3 class="mt-5 text-xl font-extrabold text-[#6D1720]">
+                <h3 class="mt-5 text-xl font-extrabold text-ewf-wine-dark">
                     Magang SMA/SMK
                 </h3>
 
@@ -138,7 +138,7 @@
                 </p>
 
                 <a href="{{ route('careers.internship-school') }}"
-                   class="mt-6 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:gap-3 hover:text-[#CF3021]">
+                   class="mt-6 inline-flex items-center gap-2 font-bold text-[#951A21] transition hover:gap-3 hover:text-ewf-red-poppy">
                     Lihat Magang SMA/SMK
                     <span aria-hidden="true">→</span>
                 </a>

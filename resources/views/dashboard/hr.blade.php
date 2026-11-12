@@ -10,10 +10,10 @@
     {{-- =====================================================
          HEADER DASHBOARD
     ====================================================== --}}
-    <section class="relative overflow-hidden bg-gradient-to-r from-[#6D1720] via-[#951A21] to-[#CF3021] text-white">
+    <section class="relative overflow-hidden bg-linear-to-r from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy text-white">
 
         <div class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
-        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-[#FFD66E]/10 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-ewf-hawkbit/10 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
 
@@ -21,8 +21,8 @@
 
                 <div>
                     <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
-                        <span class="h-2 w-2 rounded-full bg-[#FFD66E]"></span>
-                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#FFD66E]">
+                        <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
+                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
                             Human Resources Area
                         </span>
                     </div>
@@ -42,11 +42,11 @@
 
                     <div class="rounded-xl border border-white/20 bg-white/10 px-5 py-3">
                         <p class="text-xs text-white/70">Akses pengguna</p>
-                        <p class="mt-1 font-bold text-[#FFD66E]">Human Resources</p>
+                        <p class="mt-1 font-bold text-ewf-hawkbit">Human Resources</p>
                     </div>
 
                     <a href="{{ route('logout') }}"
-                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3 text-sm font-bold text-[#6D1720] shadow-sm transition hover:bg-white">
+                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 text-sm font-bold text-ewf-wine-dark shadow-sm transition hover:bg-white">
 
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -246,14 +246,14 @@
                 <article class="rounded-2xl border border-[#EAD8CB] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
                     <div class="flex items-center justify-between">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FCE8E8] text-[#CF3021]">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FCE8E8] text-ewf-red-poppy">
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                                     d="M9 12l2 2 4-4m5-3v12a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2z"/>
                             </svg>
                         </div>
 
-                        <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-[#CF3021]">
+                        <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-ewf-red-poppy">
                             Perlu Ditinjau
                         </span>
                     </div>
@@ -312,7 +312,7 @@
                 </div>
 
                 <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
-                    <div class="h-2 w-10 rounded-full bg-[#CF3021]"></div>
+                    <div class="h-2 w-10 rounded-full bg-ewf-red-poppy"></div>
                     <p class="mt-4 text-sm text-[#786662]">Tahap Wawancara</p>
                     <h3 class="mt-1 text-2xl font-extrabold text-[#401C20]">08</h3>
                 </div>
@@ -562,7 +562,7 @@
 
                 <div class="overflow-x-auto">
 
-                    <table class="w-full min-w-[600px] text-left text-sm">
+                    <table class="w-full min-w-150 text-left text-sm">
 
                         <thead class="bg-[#FFF9F0] text-xs uppercase tracking-wider text-[#786662]">
                             <tr>
@@ -620,7 +620,7 @@
                                     08 Nov 2026
                                 </td>
                                 <td class="px-6 py-4">
-                                    <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-[#CF3021]">
+                                    <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-ewf-red-poppy">
                                         Perlu Verifikasi
                                     </span>
                                 </td>
@@ -698,7 +698,7 @@
         <div class="mt-10 border-t border-[#EAD8CB] pt-6">
 
             <a href="{{ url('/') }}"
-               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-[#CF3021]">
+               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
 
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

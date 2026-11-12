@@ -5,14 +5,14 @@
 @section('content')
 <main class="min-h-screen bg-[#FFF9F0]">
 
-    <section class="bg-[#6D1720] text-white">
+    <section class="bg-ewf-wine-dark text-white">
         <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
             <a href="{{ route('careers') }}"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-[#FFD66E] hover:text-white">
+               class="inline-flex items-center gap-2 text-sm font-semibold text-ewf-hawkbit hover:text-white">
                 ← Kembali ke Karier
             </a>
 
-            <p class="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-[#FFD66E]">
+            <p class="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-ewf-hawkbit">
                 Program Pengembangan Mahasiswa
             </p>
 
@@ -34,7 +34,7 @@
                 Informasi Program
             </span>
 
-            <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720]">
+            <h2 class="mt-3 text-3xl font-extrabold text-ewf-wine-dark">
                 Program Magang untuk Mahasiswa
             </h2>
 
@@ -48,7 +48,7 @@
 
         <div class="mt-9 grid gap-6 md:grid-cols-2">
             <article class="rounded-2xl border border-[#EAD8CB] bg-white p-7">
-                <h3 class="text-xl font-bold text-[#6D1720]">
+                <h3 class="text-xl font-bold text-ewf-wine-dark">
                     Persyaratan Umum
                 </h3>
 
@@ -78,7 +78,7 @@
             </article>
 
             <article class="rounded-2xl border border-[#EAD8CB] bg-white p-7">
-                <h3 class="text-xl font-bold text-[#6D1720]">
+                <h3 class="text-xl font-bold text-ewf-wine-dark">
                     Dokumen dan Alur Pendaftaran
                 </h3>
 
@@ -104,7 +104,7 @@
         </div>
 
         <div class="mt-8 rounded-2xl bg-[#F7EEE6] p-6 sm:p-8">
-            <h2 class="text-xl font-extrabold text-[#6D1720]">
+            <h2 class="text-xl font-extrabold text-ewf-wine-dark">
                 Informasi Pendaftaran
             </h2>
 
@@ -116,7 +116,7 @@
 
             {{-- TOMBOL DAFTAR SEKARANG --}}
             <a href="{{ route('login') }}"
-               class="mt-6 inline-flex rounded-full bg-[#951A21] px-6 py-3 font-bold text-white transition hover:bg-[#6D1720]">
+               class="mt-6 inline-flex rounded-full bg-[#951A21] px-6 py-3 font-bold text-white transition hover:bg-ewf-wine-dark">
                 Daftar Sekarang
             </a>
         </div>

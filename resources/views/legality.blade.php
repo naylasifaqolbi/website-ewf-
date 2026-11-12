@@ -7,13 +7,13 @@
 <main class="min-h-screen bg-[#FFF9F0]">
 
     {{-- HERO --}}
-    <section class="relative overflow-hidden bg-[#6D1720] text-white">
-        <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#951A21]/70 blur-3xl"></div>
-        <div class="absolute -bottom-24 right-1/3 h-56 w-56 rounded-full bg-[#FFA368]/10 blur-3xl"></div>
+    <section class="relative overflow-hidden bg-[#951A21] text-white">
+        <div class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-ewf-red-poppy/40 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-24 right-1/3 h-56 w-56 rounded-full bg-[#FFA368]/10 blur-3xl"></div>
 
-        <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-            <span class="inline-flex items-center gap-2 rounded-full border border-[#FFD66E]/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#FFD66E]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <div class="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
+            <span class="inline-flex items-center gap-2 rounded-full border border-ewf-hawkbit/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5-2a2 2 0 00-2-2h-1V5a2 2 0 00-2-2H9a2 2 0 00-2 2v1H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2V8z"/>
                 </svg>
                 Informasi Perusahaan
@@ -29,9 +29,10 @@
             </p>
 
             <a href="#dokumen-legalitas"
-               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#FFD66E] px-6 py-3 font-bold text-[#6D1720] transition hover:bg-[#EFBB55]">
+               class="mt-8 inline-flex items-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 font-bold text-[#951A21] transition duration-300 hover:bg-[#EFBB55] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#951A21]">
                 Lihat Dokumen Legalitas
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
                 </svg>
             </a>
@@ -40,7 +41,7 @@
 
 
     {{-- TENTANG LEGALITAS --}}
-    <section class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-16">
+    <section class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8 lg:py-16">
         <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
 
             <div>
@@ -48,7 +49,7 @@
                     Tentang Legalitas Kami
                 </span>
 
-                <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#6D1720] sm:text-4xl">
+                <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#951A21] sm:text-4xl">
                     Menjalankan Bisnis dengan Kepatuhan dan Transparansi
                 </h2>
 
@@ -64,13 +65,13 @@
 
             <div class="rounded-3xl border border-[#EAD8CB] bg-white p-7 shadow-sm sm:p-9">
                 <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FBE5D6] text-[#951A21]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
                     </svg>
                 </div>
 
-                <h3 class="mt-5 text-xl font-extrabold text-[#6D1720]">
+                <h3 class="mt-5 text-xl font-extrabold text-[#951A21]">
                     Komitmen terhadap Kepatuhan
                 </h3>
 
@@ -159,14 +160,14 @@
     @endphp
 
     <section id="dokumen-legalitas" class="scroll-mt-24 bg-white">
-        <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-16">
+        <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8 lg:py-16">
 
             <div class="max-w-3xl">
                 <span class="text-sm font-bold uppercase tracking-[0.15em] text-[#951A21]">
                     Dokumen dan Perizinan
                 </span>
 
-                <h2 class="mt-3 text-3xl font-extrabold text-[#6D1720] sm:text-4xl">
+                <h2 class="mt-3 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
                     Legalitas PT Equityworld Futures
                 </h2>
 
@@ -181,14 +182,14 @@
                     <article class="group flex h-full flex-col rounded-2xl border border-[#EAD8CB] bg-[#FFF9F0] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#D9A49A] hover:shadow-lg">
 
                         <div class="flex items-start justify-between gap-3">
-                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition duration-300 group-hover:bg-[#951A21] group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 3h7l5 5v11a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 3v5h5M8 13h8M8 17h8"/>
                                 </svg>
                             </div>
 
-                            <span class="flex h-8 min-w-8 items-center justify-center rounded-full bg-[#6D1720] px-2 text-xs font-extrabold text-white">
+                            <span class="flex h-8 min-w-8 items-center justify-center rounded-full bg-[#951A21] px-2 text-xs font-extrabold text-white">
                                 {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                             </span>
                         </div>
@@ -197,7 +198,7 @@
                             {{ $item['category'] }}
                         </span>
 
-                        <h3 class="mt-2 text-lg font-extrabold leading-7 text-[#6D1720]">
+                        <h3 class="mt-2 text-lg font-extrabold leading-7 text-[#951A21]">
                             {{ $item['title'] }}
                         </h3>
 
@@ -205,21 +206,22 @@
                             {{ $item['description'] }}
                         </p>
 
-                        <div class="mt-5 h-1 w-12 rounded-full bg-[#EFBB55] transition-all group-hover:w-20"></div>
+                        <div class="mt-5 h-1 w-12 rounded-full bg-[#EFBB55] transition-all duration-300 group-hover:w-20"></div>
                     </article>
                 @endforeach
             </div>
 
             <div class="mt-8 rounded-2xl border border-[#F0D9A5] bg-[#FFF8E6] p-5 sm:p-6">
                 <div class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-6 w-6 shrink-0 text-[#951A21]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-6 w-6 shrink-0 text-[#951A21]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                     </svg>
 
                     <div>
-                        <h3 class="font-extrabold text-[#6D1720]">
+                        <h3 class="font-extrabold text-[#951A21]">
                             Informasi Dokumen
                         </h3>
+
                         <p class="mt-2 text-sm leading-7 text-[#675653]">
                             Daftar ini merupakan informasi ringkas, bukan pengganti dokumen
                             legalitas asli. Nomor, nama dokumen, status keberlakuan, dan
@@ -235,25 +237,25 @@
 
 
     {{-- PERINGATAN PENIPUAN --}}
-    <section class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-16">
-        <div class="overflow-hidden rounded-3xl border border-[#E9B5AD] bg-white shadow-sm">
-            <div class="h-2 bg-[#CF3021]"></div>
+    <section class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8 lg:py-16">
+        <div class="overflow-hidden rounded-3xl border border-ewf-red-poppy/20 bg-white shadow-sm">
+            <div class="h-2 bg-ewf-red-poppy"></div>
 
             <div class="p-6 sm:p-9 lg:p-10">
                 <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
 
-                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCE7E3] text-[#CF3021]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#FCE7E3] text-ewf-red-poppy">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                         </svg>
                     </div>
 
                     <div class="flex-1">
-                        <span class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#CF3021]">
+                        <span class="text-xs font-extrabold uppercase tracking-[0.18em] text-ewf-red-poppy">
                             Pemberitahuan Penting
                         </span>
 
-                        <h2 class="mt-2 text-2xl font-extrabold text-[#6D1720] sm:text-3xl">
+                        <h2 class="mt-2 text-2xl font-extrabold text-[#951A21] sm:text-3xl">
                             PERHATIAN: Waspada Penipuan
                         </h2>
 

@@ -1,7 +1,7 @@
 
 <header class="sticky top-0 z-50 border-b border-[#951A21]/10 bg-[#FFF9F0]/95 shadow-sm backdrop-blur-md">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex min-h-[78px] items-center justify-between gap-4">
+        <div class="flex min-h-19.5 items-center justify-between gap-4">
 
             {{-- LOGO PERUSAHAAN --}}
             <a href="{{ route('home') }}"
@@ -204,7 +204,7 @@
 
             {{-- LOGIN DESKTOP --}}
             <a href="{{ route('login') }}"
-               class="hidden shrink-0 items-center justify-center rounded-lg bg-[#951A21] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#6D1720] xl:inline-flex">
+               class="hidden shrink-0 items-center justify-center rounded-lg bg-[#951A21] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-ewf-wine-dark xl:inline-flex">
                 Login
             </a>
 
@@ -369,7 +369,7 @@
 
                 {{-- LOGIN MOBILE --}}
                 <a href="{{ route('login') }}"
-                   class="mt-2 flex items-center justify-center rounded-lg bg-[#951A21] px-4 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]">
+                   class="mt-2 flex items-center justify-center rounded-lg bg-[#951A21] px-4 py-3 text-sm font-bold text-white transition hover:bg-ewf-wine-dark">
                     Login
                 </a>
 

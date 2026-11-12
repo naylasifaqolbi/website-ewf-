@@ -9,12 +9,12 @@
     {{-- ========================================== --}}
     {{-- HEADER DETAIL BERITA --}}
     {{-- ========================================== --}}
-    <section class="bg-[#6D1720] text-white">
+    <section class="bg-ewf-wine-dark text-white">
 
         <div class="mx-auto max-w-5xl px-5 py-14 lg:px-8 lg:py-16">
 
             <a href="{{ route('news.index', ['language' => $article['language']]) }}"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-[#FFD66E]">
+               class="inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-ewf-hawkbit">
 
                 <span>←</span>
 
@@ -26,7 +26,7 @@
 
             <div class="mt-8">
 
-                <span class="inline-flex rounded-full bg-[#FFD66E] px-4 py-2 text-xs font-bold text-[#6D1720]">
+                <span class="inline-flex rounded-full bg-ewf-hawkbit px-4 py-2 text-xs font-bold text-ewf-wine-dark">
                     {{ $article['category'] }}
                 </span>
 
@@ -36,7 +36,7 @@
 
                 <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-white/75">
 
-                    <span class="font-semibold text-[#FFD66E]">
+                    <span class="font-semibold text-ewf-hawkbit">
                         {{ $article['source'] }}
                     </span>
 
@@ -63,12 +63,12 @@
             {{-- IMAGE --}}
             @if (!empty($article['image']))
 
-                <div class="max-h-[480px] overflow-hidden bg-[#F3E8DF]">
+                <div class="max-h-120 overflow-hidden bg-[#F3E8DF]">
 
                     <img
                         src="{{ $article['image'] }}"
                         alt="{{ $article['title'] }}"
-                        class="max-h-[480px] w-full object-cover"
+                        class="max-h-120 w-full object-cover"
                         onerror="this.style.display='none';"
                     >
 
@@ -94,7 +94,7 @@
                         </p>
                     </div>
 
-                    <span class="rounded-lg bg-[#FFF9F0] px-3 py-2 text-xs font-semibold text-[#6D1720]">
+                    <span class="rounded-lg bg-[#FFF9F0] px-3 py-2 text-xs font-semibold text-ewf-wine-dark">
                         {{ $article['category'] }}
                     </span>
 
@@ -104,7 +104,7 @@
                 {{-- EXCERPT --}}
                 <div class="mt-8">
 
-                    <h2 class="text-xl font-extrabold text-[#6D1720]">
+                    <h2 class="text-xl font-extrabold text-ewf-wine-dark">
                         {{ $article['language'] === 'id'
                             ? 'Ringkasan Berita'
                             : 'News Summary' }}
@@ -120,7 +120,7 @@
                 {{-- ORIGINAL SOURCE LINK --}}
                 <div class="mt-10 rounded-xl border border-[#EAD8CB] bg-[#FFF9F0] p-6">
 
-                    <h3 class="text-lg font-extrabold text-[#6D1720]">
+                    <h3 class="text-lg font-extrabold text-ewf-wine-dark">
                         {{ $article['language'] === 'id'
                             ? 'Baca Berita Lengkap'
                             : 'Read the Full Article' }}
@@ -135,7 +135,7 @@
                     <a href="{{ $article['link'] }}"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#6D1720]">
+                       class="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-[#951A21] px-6 py-3 text-sm font-bold text-white transition hover:bg-ewf-wine-dark">
 
                         {{ $article['language'] === 'id'
                             ? 'Kunjungi Sumber Berita'
@@ -156,7 +156,7 @@
         <div class="mt-8">
 
             <a href="{{ route('news.index', ['language' => $article['language']]) }}"
-               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-[#CF3021]">
+               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
 
                 ←
 
