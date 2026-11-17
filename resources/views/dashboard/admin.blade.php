@@ -5,33 +5,36 @@
 
 @section('content')
 
-<main class="min-h-screen bg-[#FFF9F0]">
+<main class="min-h-screen bg-linear-to-b from-white via-white to-[#D5B893]/10 font-['DM_Sans']">
 
     {{-- =====================================================
          HEADER DASHBOARD ADMIN
     ====================================================== --}}
-    <section class="relative overflow-hidden bg-linear-to-r from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy text-white">
+    <section class="relative isolate overflow-hidden bg-linear-to-br from-[#25344F] via-[#25344F] to-[#632024] text-white">
 
-        <div class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
-        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-ewf-hawkbit/10 blur-3xl"></div>
+        {{-- DEKORASI HERO --}}
+        <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border border-[#D5B893]/20"></div>
+        <div class="pointer-events-none absolute -right-5 -top-10 h-56 w-56 rounded-full border border-[#D5B893]/15"></div>
+        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-[#D5B893]/10 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-0 right-1/4 h-px w-64 bg-linear-to-r from-transparent via-[#D5B893]/50 to-transparent"></div>
 
-        <div class="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
+        <div class="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-16">
 
             <div class="flex flex-col justify-between gap-8 sm:flex-row sm:items-center">
 
                 <div>
 
-                    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-[#D5B893]/30 bg-white/10 px-4 py-2 backdrop-blur-sm">
 
-                        <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
+                        <span class="h-2 w-2 rounded-full bg-[#D5B893]"></span>
 
-                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
+                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#D5B893]">
                             Administrator Area
                         </span>
 
                     </div>
 
-                    <h1 class="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+                    <h1 class="mt-5 font-['Manrope'] text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
                         Dashboard Admin
                     </h1>
 
@@ -45,20 +48,20 @@
 
                 <div class="flex flex-wrap items-center gap-3">
 
-                    <div class="rounded-xl border border-white/20 bg-white/10 px-5 py-3">
+                    <div class="rounded-xl border border-white/20 bg-white/10 px-5 py-3 backdrop-blur-sm">
 
-                        <p class="text-xs text-white/70">
+                        <p class="text-xs text-white/65">
                             Akses pengguna
                         </p>
 
-                        <p class="mt-1 font-bold text-ewf-hawkbit">
+                        <p class="mt-1 font-bold text-[#D5B893]">
                             Administrator
                         </p>
 
                     </div>
 
                     <a href="{{ route('logout') }}"
-                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 text-sm font-bold text-ewf-wine-dark shadow-sm transition hover:bg-white">
+                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#D5B893] px-6 py-3 text-sm font-bold text-[#25344F] shadow-md transition duration-300 hover:bg-white hover:shadow-lg">
 
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -85,23 +88,24 @@
 
 
         {{-- SAMBUTAN ADMIN --}}
-        <div class="relative overflow-hidden rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm sm:p-8">
+        <div class="relative overflow-hidden rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm sm:p-8">
 
-            <div class="absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-[#FBE5D6]/70"></div>
+            <div class="pointer-events-none absolute -right-5 -top-8 h-40 w-40 rounded-bl-full bg-[#D5B893]/15"></div>
+            <div class="pointer-events-none absolute right-24 top-0 h-24 w-24 rounded-full border border-[#D5B893]/20"></div>
 
             <div class="relative flex flex-col justify-between gap-5 md:flex-row md:items-center">
 
                 <div>
 
-                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#951A21]">
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#632024]">
                         Administrator
                     </span>
 
-                    <h2 class="mt-3 text-2xl font-extrabold text-[#401C20] sm:text-3xl">
+                    <h2 class="mt-3 font-['Manrope'] text-2xl font-extrabold text-[#25344F] sm:text-3xl">
                         Selamat Datang, Admin!
                     </h2>
 
-                    <p class="mt-3 max-w-2xl text-sm leading-7 text-[#786662]">
+                    <p class="mt-3 max-w-2xl text-sm leading-7 text-[#617891]">
                         Anda berhasil masuk ke Dashboard Admin.
                         Melalui halaman ini, Anda dapat mengelola akun pengguna,
                         mengatur role dan hak akses, memantau aktivitas sistem,
@@ -110,7 +114,7 @@
 
                 </div>
 
-                <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#FBE5D6] text-[#951A21]">
+                <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-[#D5B893]/40 bg-[#D5B893]/20 text-[#632024]">
 
                     <svg class="h-9 w-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
@@ -123,11 +127,11 @@
 
             <div class="relative mt-6 flex flex-wrap gap-3">
 
-                <span class="inline-flex items-center rounded-full bg-[#FBE5D6] px-4 py-2 text-xs font-bold text-[#951A21]">
+                <span class="inline-flex items-center rounded-full border border-[#D5B893]/50 bg-[#D5B893]/20 px-4 py-2 text-xs font-bold text-[#632024]">
                     Role: Admin
                 </span>
 
-                <span class="inline-flex items-center rounded-full bg-[#FFF4D8] px-4 py-2 text-xs font-bold text-[#8A5B13]">
+                <span class="inline-flex items-center rounded-full border border-[#617891]/20 bg-[#617891]/10 px-4 py-2 text-xs font-bold text-[#25344F]">
                     Administrator Sistem
                 </span>
 
@@ -145,21 +149,21 @@
 
                 <div>
 
-                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#951A21]">
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#632024]">
                         Ringkasan Sistem
                     </span>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-[#401C20]">
+                    <h2 class="mt-2 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                         Informasi Administrasi
                     </h2>
 
-                    <p class="mt-2 text-sm text-[#786662]">
+                    <p class="mt-2 text-sm text-[#617891]">
                         Gambaran umum akun pengguna dan kondisi operasional sistem.
                     </p>
 
                 </div>
 
-                <span class="text-xs text-[#9A8279]">
+                <span class="text-xs text-[#617891]">
                     Data contoh / sementara
                 </span>
 
@@ -170,11 +174,11 @@
 
 
                 {{-- TOTAL PENGGUNA --}}
-                <article class="rounded-2xl border border-[#EAD8CB] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-lg">
 
                     <div class="flex items-center justify-between">
 
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21]">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -183,21 +187,21 @@
 
                         </div>
 
-                        <span class="rounded-full bg-[#FBE5D6] px-3 py-1 text-xs font-bold text-[#951A21]">
+                        <span class="rounded-full bg-[#D5B893]/20 px-3 py-1 text-xs font-bold text-[#632024]">
                             Pengguna
                         </span>
 
                     </div>
 
-                    <p class="mt-5 text-sm font-medium text-[#786662]">
+                    <p class="mt-5 text-sm font-medium text-[#617891]">
                         Total Pengguna
                     </p>
 
-                    <h3 class="mt-1 text-3xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-3xl font-extrabold text-[#25344F]">
                         48
                     </h3>
 
-                    <p class="mt-2 text-xs text-[#9A8279]">
+                    <p class="mt-2 text-xs text-[#617891]">
                         Seluruh akun terdaftar
                     </p>
 
@@ -205,11 +209,11 @@
 
 
                 {{-- AKUN AKTIF --}}
-                <article class="rounded-2xl border border-[#EAD8CB] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-lg">
 
                     <div class="flex items-center justify-between">
 
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#E8F4EA] text-[#3D8050]">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#617891]/10 text-[#25344F] transition duration-300 group-hover:bg-[#25344F] group-hover:text-white">
 
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -218,21 +222,21 @@
 
                         </div>
 
-                        <span class="rounded-full bg-[#E8F4EA] px-3 py-1 text-xs font-bold text-[#3D8050]">
+                        <span class="rounded-full bg-[#617891]/10 px-3 py-1 text-xs font-bold text-[#25344F]">
                             Aktif
                         </span>
 
                     </div>
 
-                    <p class="mt-5 text-sm font-medium text-[#786662]">
+                    <p class="mt-5 text-sm font-medium text-[#617891]">
                         Akun Aktif
                     </p>
 
-                    <h3 class="mt-1 text-3xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-3xl font-extrabold text-[#25344F]">
                         43
                     </h3>
 
-                    <p class="mt-2 text-xs text-[#9A8279]">
+                    <p class="mt-2 text-xs text-[#617891]">
                         Akun dapat mengakses sistem
                     </p>
 
@@ -240,11 +244,11 @@
 
 
                 {{-- ROLE PENGGUNA --}}
-                <article class="rounded-2xl border border-[#EAD8CB] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-lg">
 
                     <div class="flex items-center justify-between">
 
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF4D8] text-[#A56B16]">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/25 text-[#6F4D38] transition duration-300 group-hover:bg-[#6F4D38] group-hover:text-white">
 
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -253,21 +257,21 @@
 
                         </div>
 
-                        <span class="rounded-full bg-[#FFF4D8] px-3 py-1 text-xs font-bold text-[#8A5B13]">
+                        <span class="rounded-full bg-[#D5B893]/25 px-3 py-1 text-xs font-bold text-[#6F4D38]">
                             Role
                         </span>
 
                     </div>
 
-                    <p class="mt-5 text-sm font-medium text-[#786662]">
+                    <p class="mt-5 text-sm font-medium text-[#617891]">
                         Kategori Role
                     </p>
 
-                    <h3 class="mt-1 text-3xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-3xl font-extrabold text-[#25344F]">
                         05
                     </h3>
 
-                    <p class="mt-2 text-xs text-[#9A8279]">
+                    <p class="mt-2 text-xs text-[#617891]">
                         Kelompok hak akses pengguna
                     </p>
 
@@ -275,11 +279,11 @@
 
 
                 {{-- AKUN NONAKTIF --}}
-                <article class="rounded-2xl border border-[#EAD8CB] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-lg">
 
                     <div class="flex items-center justify-between">
 
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FCE8E8] text-ewf-red-poppy">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#632024]/10 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -288,21 +292,21 @@
 
                         </div>
 
-                        <span class="rounded-full bg-[#FCE8E8] px-3 py-1 text-xs font-bold text-ewf-red-poppy">
+                        <span class="rounded-full bg-[#632024]/10 px-3 py-1 text-xs font-bold text-[#632024]">
                             Nonaktif
                         </span>
 
                     </div>
 
-                    <p class="mt-5 text-sm font-medium text-[#786662]">
+                    <p class="mt-5 text-sm font-medium text-[#617891]">
                         Akun Nonaktif
                     </p>
 
-                    <h3 class="mt-1 text-3xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-3xl font-extrabold text-[#25344F]">
                         05
                     </h3>
 
-                    <p class="mt-2 text-xs text-[#9A8279]">
+                    <p class="mt-2 text-xs text-[#617891]">
                         Akun yang dinonaktifkan
                     </p>
 
@@ -320,15 +324,15 @@
 
             <div>
 
-                <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#951A21]">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#632024]">
                     Pengelompokan Akun
                 </span>
 
-                <h2 class="mt-2 text-2xl font-extrabold text-[#401C20]">
+                <h2 class="mt-2 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                     Distribusi Role Pengguna
                 </h2>
 
-                <p class="mt-2 text-sm text-[#786662]">
+                <p class="mt-2 text-sm text-[#617891]">
                     Gambaran pembagian akun berdasarkan kategori peran dalam sistem.
                 </p>
 
@@ -338,95 +342,95 @@
             <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
 
 
-                <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
+                <div class="rounded-xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
-                    <div class="h-2 w-10 rounded-full bg-[#951A21]"></div>
+                    <div class="h-1.5 w-10 rounded-full bg-[#632024]"></div>
 
-                    <p class="mt-4 text-sm text-[#786662]">
+                    <p class="mt-4 text-sm text-[#617891]">
                         Admin
                     </p>
 
-                    <h3 class="mt-1 text-2xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                         03
                     </h3>
 
-                    <p class="mt-1 text-xs text-[#9A8279]">
+                    <p class="mt-1 text-xs text-[#617891]">
                         Administrator sistem
                     </p>
 
                 </div>
 
 
-                <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
+                <div class="rounded-xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
-                    <div class="h-2 w-10 rounded-full bg-ewf-red-poppy"></div>
+                    <div class="h-1.5 w-10 rounded-full bg-[#25344F]"></div>
 
-                    <p class="mt-4 text-sm text-[#786662]">
+                    <p class="mt-4 text-sm text-[#617891]">
                         HR / Recruitment
                     </p>
 
-                    <h3 class="mt-1 text-2xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                         05
                     </h3>
 
-                    <p class="mt-1 text-xs text-[#9A8279]">
+                    <p class="mt-1 text-xs text-[#617891]">
                         Pengelola rekrutmen
                     </p>
 
                 </div>
 
 
-                <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
+                <div class="rounded-xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
-                    <div class="h-2 w-10 rounded-full bg-[#FFA368]"></div>
+                    <div class="h-1.5 w-10 rounded-full bg-[#6F4D38]"></div>
 
-                    <p class="mt-4 text-sm text-[#786662]">
+                    <p class="mt-4 text-sm text-[#617891]">
                         Staff
                     </p>
 
-                    <h3 class="mt-1 text-2xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                         08
                     </h3>
 
-                    <p class="mt-1 text-xs text-[#9A8279]">
+                    <p class="mt-1 text-xs text-[#617891]">
                         Pengelola operasional
                     </p>
 
                 </div>
 
 
-                <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
+                <div class="rounded-xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
-                    <div class="h-2 w-10 rounded-full bg-[#EFBB55]"></div>
+                    <div class="h-1.5 w-10 rounded-full bg-[#D5B893]"></div>
 
-                    <p class="mt-4 text-sm text-[#786662]">
+                    <p class="mt-4 text-sm text-[#617891]">
                         Management / Executive
                     </p>
 
-                    <h3 class="mt-1 text-2xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                         02
                     </h3>
 
-                    <p class="mt-1 text-xs text-[#9A8279]">
+                    <p class="mt-1 text-xs text-[#617891]">
                         Pemantauan kinerja
                     </p>
 
                 </div>
 
 
-                <div class="rounded-xl border border-[#EAD8CB] bg-white p-5">
+                <div class="rounded-xl border border-[#D5B893]/50 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
-                    <div class="h-2 w-10 rounded-full bg-[#B8A6A0]"></div>
+                    <div class="h-1.5 w-10 rounded-full bg-[#617891]"></div>
 
-                    <p class="mt-4 text-sm text-[#786662]">
+                    <p class="mt-4 text-sm text-[#617891]">
                         Applicant / User
                     </p>
 
-                    <h3 class="mt-1 text-2xl font-extrabold text-[#401C20]">
+                    <h3 class="mt-1 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                         30
                     </h3>
 
-                    <p class="mt-1 text-xs text-[#9A8279]">
+                    <p class="mt-1 text-xs text-[#617891]">
                         Pengguna pendaftar
                     </p>
 
@@ -444,15 +448,15 @@
 
             <div>
 
-                <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#951A21]">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#632024]">
                     Menu Utama
                 </span>
 
-                <h2 class="mt-2 text-2xl font-extrabold text-[#401C20]">
+                <h2 class="mt-2 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                     Pengelolaan Sistem
                 </h2>
 
-                <p class="mt-2 text-sm text-[#786662]">
+                <p class="mt-2 text-sm text-[#617891]">
                     Kelola akun, konfigurasi akses, keamanan, dan pemantauan sistem perusahaan.
                 </p>
 
@@ -463,9 +467,9 @@
 
 
                 {{-- USER MANAGEMENT --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -474,22 +478,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         User Management
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Membuat, melihat, memperbarui, menonaktifkan,
                         dan mengelola akun pengguna sistem.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Manajemen Pengguna
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -499,9 +503,9 @@
 
 
                 {{-- ROLE MANAGEMENT --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -510,22 +514,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Role Management
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Mengelola kategori peran Admin, Staff, HR,
                         Management/Executive, dan Applicant/User.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Pengaturan Role
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -535,9 +539,9 @@
 
 
                 {{-- PERMISSION MANAGEMENT --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -546,22 +550,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Permission Management
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Mengatur hak akses setiap role terhadap
                         menu, data, dan tindakan di dalam sistem.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Pengaturan Hak Akses
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -571,9 +575,9 @@
 
 
                 {{-- MONITORING DATA OPERASIONAL --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -582,22 +586,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Monitoring Data Operasional
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Memantau data dan aktivitas operasional
                         sesuai kewenangan administrator sistem.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Monitoring Operasional
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -607,9 +611,9 @@
 
 
                 {{-- AUDIT LOG --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -618,22 +622,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Audit Log
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Menampilkan catatan perubahan data,
                         pengelolaan akun, dan tindakan administratif.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Riwayat Aktivitas Sistem
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -643,9 +647,9 @@
 
 
                 {{-- LOGIN ACTIVITY --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -654,22 +658,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Login Activity
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Memantau riwayat login pengguna, waktu masuk,
                         dan informasi aktivitas akses yang tersedia.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Riwayat Login
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -679,9 +683,9 @@
 
 
                 {{-- SECURITY MANAGEMENT --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21] transition group-hover:bg-[#951A21] group-hover:text-white">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024] transition duration-300 group-hover:bg-[#632024] group-hover:text-white">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -692,22 +696,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Security Management
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Mengelola keamanan akun, penonaktifan akun,
                         dan penanganan masalah akses pengguna.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Keamanan Sistem
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -717,9 +721,9 @@
 
 
                 {{-- EXECUTIVE DASHBOARD --}}
-                <article class="group rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-lg">
+                <article class="group rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/40 hover:shadow-xl">
 
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF4D8] text-[#A56B16] transition group-hover:bg-[#EFBB55] group-hover:text-[#401C20]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/30 text-[#6F4D38] transition duration-300 group-hover:bg-[#D5B893] group-hover:text-[#25344F]">
 
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -728,22 +732,22 @@
 
                     </div>
 
-                    <h3 class="mt-5 text-lg font-bold text-[#401C20]">
+                    <h3 class="mt-5 font-['Manrope'] text-lg font-bold text-[#25344F]">
                         Executive Dashboard
                     </h3>
 
-                    <p class="mt-2 text-sm leading-6 text-[#786662]">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Mengakses ringkasan indikator dan informasi
                         kinerja perusahaan untuk keperluan pemantauan.
                     </p>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-[#F1E5DE] pt-4">
+                    <div class="mt-5 flex items-center justify-between border-t border-[#D5B893]/40 pt-4">
 
-                        <span class="text-xs font-semibold text-[#9A8279]">
+                        <span class="text-xs font-semibold text-[#6F4D38]">
                             Monitoring Kinerja
                         </span>
 
-                        <span class="text-lg font-bold text-[#951A21] transition group-hover:translate-x-1">
+                        <span class="text-lg font-bold text-[#632024] transition group-hover:translate-x-1">
                             →
                         </span>
 
@@ -763,19 +767,19 @@
 
 
             {{-- AKTIVITAS TERBARU --}}
-            <div class="overflow-hidden rounded-2xl border border-[#EAD8CB] bg-white shadow-sm lg:col-span-2">
+            <div class="overflow-hidden rounded-2xl border border-[#D5B893]/50 bg-white shadow-sm lg:col-span-2">
 
-                <div class="border-b border-[#F1E5DE] p-6">
+                <div class="border-b border-[#D5B893]/40 p-6">
 
-                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#951A21]">
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#632024]">
                         System Activity
                     </span>
 
-                    <h2 class="mt-2 text-xl font-extrabold text-[#401C20]">
+                    <h2 class="mt-2 font-['Manrope'] text-xl font-extrabold text-[#25344F]">
                         Aktivitas Sistem Terbaru
                     </h2>
 
-                    <p class="mt-2 text-sm text-[#786662]">
+                    <p class="mt-2 text-sm text-[#617891]">
                         Contoh catatan aktivitas pengguna dalam sistem.
                     </p>
 
@@ -786,7 +790,7 @@
 
                     <table class="w-full min-w-162.5 text-left text-sm">
 
-                        <thead class="bg-[#FFF9F0] text-xs uppercase tracking-wider text-[#786662]">
+                        <thead class="bg-[#25344F] text-xs uppercase tracking-wider text-white">
 
                             <tr>
 
@@ -811,34 +815,34 @@
                         </thead>
 
 
-                        <tbody class="divide-y divide-[#F1E5DE]">
+                        <tbody class="divide-y divide-[#D5B893]/30">
 
 
-                            <tr class="transition hover:bg-[#FFF9F0]">
+                            <tr class="transition hover:bg-[#D5B893]/10">
 
                                 <td class="px-6 py-4">
 
-                                    <p class="font-semibold text-[#401C20]">
+                                    <p class="font-semibold text-[#25344F]">
                                         Admin Utama
                                     </p>
 
-                                    <p class="mt-1 text-xs text-[#9A8279]">
+                                    <p class="mt-1 text-xs text-[#617891]">
                                         Administrator
                                     </p>
 
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     Login ke sistem
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     10 Nov 2026, 08.00
                                 </td>
 
                                 <td class="px-6 py-4">
 
-                                    <span class="rounded-full bg-[#E8F4EA] px-3 py-1 text-xs font-bold text-[#3D8050]">
+                                    <span class="rounded-full bg-[#617891]/10 px-3 py-1 text-xs font-bold text-[#25344F]">
                                         Berhasil
                                     </span>
 
@@ -847,31 +851,31 @@
                             </tr>
 
 
-                            <tr class="transition hover:bg-[#FFF9F0]">
+                            <tr class="transition hover:bg-[#D5B893]/10">
 
                                 <td class="px-6 py-4">
 
-                                    <p class="font-semibold text-[#401C20]">
+                                    <p class="font-semibold text-[#25344F]">
                                         HR Recruitment
                                     </p>
 
-                                    <p class="mt-1 text-xs text-[#9A8279]">
+                                    <p class="mt-1 text-xs text-[#617891]">
                                         HR
                                     </p>
 
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     Mengakses data pelamar
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     10 Nov 2026, 08.15
                                 </td>
 
                                 <td class="px-6 py-4">
 
-                                    <span class="rounded-full bg-[#E8F4EA] px-3 py-1 text-xs font-bold text-[#3D8050]">
+                                    <span class="rounded-full bg-[#617891]/10 px-3 py-1 text-xs font-bold text-[#25344F]">
                                         Berhasil
                                     </span>
 
@@ -880,31 +884,31 @@
                             </tr>
 
 
-                            <tr class="transition hover:bg-[#FFF9F0]">
+                            <tr class="transition hover:bg-[#D5B893]/10">
 
                                 <td class="px-6 py-4">
 
-                                    <p class="font-semibold text-[#401C20]">
+                                    <p class="font-semibold text-[#25344F]">
                                         Staff Operasional
                                     </p>
 
-                                    <p class="mt-1 text-xs text-[#9A8279]">
+                                    <p class="mt-1 text-xs text-[#617891]">
                                         Staff
                                     </p>
 
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     Memperbarui data operasional
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     10 Nov 2026, 08.30
                                 </td>
 
                                 <td class="px-6 py-4">
 
-                                    <span class="rounded-full bg-[#E8F4EA] px-3 py-1 text-xs font-bold text-[#3D8050]">
+                                    <span class="rounded-full bg-[#617891]/10 px-3 py-1 text-xs font-bold text-[#25344F]">
                                         Berhasil
                                     </span>
 
@@ -913,31 +917,31 @@
                             </tr>
 
 
-                            <tr class="transition hover:bg-[#FFF9F0]">
+                            <tr class="transition hover:bg-[#D5B893]/10">
 
                                 <td class="px-6 py-4">
 
-                                    <p class="font-semibold text-[#401C20]">
+                                    <p class="font-semibold text-[#25344F]">
                                         Applicant User
                                     </p>
 
-                                    <p class="mt-1 text-xs text-[#9A8279]">
+                                    <p class="mt-1 text-xs text-[#617891]">
                                         Applicant
                                     </p>
 
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     Percobaan login
                                 </td>
 
-                                <td class="px-6 py-4 text-[#786662]">
+                                <td class="px-6 py-4 text-[#617891]">
                                     10 Nov 2026, 08.45
                                 </td>
 
                                 <td class="px-6 py-4">
 
-                                    <span class="rounded-full bg-[#FFF4D8] px-3 py-1 text-xs font-bold text-[#8A5B13]">
+                                    <span class="rounded-full bg-[#D5B893]/30 px-3 py-1 text-xs font-bold text-[#6F4D38]">
                                         Simulasi
                                     </span>
 
@@ -953,9 +957,9 @@
                 </div>
 
 
-                <div class="border-t border-[#F1E5DE] px-6 py-4">
+                <div class="border-t border-[#D5B893]/40 px-6 py-4">
 
-                    <p class="text-xs text-[#9A8279]">
+                    <p class="text-xs text-[#617891]">
                         Aktivitas di atas merupakan data contoh dan belum berasal dari audit log sebenarnya.
                     </p>
 
@@ -965,9 +969,9 @@
 
 
             {{-- INFORMASI KEAMANAN --}}
-            <aside class="rounded-2xl border border-[#EAD8CB] bg-white p-6 shadow-sm">
+            <aside class="rounded-2xl border border-[#D5B893]/50 bg-white p-6 shadow-sm">
 
-                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FBE5D6] text-[#951A21]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893]/20 text-[#632024]">
 
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -979,11 +983,11 @@
                 </div>
 
 
-                <h3 class="mt-5 text-lg font-extrabold text-[#401C20]">
+                <h3 class="mt-5 font-['Manrope'] text-lg font-extrabold text-[#25344F]">
                     Informasi Keamanan
                 </h3>
 
-                <p class="mt-2 text-sm leading-6 text-[#786662]">
+                <p class="mt-2 text-sm leading-6 text-[#617891]">
                     Perhatikan pengelolaan akses dan aktivitas akun
                     untuk menjaga keamanan sistem informasi.
                 </p>
@@ -994,9 +998,9 @@
 
                     <div class="flex gap-3">
 
-                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#951A21]"></span>
+                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#632024]"></span>
 
-                        <p class="text-sm leading-6 text-[#786662]">
+                        <p class="text-sm leading-6 text-[#617891]">
                             Pastikan setiap pengguna memiliki role yang sesuai.
                         </p>
 
@@ -1005,9 +1009,9 @@
 
                     <div class="flex gap-3">
 
-                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#FFA368]"></span>
+                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#6F4D38]"></span>
 
-                        <p class="text-sm leading-6 text-[#786662]">
+                        <p class="text-sm leading-6 text-[#617891]">
                             Periksa aktivitas login dan perubahan data pengguna.
                         </p>
 
@@ -1016,9 +1020,9 @@
 
                     <div class="flex gap-3">
 
-                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#EFBB55]"></span>
+                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#D5B893]"></span>
 
-                        <p class="text-sm leading-6 text-[#786662]">
+                        <p class="text-sm leading-6 text-[#617891]">
                             Nonaktifkan akun yang tidak lagi memiliki kewenangan akses.
                         </p>
 
@@ -1027,9 +1031,9 @@
 
                     <div class="flex gap-3">
 
-                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-ewf-red-poppy"></span>
+                        <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#25344F]"></span>
 
-                        <p class="text-sm leading-6 text-[#786662]">
+                        <p class="text-sm leading-6 text-[#617891]">
                             Tinjau kembali permission setiap kategori role.
                         </p>
 
@@ -1045,17 +1049,21 @@
         {{-- =====================================================
              AKSES EXECUTIVE DASHBOARD
         ====================================================== --}}
-        <div class="mt-10 overflow-hidden rounded-2xl bg-linear-to-r from-ewf-wine-dark via-[#951A21] to-ewf-red-poppy p-6 text-white shadow-sm sm:p-8">
+        <div class="relative mt-10 overflow-hidden rounded-2xl bg-linear-to-br from-[#25344F] via-[#25344F] to-[#632024] p-6 text-white shadow-lg sm:p-8">
 
-            <div class="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+            <div class="pointer-events-none absolute -right-10 -top-20 h-64 w-64 rounded-full border border-[#D5B893]/20"></div>
+            <div class="pointer-events-none absolute -right-4 -top-12 h-44 w-44 rounded-full border border-[#D5B893]/15"></div>
+            <div class="pointer-events-none absolute -bottom-20 left-1/3 h-48 w-48 rounded-full bg-[#D5B893]/10 blur-3xl"></div>
+
+            <div class="relative flex flex-col justify-between gap-6 md:flex-row md:items-center">
 
                 <div class="max-w-2xl">
 
-                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-ewf-hawkbit">
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#D5B893]">
                         Akses Pemantauan
                     </span>
 
-                    <h2 class="mt-3 text-2xl font-extrabold">
+                    <h2 class="mt-3 font-['Manrope'] text-2xl font-extrabold text-white">
                         Executive Dashboard
                     </h2>
 
@@ -1068,10 +1076,10 @@
                 </div>
 
 
-                <div class="shrink-0">
+                <div class="relative shrink-0">
 
                     <a href="#"
-                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3 text-sm font-bold text-ewf-wine-dark transition hover:bg-white">
+                       class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#D5B893] px-6 py-3 text-sm font-bold text-[#25344F] shadow-md transition duration-300 hover:bg-white hover:shadow-lg">
 
                         Lihat Executive Dashboard
 
@@ -1092,10 +1100,10 @@
         {{-- =====================================================
              KEMBALI KE BERANDA
         ====================================================== --}}
-        <div class="mt-10 border-t border-[#EAD8CB] pt-6">
+        <div class="mt-10 border-t border-[#D5B893]/50 pt-6">
 
             <a href="{{ url('/') }}"
-               class="inline-flex items-center gap-2 text-sm font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
+               class="inline-flex items-center gap-2 text-sm font-bold text-[#632024] transition duration-300 hover:text-[#25344F]">
 
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
