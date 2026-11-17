@@ -1,36 +1,38 @@
+
 @extends('layouts.public')
 
 @section('title', 'Login | PT Equityworld Futures')
 
 @section('content')
 
-<main class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#FFF9F0] px-4 py-5 sm:px-6 lg:py-6">
+<main class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-linear-to-b from-white to-[#D5B893]/10 px-4 py-5 font-['DM_Sans'] sm:px-6 lg:py-6">
 
     {{-- BACKGROUND DECORATION --}}
-    <div class="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#FFA368]/10 blur-3xl"></div>
-    <div class="pointer-events-none absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-[#EFBB55]/15 blur-3xl"></div>
+    <div class="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#D5B893]/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-[#617891]/10 blur-3xl"></div>
 
-    <div class="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-3xl bg-white shadow-[0_20px_70px_rgba(80,30,30,0.10)] lg:grid-cols-2">
+    <div class="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-3xl border border-[#D5B893]/30 bg-white shadow-[0_24px_80px_rgba(37,52,79,0.12)] lg:grid-cols-2">
 
         {{-- LEFT PANEL --}}
-        <section class="relative flex min-h-75 flex-col justify-between overflow-hidden bg-linear-to-br from-[#951A21] via-[#801820] to-[#5F1119] p-7 text-white sm:p-10 lg:min-h-140 lg:p-10">
+        <section class="relative flex min-h-75 flex-col justify-between overflow-hidden bg-linear-to-br from-[#25344F] via-[#25344F] to-[#632024] p-7 text-white sm:p-10 lg:min-h-140 lg:p-10">
 
             {{-- DECORATION --}}
-            <div class="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border border-white/10"></div>
-            <div class="pointer-events-none absolute -right-10 -top-10 h-52 w-52 rounded-full border border-white/10"></div>
-            <div class="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#FFA368]/10 blur-2xl"></div>
+            <div class="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border border-[#D5B893]/25"></div>
+            <div class="pointer-events-none absolute -right-10 -top-10 h-52 w-52 rounded-full border border-[#D5B893]/20"></div>
+            <div class="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#D5B893]/10 blur-2xl"></div>
+            <div class="pointer-events-none absolute bottom-20 right-10 h-24 w-24 rotate-45 border border-white/10"></div>
 
             {{-- LOGO --}}
             <div class="relative z-10 flex items-center gap-4">
-                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-xl font-black text-[#951A21] shadow-lg">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D5B893]/50 bg-white text-xl font-black text-[#25344F] shadow-lg">
                     EWF
                 </div>
 
                 <div>
-                    <h2 class="text-lg font-extrabold tracking-wide">
+                    <h2 class="font-['Manrope'] text-lg font-extrabold tracking-wide">
                         EQUITYWORLD
                     </h2>
-                    <p class="text-xs font-medium tracking-[0.25em] text-ewf-hawkbit">
+                    <p class="text-xs font-medium tracking-[0.25em] text-[#D5B893]">
                         FUTURES
                     </p>
                 </div>
@@ -39,19 +41,19 @@
             {{-- INTRODUCTION --}}
             <div class="relative z-10 my-6 lg:my-5">
 
-                <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-wider text-ewf-hawkbit">
-                    <span class="h-2 w-2 rounded-full bg-ewf-hawkbit"></span>
+                <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D5B893]/40 bg-white/10 px-4 py-2 text-xs font-semibold tracking-wider text-[#D5B893]">
+                    <span class="h-2 w-2 rounded-full bg-[#D5B893]"></span>
                     OFFICIAL MEMBER AREA
                 </span>
 
-                <h1 class="max-w-md text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+                <h1 class="max-w-md font-['Manrope'] text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
                     Selamat Datang
-                    <span class="mt-2 block text-ewf-hawkbit">
+                    <span class="mt-2 block text-[#D5B893]">
                         Kembali!
                     </span>
                 </h1>
 
-                <p class="mt-4 max-w-md text-sm leading-7 text-white/75 sm:text-base">
+                <p class="mt-4 max-w-md text-sm leading-7 text-white/80 sm:text-base">
                     Akses sistem informasi PT Equityworld Futures
                     melalui satu pintu untuk mendapatkan informasi
                     dan layanan perusahaan.
@@ -59,7 +61,7 @@
 
                 {{-- DECORATIVE LINE --}}
                 <div class="mt-6 flex items-center gap-3">
-                    <div class="h-1 w-14 rounded-full bg-ewf-hawkbit"></div>
+                    <div class="h-1 w-14 rounded-full bg-[#D5B893]"></div>
                     <div class="h-1 w-5 rounded-full bg-white/40"></div>
                     <div class="h-1 w-5 rounded-full bg-white/20"></div>
                 </div>
@@ -67,11 +69,11 @@
             </div>
 
             {{-- BOTTOM INFORMATION --}}
-            <div class="relative z-10 border-t border-white/15 pt-4">
-                <p class="text-xs leading-6 text-white/60">
+            <div class="relative z-10 border-t border-white/20 pt-4">
+                <p class="text-xs leading-6 text-white/65">
                     PT Equityworld Futures
                 </p>
-                <p class="mt-1 text-xs font-medium text-white/80">
+                <p class="mt-1 text-xs font-medium text-[#D5B893]">
                     Professional Service · Trust · Commitment
                 </p>
             </div>
@@ -79,22 +81,22 @@
         </section>
 
         {{-- RIGHT PANEL: LOGIN FORM --}}
-        <section class="flex flex-col justify-center p-6 sm:p-10 lg:p-10">
+        <section class="flex flex-col justify-center bg-white p-6 sm:p-10 lg:p-10">
 
             <div class="mx-auto w-full max-w-md">
 
                 {{-- FORM HEADING --}}
                 <div class="mb-6">
 
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-ewf-red-poppy">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#6F4D38]">
                         Account Access
                     </span>
 
-                    <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#401C20] sm:text-4xl">
+                    <h2 class="mt-2 font-['Manrope'] text-3xl font-extrabold tracking-tight text-[#25344F] sm:text-4xl">
                         Login
                     </h2>
 
-                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                    <p class="mt-2 text-sm leading-6 text-[#617891]">
                         Silakan masuk menggunakan username dan password
                         akun Anda untuk melanjutkan.
                     </p>
@@ -135,13 +137,13 @@
                     {{-- USERNAME --}}
                     <div>
 
-                        <label for="username" class="mb-2 block text-sm font-semibold text-[#401C20]">
+                        <label for="username" class="mb-2 block text-sm font-semibold text-[#25344F]">
                             Username
                         </label>
 
                         <div class="relative">
 
-                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-[#617891]">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
                                         d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z"/>
@@ -157,7 +159,7 @@
                                 autocomplete="username"
                                 required
                                 autofocus
-                                class="w-full rounded-xl border border-gray-200 bg-[#FFFEFC] py-3 pl-12 pr-4 text-sm text-[#401C20] outline-none transition duration-300 placeholder:text-gray-400 hover:border-[#FFA368] focus:border-[#951A21] focus:ring-4 focus:ring-[#951A21]/10"
+                                class="w-full rounded-xl border border-[#D5B893]/60 bg-white py-3 pl-12 pr-4 text-sm text-[#25344F] outline-none transition duration-300 placeholder:text-[#617891]/60 hover:border-[#6F4D38] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10"
                             >
 
                         </div>
@@ -168,14 +170,14 @@
                     <div>
 
                         <div class="mb-2 flex items-center justify-between">
-                            <label for="password" class="block text-sm font-semibold text-[#401C20]">
+                            <label for="password" class="block text-sm font-semibold text-[#25344F]">
                                 Password
                             </label>
                         </div>
 
                         <div class="relative">
 
-                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-[#617891]">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
                                         d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm2-9V7a4 4 0 118 0v3"/>
@@ -188,14 +190,14 @@
                                 name="password"
                                 placeholder="Masukkan password"
                                 autocomplete="current-password"
-                                class="w-full rounded-xl border border-gray-200 bg-[#FFFEFC] py-3 pl-12 pr-12 text-sm text-[#401C20] outline-none transition duration-300 placeholder:text-gray-400 hover:border-[#FFA368] focus:border-[#951A21] focus:ring-4 focus:ring-[#951A21]/10"
+                                class="w-full rounded-xl border border-[#D5B893]/60 bg-white py-3 pl-12 pr-12 text-sm text-[#25344F] outline-none transition duration-300 placeholder:text-[#617891]/60 hover:border-[#6F4D38] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10"
                             >
 
                             {{-- TOGGLE PASSWORD --}}
                             <button
                                 type="button"
                                 id="togglePassword"
-                                class="absolute inset-y-0 right-0 flex items-center px-4 text-gray-400 transition hover:text-[#951A21]"
+                                class="absolute inset-y-0 right-0 flex items-center px-4 text-[#617891] transition hover:text-[#632024]"
                                 aria-label="Tampilkan password"
                             >
                                 <svg id="eyeIcon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -217,15 +219,15 @@
                                 type="checkbox"
                                 id="remember"
                                 name="remember"
-                                class="h-4 w-4 rounded border-gray-300 accent-[#951A21] focus:ring-[#951A21]"
+                                class="h-4 w-4 rounded border-[#D5B893] accent-[#632024] focus:ring-[#632024]"
                             >
 
-                            <span class="text-sm text-gray-600">
+                            <span class="text-sm text-[#617891]">
                                 Ingat saya
                             </span>
                         </label>
 
-                        <span class="cursor-default text-sm font-semibold text-[#951A21]/70">
+                        <span class="cursor-default text-sm font-semibold text-[#632024]/70">
                             Lupa password?
                         </span>
 
@@ -234,7 +236,7 @@
                     {{-- LOGIN BUTTON --}}
                     <button
                         type="submit"
-                        class="group flex w-full items-center justify-center gap-3 rounded-xl bg-linear-to-r from-[#951A21] to-[#722F37] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#951A21]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#951A21]/25 active:translate-y-0"
+                        class="group flex w-full items-center justify-center gap-3 rounded-xl bg-linear-to-r from-[#632024] to-[#25344F] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#25344F]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#25344F]/25 active:translate-y-0"
                     >
                         Masuk ke Akun
 
@@ -247,19 +249,19 @@
                 </form>
 
                 {{-- DEMO LOGIN INFORMATION --}}
-                <div class="mt-5 rounded-xl border border-[#EAD8CB] bg-[#FFF9F0] p-4">
+                <div class="mt-5 rounded-xl border border-[#D5B893]/60 bg-[#D5B893]/15 p-4">
 
-                    <p class="text-xs font-bold uppercase tracking-wider text-[#951A21]">
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#632024]">
                         Informasi Login Sementara
                     </p>
 
-                    <div class="mt-3 space-y-2 text-xs text-[#675653]">
-                        <p>Username <span class="font-bold text-[#401C20]">user</span> untuk Dashboard User</p>
-                        <p>Username <span class="font-bold text-[#401C20]">admin</span> untuk Dashboard Admin</p>
-                        <p>Username <span class="font-bold text-[#401C20]">hr</span> untuk Dashboard HR</p>
+                    <div class="mt-3 space-y-2 text-xs text-[#6F4D38]">
+                        <p>Username <span class="font-bold text-[#25344F]">user</span> untuk Dashboard User</p>
+                        <p>Username <span class="font-bold text-[#25344F]">admin</span> untuk Dashboard Admin</p>
+                        <p>Username <span class="font-bold text-[#25344F]">hr</span> untuk Dashboard HR</p>
                     </div>
 
-                    <p class="mt-3 text-[11px] leading-5 text-[#786662]">
+                    <p class="mt-3 text-[11px] leading-5 text-[#617891]">
                         Password belum digunakan dalam proses login simulasi ini.
                     </p>
 
@@ -268,11 +270,11 @@
                 {{-- REGISTRATION LINK --}}
                 <div class="mt-6 text-center">
 
-                    <p class="text-sm text-gray-500">
+                    <p class="text-sm text-[#617891]">
                         Belum memiliki akun?
                         <a
                             href="{{ route('register') }}"
-                            class="font-bold text-[#951A21] transition duration-300 hover:text-ewf-red-poppy hover:underline"
+                            class="font-bold text-[#632024] transition duration-300 hover:text-[#25344F] hover:underline"
                         >
                             Daftar Sekarang
                         </a>
@@ -281,18 +283,18 @@
                 </div>
 
                 {{-- FOOTER FORM --}}
-                <div class="mt-5 border-t border-gray-100 pt-4 text-center">
+                <div class="mt-5 border-t border-[#D5B893]/40 pt-4 text-center">
 
-                    <p class="text-xs leading-6 text-gray-400">
+                    <p class="text-xs leading-6 text-[#617891]">
                         Dengan melanjutkan, Anda menyetujui penggunaan layanan
-                        <span class="font-semibold text-[#951A21]">
+                        <span class="font-semibold text-[#632024]">
                             PT Equityworld Futures.
                         </span>
                     </p>
 
                     <a
                         href="{{ url('/') }}"
-                        class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#951A21] transition hover:text-ewf-red-poppy"
+                        class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#632024] transition hover:text-[#25344F]"
                     >
                         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
