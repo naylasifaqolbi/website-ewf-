@@ -1,47 +1,67 @@
-
 @extends('layouts.public')
 
 @section('title', 'Produk & Layanan | PT Equityworld Futures')
 
 @section('content')
 
-<main class="bg-[#FFF9F0]">
+<main class="bg-white text-[#25344F]">
 
     {{-- =====================================================
         HERO SECTION
     ====================================================== --}}
-    <section class="relative overflow-hidden bg-[#951A21] text-white">
-        <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-ewf-red-poppy/40 blur-3xl"></div>
-        <div class="absolute -bottom-24 left-1/3 h-64 w-64 rounded-full bg-[#FFA368]/20 blur-3xl"></div>
+    <section class="relative isolate overflow-hidden bg-linear-to-br from-[#25344F] via-[#25344F] to-[#632024] text-white">
 
-        <div class="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
-            <span class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
-                Informasi Produk EWF
-            </span>
+        {{-- Dekorasi --}}
+        <div class="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full border border-[#D5B893]/20"></div>
+        <div class="pointer-events-none absolute -right-12 -top-16 h-72 w-72 rounded-full border border-[#D5B893]/15"></div>
+        <div class="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#6F4D38]/25 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-0 right-1/3 h-px w-64 bg-linear-to-r from-transparent via-[#D5B893]/60 to-transparent"></div>
 
-            <h1 class="mt-6 max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-                Solusi Investasi Terbaik
-            </h1>
+        <div class="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
 
-            <p class="mt-6 max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
-                Kenali berbagai produk perdagangan berjangka dan Sistem
-                Perdagangan Alternatif (SPA) yang tercantum dalam informasi
-                produk PT Equityworld Futures. Pelajari kode kontrak,
-                karakteristik, serta risiko setiap produk sebelum bertransaksi.
-            </p>
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-3 rounded-full border border-[#D5B893]/40 bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#D5B893] backdrop-blur-sm">
+                    <span class="h-1.5 w-1.5 rounded-full bg-[#D5B893]"></span>
+                    Informasi Produk EWF
+                </span>
 
-            <div class="mt-8 flex flex-wrap gap-4">
-                <a href="#produk-jfx"
-                   class="inline-flex items-center gap-2 rounded-xl bg-ewf-hawkbit px-6 py-3.5 font-bold text-[#64151B] transition hover:bg-[#EFBB55]">
-                    Jelajahi Produk
-                    <span aria-hidden="true">&darr;</span>
-                </a>
+                <h1 class="mt-7 font-['Manrope'] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                    Solusi Investasi
+                    <span class="block text-[#D5B893]">Terbaik</span>
+                </h1>
 
-                <a href="#keunggulan"
-                   class="inline-flex items-center rounded-xl border border-white/30 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
-                    Keunggulan Produk
-                </a>
+                <p class="mt-7 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
+                    Kenali berbagai produk perdagangan berjangka dan Sistem
+                    Perdagangan Alternatif (SPA) yang tercantum dalam informasi
+                    produk PT Equityworld Futures. Pelajari kode kontrak,
+                    karakteristik, serta risiko setiap produk sebelum bertransaksi.
+                </p>
+
+                <div class="mt-9 flex flex-wrap gap-4">
+                    <a href="#produk-jfx"
+                       class="inline-flex items-center gap-3 rounded-xl bg-[#D5B893] px-7 py-3.5 font-bold text-[#25344F] shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-white">
+                        Jelajahi Produk
+                        <span aria-hidden="true">&darr;</span>
+                    </a>
+
+                    <a href="#keunggulan"
+                       class="inline-flex items-center gap-3 rounded-xl border border-white/30 bg-white/5 px-7 py-3.5 font-bold text-white transition duration-300 hover:border-[#D5B893] hover:bg-white/10">
+                        Keunggulan Produk
+                        <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
             </div>
+
+            {{-- Ornamen dekoratif --}}
+            <div class="pointer-events-none absolute bottom-12 right-10 hidden lg:block">
+                <div class="flex items-center gap-4">
+                    <div class="h-px w-20 bg-[#D5B893]/60"></div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.3em] text-white/50">
+                        Equityworld Futures
+                    </span>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -49,24 +69,32 @@
     {{-- =====================================================
         INTRODUCTION
     ====================================================== --}}
-    <section class="px-5 py-14 lg:px-8 lg:py-16">
-        <div class="mx-auto max-w-7xl">
+    <section class="relative overflow-hidden bg-linear-to-br from-white via-white to-[#D5B893]/15 px-5 py-16 lg:px-8 lg:py-20">
+
+        <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full border border-[#D5B893]/30"></div>
+
+        <div class="relative mx-auto max-w-7xl">
             <div class="max-w-3xl">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-[#951A21]">
+
+                <p class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.22em] text-[#6F4D38]">
+                    <span class="h-px w-10 bg-[#D5B893]"></span>
                     Jelajahi Produk
                 </p>
 
-                <h2 class="mt-3 text-3xl font-extrabold leading-tight text-[#951A21] sm:text-4xl">
-                    Informasi Produk Perdagangan Berjangka
+                <h2 class="mt-5 font-['Manrope'] text-3xl font-extrabold leading-tight text-[#25344F] sm:text-4xl">
+                    Informasi Produk
+                    <span class="text-[#632024]">Perdagangan Berjangka</span>
                 </h2>
 
-                <p class="mt-5 leading-8 text-[#51413E]">
+                <p class="mt-6 leading-8 text-[#617891]">
                     EWF menyediakan informasi mengenai berbagai instrumen
                     perdagangan berjangka, termasuk kontrak komoditas dan
                     produk dengan mekanisme Sistem Perdagangan Alternatif.
                     Setiap produk memiliki karakteristik, kode kontrak,
                     mekanisme transaksi, dan risiko yang perlu dipahami.
                 </p>
+
+                <div class="mt-8 h-1 w-24 rounded-full bg-linear-to-r from-[#632024] to-[#D5B893]"></div>
             </div>
         </div>
     </section>
@@ -194,36 +222,45 @@
     {{-- =====================================================
         JFX PRODUCTS
     ====================================================== --}}
-    <section id="produk-jfx" class="scroll-mt-24 bg-white px-5 py-16 lg:px-8 lg:py-20">
+    <section id="produk-jfx" class="scroll-mt-24 bg-[#F8F9FB] px-5 py-16 lg:px-8 lg:py-20">
+
         <div class="mx-auto max-w-7xl">
 
-            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div class="flex flex-col gap-5 border-b border-[#D5B893]/50 pb-8 sm:flex-row sm:items-end sm:justify-between">
+
                 <div>
-                    <span class="inline-flex rounded-full bg-[#FBE5D6] px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-[#951A21]">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-[#D5B893] bg-[#D5B893]/15 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.2em] text-[#632024]">
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#632024]"></span>
                         JFX
                     </span>
 
-                    <h2 class="mt-4 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
-                        Kontrak Berjangka Komoditas
+                    <h2 class="mt-5 font-['Manrope'] text-3xl font-extrabold text-[#25344F] sm:text-4xl">
+                        Kontrak Berjangka
+                        <span class="text-[#632024]">Komoditas</span>
                     </h2>
 
-                    <p class="mt-3 max-w-2xl leading-7 text-[#675653]">
+                    <p class="mt-4 max-w-2xl leading-7 text-[#617891]">
                         Kenali kontrak berjangka yang berkaitan dengan
                         komoditas emas dan olein.
                     </p>
                 </div>
 
-                <span class="text-sm font-semibold text-[#951A21]">
-                    {{ count($jfxProducts) }} produk
-                </span>
+                <div class="flex items-center gap-3">
+                    <span class="h-10 w-1 rounded-full bg-[#D5B893]"></span>
+                    <span class="text-sm font-bold text-[#25344F]">
+                        {{ count($jfxProducts) }} produk
+                    </span>
+                </div>
             </div>
 
-            <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
                 @foreach ($jfxProducts as $index => $product)
-                    <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#951A21]/10 bg-[#FFF9F0] transition duration-300 hover:-translate-y-1 hover:border-[#951A21]/30 hover:shadow-xl">
+
+                    <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D5B893]/50 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#632024]/30 hover:shadow-xl">
 
                         {{-- GAMBAR PRODUK --}}
-                        <div class="relative h-56 overflow-hidden bg-[#FBE5D6]">
+                        <div class="relative h-60 overflow-hidden bg-[#25344F]">
 
                             <img
                                 src="{{ $product['image'] }}"
@@ -232,29 +269,30 @@
                                 height="800"
                                 loading="{{ $index === 0 ? 'eager' : 'lazy' }}"
                                 decoding="async"
-                                class="product-image h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                                class="product-image h-full w-full object-cover transition duration-700 group-hover:scale-110"
                                 onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').classList.remove('hidden');"
                             >
 
-                            {{-- FALLBACK JIKA GAMBAR GAGAL DIMUAT --}}
-                            <div class="image-fallback absolute inset-0 hidden flex-col items-center justify-center bg-linear-to-br from-[#951A21] to-[#64151B]">
+                            {{-- FALLBACK GAMBAR --}}
+                            <div class="image-fallback absolute inset-0 hidden flex-col items-center justify-center bg-linear-to-br from-[#25344F] to-[#632024]">
                                 <div class="text-center text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-ewf-hawkbit" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[#D5B893]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                                         <rect x="3" y="3" width="18" height="18" rx="2"/>
                                         <circle cx="8.5" cy="8.5" r="1.5"/>
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 15-5-5L5 21"/>
                                     </svg>
-                                    <p class="mt-2 text-sm font-bold">Gambar Produk</p>
+                                    <p class="mt-3 text-sm font-bold tracking-wide">Gambar Produk</p>
                                 </div>
                             </div>
 
-                            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
+                            {{-- OVERLAY --}}
+                            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-[#25344F]/90 via-[#25344F]/10 to-transparent"></div>
 
-                            <span class="absolute bottom-4 left-5 rounded-lg bg-white/95 px-3 py-2 text-sm font-extrabold tracking-wide text-[#951A21]">
+                            <span class="absolute bottom-5 left-5 rounded-lg border border-white/30 bg-white/95 px-4 py-2 text-sm font-extrabold tracking-wide text-[#25344F] shadow-lg">
                                 {{ $product['code'] }}
                             </span>
 
-                            <span class="absolute right-5 top-5 rounded-full bg-ewf-hawkbit px-3 py-1.5 text-xs font-extrabold text-[#64151B]">
+                            <span class="absolute right-5 top-5 rounded-full border border-[#D5B893]/60 bg-[#25344F]/85 px-4 py-1.5 text-xs font-extrabold tracking-wider text-[#D5B893] backdrop-blur-sm">
                                 JFX
                             </span>
                         </div>
@@ -263,31 +301,38 @@
                         <div class="flex flex-1 flex-col p-7">
 
                             <div class="flex items-start justify-between gap-4">
-                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#951A21] text-sm font-extrabold text-white">
+
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#25344F] text-sm font-extrabold text-[#D5B893]">
                                     {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                                 </span>
 
-                                <span class="text-right text-xs font-bold uppercase tracking-wider text-[#951A21]">
+                                <span class="max-w-[70%] text-right text-[10px] font-extrabold uppercase leading-5 tracking-[0.13em] text-[#617891]">
                                     {{ $product['type'] }}
                                 </span>
+
                             </div>
 
-                            <h3 class="mt-5 text-xl font-extrabold leading-snug text-[#951A21]">
+                            <h3 class="mt-6 font-['Manrope'] text-xl font-extrabold leading-snug text-[#25344F] transition group-hover:text-[#632024]">
                                 {{ $product['title'] }}
                             </h3>
 
-                            <p class="mt-4 flex-1 text-sm leading-7 text-[#675653]">
+                            <p class="mt-4 flex-1 text-sm leading-7 text-[#617891]">
                                 {{ $product['description'] }}
                             </p>
 
                             <a href="{{ route('contact') }}"
-                               class="mt-6 inline-flex items-center gap-2 border-t border-[#951A21]/10 pt-5 font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
-                                Tanyakan informasi
-                                <span aria-hidden="true">&rarr;</span>
+                               class="mt-7 inline-flex items-center justify-between gap-3 border-t border-[#D5B893]/50 pt-5 font-bold text-[#632024] transition hover:text-[#6F4D38]">
+                                <span>Tanyakan informasi</span>
+                                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#D5B893]/20 transition group-hover:bg-[#632024] group-hover:text-white" aria-hidden="true">
+                                    &rarr;
+                                </span>
                             </a>
+
                         </div>
                     </article>
+
                 @endforeach
+
             </div>
         </div>
     </section>
@@ -296,37 +341,46 @@
     {{-- =====================================================
         SPA PRODUCTS
     ====================================================== --}}
-    <section id="produk-spa" class="scroll-mt-24 px-5 py-16 lg:px-8 lg:py-20">
+    <section id="produk-spa" class="scroll-mt-24 bg-white px-5 py-16 lg:px-8 lg:py-20">
+
         <div class="mx-auto max-w-7xl">
 
-            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div class="flex flex-col gap-5 border-b border-[#D5B893]/50 pb-8 sm:flex-row sm:items-end sm:justify-between">
+
                 <div>
-                    <span class="inline-flex rounded-full bg-[#EFBB55]/30 px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-[#951A21]">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-[#617891]/30 bg-[#617891]/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.2em] text-[#25344F]">
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#617891]"></span>
                         SPA
                     </span>
 
-                    <h2 class="mt-4 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
-                        Sistem Perdagangan Alternatif
+                    <h2 class="mt-5 font-['Manrope'] text-3xl font-extrabold text-[#25344F] sm:text-4xl">
+                        Sistem Perdagangan
+                        <span class="text-[#632024]">Alternatif</span>
                     </h2>
 
-                    <p class="mt-3 max-w-2xl leading-7 text-[#675653]">
+                    <p class="mt-4 max-w-2xl leading-7 text-[#617891]">
                         Daftar kode produk SPA berdasarkan informasi yang
                         diberikan. Periksa dokumen resmi untuk memastikan
                         spesifikasi dan karakteristik setiap kontrak.
                     </p>
                 </div>
 
-                <span class="text-sm font-semibold text-[#951A21]">
-                    {{ count($spaProducts) }} kelompok produk
-                </span>
+                <div class="flex items-center gap-3">
+                    <span class="h-10 w-1 rounded-full bg-[#632024]"></span>
+                    <span class="text-sm font-bold text-[#25344F]">
+                        {{ count($spaProducts) }} kelompok produk
+                    </span>
+                </div>
             </div>
 
-            <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
                 @foreach ($spaProducts as $index => $product)
-                    <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#EAD8CB] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#D9A27D] hover:shadow-xl">
+
+                    <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D5B893]/50 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#632024]/30 hover:shadow-xl">
 
                         {{-- GAMBAR PRODUK --}}
-                        <div class="relative h-56 overflow-hidden bg-[#FBE5D6]">
+                        <div class="relative h-60 overflow-hidden bg-[#25344F]">
 
                             <img
                                 src="{{ $product['image'] }}"
@@ -335,29 +389,30 @@
                                 height="800"
                                 loading="lazy"
                                 decoding="async"
-                                class="product-image h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                                class="product-image h-full w-full object-cover transition duration-700 group-hover:scale-110"
                                 onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').classList.remove('hidden');"
                             >
 
-                            {{-- FALLBACK JIKA GAMBAR GAGAL DIMUAT --}}
-                            <div class="image-fallback absolute inset-0 hidden flex-col items-center justify-center bg-linear-to-br from-[#951A21] to-[#64151B]">
+                            {{-- FALLBACK GAMBAR --}}
+                            <div class="image-fallback absolute inset-0 hidden flex-col items-center justify-center bg-linear-to-br from-[#25344F] to-[#632024]">
                                 <div class="text-center text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-ewf-hawkbit" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[#D5B893]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                                         <rect x="3" y="3" width="18" height="18" rx="2"/>
                                         <circle cx="8.5" cy="8.5" r="1.5"/>
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 15-5-5L5 21"/>
                                     </svg>
-                                    <p class="mt-2 text-sm font-bold">Gambar Produk</p>
+                                    <p class="mt-3 text-sm font-bold tracking-wide">Gambar Produk</p>
                                 </div>
                             </div>
 
-                            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
+                            {{-- OVERLAY --}}
+                            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-[#25344F]/90 via-[#25344F]/10 to-transparent"></div>
 
-                            <span class="absolute bottom-4 left-5 max-w-[75%] rounded-lg bg-white/95 px-3 py-2 text-xs font-extrabold tracking-wide text-[#951A21]">
+                            <span class="absolute bottom-5 left-5 max-w-[75%] rounded-lg border border-white/30 bg-white/95 px-4 py-2 text-xs font-extrabold tracking-wide text-[#25344F] shadow-lg">
                                 {{ $product['title'] }}
                             </span>
 
-                            <span class="absolute right-5 top-5 rounded-full bg-ewf-hawkbit px-3 py-1.5 text-xs font-extrabold text-[#64151B]">
+                            <span class="absolute right-5 top-5 rounded-full border border-[#D5B893]/60 bg-[#25344F]/85 px-4 py-1.5 text-xs font-extrabold tracking-wider text-[#D5B893] backdrop-blur-sm">
                                 SPA
                             </span>
                         </div>
@@ -366,41 +421,53 @@
                         <div class="flex flex-1 flex-col p-7">
 
                             <div class="flex items-start justify-between gap-4">
-                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FBE5D6] text-sm font-extrabold text-[#951A21]">
+
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D5B893]/25 text-sm font-extrabold text-[#632024]">
                                     {{ str_pad($index + 4, 2, '0', STR_PAD_LEFT) }}
                                 </span>
 
-                                <span class="text-xs font-bold uppercase tracking-wider text-[#951A21]">
+                                <span class="text-xs font-extrabold uppercase tracking-[0.15em] text-[#617891]">
                                     {{ $product['type'] }}
                                 </span>
+
                             </div>
 
-                            <h3 class="mt-5 text-xl font-extrabold leading-snug text-[#951A21]">
+                            <h3 class="mt-6 font-['Manrope'] text-xl font-extrabold leading-snug text-[#25344F] transition group-hover:text-[#632024]">
                                 {{ $product['title'] }}
                             </h3>
 
-                            <div class="mt-4 rounded-xl border border-[#951A21]/10 bg-[#FFF9F0] p-4">
-                                <p class="text-xs font-bold uppercase tracking-widest text-[#786662]">
-                                    Kode Produk
-                                </p>
+                            {{-- KODE PRODUK --}}
+                            <div class="mt-5 rounded-xl border border-[#D5B893]/60 bg-linear-to-br from-[#D5B893]/15 to-white p-5">
 
-                                <p class="mt-2 wrap-break-word text-sm font-extrabold leading-6 text-[#951A21]">
+                                <div class="flex items-center gap-2">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-[#632024]"></span>
+                                    <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#6F4D38]">
+                                        Kode Produk
+                                    </p>
+                                </div>
+
+                                <p class="mt-3 wrap-break-word text-sm font-extrabold leading-6 text-[#25344F]">
                                     {{ $product['codes'] }}
                                 </p>
                             </div>
 
-                            <p class="mt-4 flex-1 text-sm leading-7 text-[#675653]">
+                            <p class="mt-5 flex-1 text-sm leading-7 text-[#617891]">
                                 {{ $product['description'] }}
                             </p>
 
                             <a href="{{ route('contact') }}"
-                               class="mt-6 inline-flex items-center gap-2 border-t border-[#951A21]/10 pt-5 font-bold text-[#951A21] transition hover:text-ewf-red-poppy">
-                                Tanyakan informasi
-                                <span aria-hidden="true">&rarr;</span>
+                               class="mt-7 inline-flex items-center justify-between gap-3 border-t border-[#D5B893]/50 pt-5 font-bold text-[#632024] transition hover:text-[#6F4D38]">
+                                <span>Tanyakan informasi</span>
+                                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#D5B893]/20 transition group-hover:bg-[#632024] group-hover:text-white" aria-hidden="true">
+                                    &rarr;
+                                </span>
                             </a>
+
                         </div>
                     </article>
+
                 @endforeach
+
             </div>
         </div>
     </section>
@@ -438,32 +505,46 @@
         ];
     @endphp
 
-    <section id="keunggulan" class="scroll-mt-24 bg-[#64151B] px-5 py-16 text-white lg:px-8 lg:py-20">
-        <div class="mx-auto max-w-7xl">
+    <section id="keunggulan" class="relative isolate scroll-mt-24 overflow-hidden bg-[#25344F] px-5 py-16 text-white lg:px-8 lg:py-20">
+
+        {{-- Dekorasi --}}
+        <div class="pointer-events-none absolute -right-28 -top-32 h-96 w-96 rounded-full border border-[#D5B893]/15"></div>
+        <div class="pointer-events-none absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-[#632024]/40 blur-3xl"></div>
+
+        <div class="relative mx-auto max-w-7xl">
 
             <div class="max-w-3xl">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
+
+                <p class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.22em] text-[#D5B893]">
+                    <span class="h-px w-10 bg-[#D5B893]"></span>
                     Nilai dan Karakteristik
                 </p>
 
-                <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
-                    Keunggulan Produk
+                <h2 class="mt-5 font-['Manrope'] text-3xl font-extrabold sm:text-4xl">
+                    Keunggulan
+                    <span class="text-[#D5B893]">Produk</span>
                 </h2>
 
-                <p class="mt-5 leading-8 text-white/80">
+                <p class="mt-5 leading-8 text-white/70">
                     Keunggulan produk PT Equityworld Futures dirancang
                     untuk mendukung strategi perdagangan nasabah secara
                     efisien dan fleksibel. Setiap karakteristik tetap perlu
                     dipahami bersama risiko dan ketentuan produknya.
                 </p>
+
             </div>
 
-            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                @foreach ($advantages as $advantage)
-                    <article class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+            <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-                        <div class="flex items-center justify-between">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-ewf-hawkbit text-[#64151B]">
+                @foreach ($advantages as $advantage)
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-white/15 bg-white/6 p-7 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-[#D5B893]/60 hover:bg-white/10">
+
+                        <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-[#D5B893]/5 transition group-hover:bg-[#D5B893]/10"></div>
+
+                        <div class="relative flex items-center justify-between">
+
+                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#D5B893] text-[#25344F]">
 
                                 @if ($advantage['icon'] === 'wallet')
                                     <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -492,20 +573,26 @@
 
                             </span>
 
-                            <span class="text-3xl font-black text-white/15">
+                            <span class="text-4xl font-black text-white/10">
                                 {{ $advantage['number'] }}
                             </span>
+
                         </div>
 
-                        <h3 class="mt-6 text-xl font-extrabold text-ewf-hawkbit">
+                        <h3 class="relative mt-7 font-['Manrope'] text-lg font-extrabold leading-snug text-[#D5B893]">
                             {{ $advantage['title'] }}
                         </h3>
 
-                        <p class="mt-3 text-sm leading-7 text-white/75">
+                        <p class="relative mt-4 text-sm leading-7 text-white/70">
                             {{ $advantage['description'] }}
                         </p>
+
+                        <div class="mt-7 h-px w-12 bg-[#D5B893]/60 transition-all duration-300 group-hover:w-full"></div>
+
                     </article>
+
                 @endforeach
+
             </div>
         </div>
     </section>
@@ -514,141 +601,190 @@
     {{-- =====================================================
         INVESTMENT TYPES
     ====================================================== --}}
-    <section id="jenis-investasi" class="px-5 py-16 lg:px-8 lg:py-20">
-        <div class="mx-auto max-w-7xl">
+    <section id="jenis-investasi" class="relative overflow-hidden bg-linear-to-br from-white via-white to-[#D5B893]/15 px-5 py-16 lg:px-8 lg:py-20">
+
+        <div class="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full border border-[#D5B893]/30"></div>
+
+        <div class="relative mx-auto max-w-7xl">
 
             <div class="max-w-3xl">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-[#951A21]">
+
+                <p class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.22em] text-[#6F4D38]">
+                    <span class="h-px w-10 bg-[#D5B893]"></span>
                     Pilihan Denominasi
                 </p>
 
-                <h2 class="mt-3 text-3xl font-extrabold text-[#951A21] sm:text-4xl">
-                    Jenis Investasi
+                <h2 class="mt-5 font-['Manrope'] text-3xl font-extrabold text-[#25344F] sm:text-4xl">
+                    Jenis
+                    <span class="text-[#632024]">Investasi</span>
                 </h2>
 
-                <p class="mt-4 leading-7 text-[#675653]">
+                <p class="mt-5 leading-8 text-[#617891]">
                     Informasi berikut merangkum dua jenis kurs yang
                     tercantum pada materi yang diberikan. Pastikan
                     ketentuan kurs dan biaya sesuai dengan kontrak,
                     rekening, dan perjanjian yang berlaku.
                 </p>
+
             </div>
 
-            <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <div class="mt-11 grid gap-7 md:grid-cols-2">
 
                 {{-- FIXED RATE --}}
-                <article class="overflow-hidden rounded-2xl border border-[#951A21]/10 bg-white shadow-sm transition hover:shadow-lg">
-                    <div class="bg-[#951A21] p-7 text-white">
-                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
-                            Jenis Pertama
-                        </span>
+                <article class="group overflow-hidden rounded-2xl border border-[#D5B893]/60 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-                        <h3 class="mt-3 text-2xl font-extrabold">
-                            Fixed Rate
-                        </h3>
+                    <div class="relative overflow-hidden bg-[#25344F] p-8 text-white">
 
-                        <p class="mt-1 text-white/75">
-                            Kurs Tetap
-                        </p>
+                        <div class="absolute -right-8 -top-12 h-40 w-40 rounded-full border border-[#D5B893]/20"></div>
+                        <div class="absolute -right-2 -top-6 h-28 w-28 rounded-full border border-[#D5B893]/15"></div>
+
+                        <div class="relative">
+                            <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#D5B893]">
+                                Jenis Pertama
+                            </span>
+
+                            <h3 class="mt-4 font-['Manrope'] text-3xl font-extrabold">
+                                Fixed Rate
+                            </h3>
+
+                            <p class="mt-2 text-sm text-white/65">
+                                Kurs Tetap
+                            </p>
+
+                            <div class="mt-6 h-1 w-14 rounded-full bg-[#D5B893]"></div>
+                        </div>
+
                     </div>
 
-                    <div class="p-7">
-                        <p class="text-sm font-bold uppercase tracking-widest text-[#786662]">
+                    <div class="p-8">
+
+                        <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#6F4D38]">
                             Informasi Kurs
                         </p>
 
-                        <p class="mt-2 text-2xl font-extrabold text-[#951A21]">
+                        <p class="mt-3 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                             US$ 1 = Rp10.000
                         </p>
 
-                        <p class="mt-2 text-sm leading-7 text-[#675653]">
+                        <p class="mt-4 text-sm leading-7 text-[#617891]">
                             Nilai kurs tetap sebagaimana tercantum dalam
                             materi yang diberikan. Penerapan kurs ini
                             harus dikonfirmasi berdasarkan ketentuan produk
                             dan perjanjian yang berlaku.
                         </p>
 
-                        <div class="mt-6 rounded-xl bg-[#FFF9F0] p-5">
-                            <h4 class="font-extrabold text-[#951A21]">
+                        <div class="mt-7 rounded-xl border border-[#D5B893]/50 bg-[#D5B893]/10 p-6">
+
+                            <h4 class="font-['Manrope'] font-extrabold text-[#25344F]">
                                 Karakteristik
                             </h4>
 
-                            <ul class="mt-3 space-y-3 text-sm leading-6 text-[#675653]">
-                                <li class="flex gap-3">
-                                    <span class="font-black text-[#951A21]">01</span>
+                            <ul class="mt-4 space-y-4 text-sm leading-6 text-[#617891]">
+
+                                <li class="flex items-start gap-3">
+                                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#632024] text-xs font-extrabold text-white">01</span>
                                     <span>Menggunakan nilai kurs tetap sesuai ketentuan produk.</span>
                                 </li>
 
-                                <li class="flex gap-3">
-                                    <span class="font-black text-[#951A21]">02</span>
+                                <li class="flex items-start gap-3">
+                                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#632024] text-xs font-extrabold text-white">02</span>
                                     <span>Perlakuan terhadap perubahan kurs USD/IDR mengikuti perjanjian yang berlaku.</span>
                                 </li>
+
                             </ul>
                         </div>
+
                     </div>
                 </article>
 
 
                 {{-- FLOATING RATE --}}
-                <article class="overflow-hidden rounded-2xl border border-[#951A21]/10 bg-white shadow-sm transition hover:shadow-lg">
-                    <div class="bg-[#EFBB55] p-7 text-[#64151B]">
-                        <span class="text-xs font-bold uppercase tracking-[0.2em]">
-                            Jenis Kedua
-                        </span>
+                <article class="group overflow-hidden rounded-2xl border border-[#D5B893]/60 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-                        <h3 class="mt-3 text-2xl font-extrabold">
-                            Floating Rate
-                        </h3>
+                    <div class="relative overflow-hidden bg-[#632024] p-8 text-white">
 
-                        <p class="mt-1 text-[#64151B]/75">
-                            Kurs Berjalan
-                        </p>
+                        <div class="absolute -right-8 -top-12 h-40 w-40 rounded-full border border-[#D5B893]/25"></div>
+                        <div class="absolute -right-2 -top-6 h-28 w-28 rounded-full border border-[#D5B893]/20"></div>
+
+                        <div class="relative">
+                            <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#D5B893]">
+                                Jenis Kedua
+                            </span>
+
+                            <h3 class="mt-4 font-['Manrope'] text-3xl font-extrabold">
+                                Floating Rate
+                            </h3>
+
+                            <p class="mt-2 text-sm text-white/65">
+                                Kurs Berjalan
+                            </p>
+
+                            <div class="mt-6 h-1 w-14 rounded-full bg-[#D5B893]"></div>
+                        </div>
+
                     </div>
 
-                    <div class="p-7">
-                        <p class="text-sm font-bold uppercase tracking-widest text-[#786662]">
+                    <div class="p-8">
+
+                        <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#6F4D38]">
                             Informasi Kurs
                         </p>
 
-                        <p class="mt-2 text-2xl font-extrabold text-[#951A21]">
+                        <p class="mt-3 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                             Mengikuti Kurs USD/IDR
                         </p>
 
-                        <p class="mt-2 text-sm leading-7 text-[#675653]">
+                        <p class="mt-4 text-sm leading-7 text-[#617891]">
                             Nilai Rupiah mengikuti kurs yang berlaku
                             sesuai ketentuan produk dan waktu transaksi.
                             Dampak perubahan kurs perlu diperhitungkan
                             sebelum melakukan transaksi.
                         </p>
 
-                        <div class="mt-6 rounded-xl bg-[#FFF9F0] p-5">
-                            <h4 class="font-extrabold text-[#951A21]">
+                        <div class="mt-7 rounded-xl border border-[#D5B893]/50 bg-[#D5B893]/10 p-6">
+
+                            <h4 class="font-['Manrope'] font-extrabold text-[#25344F]">
                                 Karakteristik
                             </h4>
 
-                            <ul class="mt-3 space-y-3 text-sm leading-6 text-[#675653]">
-                                <li class="flex gap-3">
-                                    <span class="font-black text-[#951A21]">01</span>
+                            <ul class="mt-4 space-y-4 text-sm leading-6 text-[#617891]">
+
+                                <li class="flex items-start gap-3">
+                                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#632024] text-xs font-extrabold text-white">01</span>
                                     <span>Konversi mengikuti kurs yang berlaku sesuai ketentuan produk.</span>
                                 </li>
 
-                                <li class="flex gap-3">
-                                    <span class="font-black text-[#951A21]">02</span>
+                                <li class="flex items-start gap-3">
+                                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#632024] text-xs font-extrabold text-white">02</span>
                                     <span>Ketentuan biaya pembukaan dan penarikan dana USD perlu dikonfirmasi kepada perusahaan.</span>
                                 </li>
+
                             </ul>
                         </div>
+
                     </div>
                 </article>
 
             </div>
 
-            <p class="mt-6 text-xs leading-6 text-[#786662]">
-                Catatan: informasi kurs tetap, kurs berjalan, dan biaya
-                pada halaman ini merupakan ringkasan materi awal.
-                Ketentuan yang berlaku harus mengacu pada dokumen resmi
-                produk dan perjanjian nasabah.
-            </p>
+            <div class="mt-7 flex items-start gap-3 rounded-xl border border-[#D5B893]/50 bg-white/80 p-5">
+
+                <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#D5B893]/30 text-[#632024]">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 8v4m0 4h.01"/>
+                        <circle cx="12" cy="12" r="9"/>
+                    </svg>
+                </span>
+
+                <p class="text-xs leading-6 text-[#617891]">
+                    Catatan: informasi kurs tetap, kurs berjalan, dan biaya
+                    pada halaman ini merupakan ringkasan materi awal.
+                    Ketentuan yang berlaku harus mengacu pada dokumen resmi
+                    produk dan perjanjian nasabah.
+                </p>
+
+            </div>
+
         </div>
     </section>
 
@@ -656,23 +792,36 @@
     {{-- =====================================================
         RISK NOTICE
     ====================================================== --}}
-    <section class="px-5 pb-10 lg:px-8">
+    <section class="bg-white px-5 pb-10 lg:px-8">
+
         <div class="mx-auto max-w-7xl">
-            <div class="rounded-2xl border border-[#EFBB55] bg-[#FFF0DF] p-6 sm:p-8">
-                <div class="flex items-start gap-4">
-                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#EFBB55]/40 text-[#64151B]">
-                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+
+            <div class="relative overflow-hidden rounded-2xl border border-[#D5B893]/70 bg-linear-to-br from-[#D5B893]/20 via-white to-white p-7 sm:p-9">
+
+                <div class="absolute right-0 top-0 h-40 w-40 rounded-bl-full border-b border-l border-[#D5B893]/30"></div>
+
+                <div class="relative flex flex-col gap-5 sm:flex-row sm:items-start">
+
+                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#25344F] text-[#D5B893] shadow-md">
+
+                        <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                             <path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z"/>
                             <path d="M12 9v4M12 17h.01"/>
                         </svg>
+
                     </div>
 
-                    <div>
-                        <h2 class="text-xl font-extrabold text-[#951A21]">
+                    <div class="max-w-4xl">
+
+                        <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-[#6F4D38]">
+                            Informasi Risiko
+                        </span>
+
+                        <h2 class="mt-2 font-['Manrope'] text-xl font-extrabold text-[#25344F] sm:text-2xl">
                             Pahami Risiko Sebelum Bertransaksi
                         </h2>
 
-                        <p class="mt-3 leading-7 text-[#675653]">
+                        <p class="mt-4 leading-8 text-[#617891]">
                             Perdagangan berjangka dan produk derivatif
                             memiliki risiko serta dapat mengakibatkan
                             kerugian. Pahami spesifikasi kontrak, nilai
@@ -681,9 +830,12 @@
                             Pergerakan harga yang menguntungkan tidak dapat
                             dijamin.
                         </p>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -691,31 +843,45 @@
     {{-- =====================================================
         ANTI-FRAUD NOTICE
     ====================================================== --}}
-    <section class="px-5 pb-16 lg:px-8 lg:pb-20">
+    <section class="bg-white px-5 pb-16 lg:px-8 lg:pb-20">
+
         <div class="mx-auto max-w-7xl">
-            <div class="overflow-hidden rounded-3xl border border-ewf-red-poppy/20 bg-white">
 
-                <div class="flex items-center gap-4 border-b border-ewf-red-poppy/10 bg-ewf-red-poppy/5 p-6 sm:p-8">
-                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ewf-red-poppy/10 text-[#951A21]">
-                        <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                            <path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z"/>
-                            <path d="M12 9v4M12 17h.01"/>
-                        </svg>
-                    </div>
+            <div class="overflow-hidden rounded-2xl border border-[#632024]/20 bg-white shadow-sm">
 
-                    <div>
-                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-ewf-red-poppy">
-                            Informasi Penting
-                        </p>
+                {{-- HEADER --}}
+                <div class="relative overflow-hidden border-b border-[#D5B893]/40 bg-[#25344F] p-7 text-white sm:p-9">
 
-                        <h2 class="mt-1 text-2xl font-extrabold text-[#951A21]">
-                            PERHATIAN
-                        </h2>
+                    <div class="absolute -right-12 -top-24 h-64 w-64 rounded-full border border-[#D5B893]/20"></div>
+
+                    <div class="relative flex items-center gap-5">
+
+                        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#632024] text-[#D5B893]">
+
+                            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z"/>
+                                <path d="M12 9v4M12 17h.01"/>
+                            </svg>
+
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-[#D5B893]">
+                                Informasi Penting
+                            </p>
+
+                            <h2 class="mt-2 font-['Manrope'] text-2xl font-extrabold text-white">
+                                PERHATIAN
+                            </h2>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="p-6 sm:p-8">
-                    <p class="leading-8 text-[#51413E]">
+                {{-- CONTENT --}}
+                <div class="p-7 sm:p-9">
+
+                    <p class="leading-8 text-[#617891]">
                         PT Equityworld Futures mengingatkan masyarakat
                         untuk selalu waspada terhadap penipuan yang
                         mengatasnamakan perusahaan melalui media apa pun.
@@ -725,17 +891,31 @@
                         perseorangan.
                     </p>
 
-                    <div class="mt-6 rounded-xl border-l-4 border-ewf-red-poppy bg-[#FFF9F0] p-5">
-                        <p class="text-sm leading-7 text-[#951A21]">
-                            <strong>Tips keamanan:</strong>
-                            verifikasi identitas pihak yang menghubungi
-                            Anda dan pastikan informasi rekening melalui
-                            kanal resmi perusahaan sebelum melakukan
-                            penyetoran dana.
-                        </p>
+                    <div class="mt-7 rounded-xl border-l-4 border-[#632024] bg-[#D5B893]/15 p-5 sm:p-6">
+
+                        <div class="flex items-start gap-3">
+
+                            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#632024] text-[#D5B893]">
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M12 8v4m0 4h.01"/>
+                                    <circle cx="12" cy="12" r="9"/>
+                                </svg>
+                            </span>
+
+                            <p class="text-sm leading-7 text-[#25344F]">
+                                <strong class="font-extrabold text-[#632024]">Tips keamanan:</strong>
+                                verifikasi identitas pihak yang menghubungi
+                                Anda dan pastikan informasi rekening melalui
+                                kanal resmi perusahaan sebelum melakukan
+                                penyetoran dana.
+                            </p>
+
+                        </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
