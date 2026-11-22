@@ -107,6 +107,10 @@ Route::controller(AuthController::class)->group(function () {
     Route::get('/register', 'showRegister')
         ->name('register');
 
+    // Proses Registrasi.
+    Route::post('/register', 'register')
+        ->name('register.process');
+
     // Logout sementara.
     Route::get('/logout', 'logout')
         ->name('logout');

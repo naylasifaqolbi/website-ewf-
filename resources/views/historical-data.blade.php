@@ -16,7 +16,7 @@
         <div class="pointer-events-none absolute -right-12 -top-16 h-72 w-72 rounded-full border border-[#D5B893]/15"></div>
         <div class="pointer-events-none absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-[#D5B893]/10 blur-3xl"></div>
 
-        <div class="relative mx-auto max-w-7xl px-6 py-20 lg:py-24">
+        <div class="relative mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-14">
 
             <div class="max-w-3xl">
 
@@ -27,11 +27,11 @@
                     </p>
                 </div>
 
-                <h1 class="mt-6 font-['Manrope'] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                <h1 class="mt-4 font-['Manrope'] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                     Data Historis
                 </h1>
 
-                <p class="mt-6 max-w-2xl font-['DM_Sans'] text-base leading-8 text-white/80 sm:text-lg">
+                <p class="mt-4 max-w-2xl font-['DM_Sans'] text-base leading-8 text-white/80 sm:text-lg">
                     Halaman untuk melihat data historis produk berdasarkan instrumen
                     dan periode waktu setelah sumber data terhubung.
                 </p>
@@ -51,7 +51,7 @@
     {{-- =========================================================
         HISTORICAL DATA CONTENT
     ========================================================== --}}
-    <section class="bg-linear-to-b from-white to-[#D5B893]/10 px-6 py-16 lg:py-20">
+    <section class="bg-linear-to-b from-white to-[#D5B893]/10 px-5 py-10 lg:px-8 lg:py-12">
 
         <div class="mx-auto max-w-7xl">
 
@@ -130,27 +130,43 @@
                     <form id="historical-filter"
                           class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
-                        {{-- INSTRUMENT --}}
-                        <div>
 
-                            <label for="instrument"
-                                   class="mb-2 block font-['DM_Sans'] text-sm font-bold text-[#25344F]">
-                                Instrumen
-                            </label>
+                {{-- INSTRUMENT --}}
+                <div>
 
-                            <select id="instrument"
-                                    name="instrument"
-                                    class="w-full rounded-lg border border-[#D5B893]/70 bg-white px-4 py-3.5 font-['DM_Sans'] text-sm text-[#25344F] outline-none transition duration-200 hover:border-[#617891] focus:border-[#25344F] focus:ring-4 focus:ring-[#25344F]/10">
+                     <label for="instrument"
+                        class="mb-2 block font-['DM_Sans'] text-sm font-bold text-[#25344F]">
+                        Instrumen
+                    </label>
 
-                                <option value="">Pilih instrumen</option>
-                                <option value="emas">Emas</option>
-                                <option value="hang-seng">Hang Seng</option>
-                                <option value="nikkei">Nikkei</option>
+                <div class="relative">
+                    <select id="instrument"
+                    name="instrument"
+                    class="w-full appearance-none rounded-lg border border-[#D5B893]/70 bg-white px-4 py-3.5 pr-11 font-['DM_Sans'] text-sm text-[#25344F] outline-none transition duration-200 hover:border-[#617891] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10">
 
-                            </select>
+                <option value="">Pilih instrumen</option>
+                <option value="emas">Emas</option>
+                <option value="hang-seng">Hang Seng</option>
+                <option value="nikkei">Nikkei</option>
 
-                        </div>
+                </select>
 
+                {{-- CUSTOM DROPDOWN ICON --}}
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#617891]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true">
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m6 9 6 6 6-6"/>
+                        </svg>
+
+                    </div>
+
+                </div>
 
                         {{-- START DATE --}}
                         <div>
@@ -346,13 +362,13 @@
             {{-- =====================================================
                 CATATAN DATA
             ====================================================== --}}
-            <div class="relative mt-7 overflow-hidden rounded-2xl border border-[#D5B893]/70 bg-[#D5B893]/15 p-6 sm:p-7">
+            <div class="relative mt-5 overflow-hidden rounded-xl border border-[#D5B893]/70 bg-[#D5B893]/15 p-4 sm:p-5">
 
                 <div class="absolute right-0 top-0 h-full w-1.5 bg-[#6F4D38]"></div>
 
                 <div class="flex items-start gap-4">
 
-                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#632024] text-white">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#632024] text-white">
 
                         <svg xmlns="http://www.w3.org/2000/svg"
                              class="h-5 w-5"
@@ -372,7 +388,7 @@
 
                     <div>
 
-                        <h3 class="font-['Manrope'] text-lg font-extrabold text-[#25344F]">
+                        <h3 class="font-['Manrope'] text-base font-extrabold text-[#25344F]">
                             Catatan Data
                         </h3>
 

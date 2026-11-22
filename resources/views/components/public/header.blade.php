@@ -308,15 +308,6 @@
             <a href="{{ route('login') }}"
                class="hidden shrink-0 items-center justify-center gap-2 rounded-xl border border-[#632024] bg-[#632024] px-5 py-3 text-sm font-extrabold text-white shadow-md shadow-[#632024]/15 transition duration-300 hover:-translate-y-0.5 hover:border-[#6F4D38] hover:bg-[#6F4D38] hover:shadow-lg xl:inline-flex">
 
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     class="h-4 w-4"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5m5 5H3"/>
-                </svg>
 
                 Login
             </a>
@@ -533,15 +524,7 @@
                 <a href="{{ route('login') }}"
                    class="mt-3 flex items-center justify-center gap-2 rounded-xl border border-[#632024] bg-[#632024] px-4 py-3.5 text-sm font-extrabold text-white shadow-md shadow-[#632024]/15 transition duration-300 hover:border-[#6F4D38] hover:bg-[#6F4D38]">
 
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         class="h-4 w-4"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5m5 5H3"/>
-                    </svg>
+                   
 
                     Login
                 </a>
