@@ -13,15 +13,19 @@
 <body class="min-h-screen bg-white font-sans text-[#25344F] antialiased selection:bg-[#D5B893]/40 selection:text-[#25344F]">
 
     {{-- HEADER --}}
+@if (!request()->routeIs('login', 'register'))
     <x-public.header />
+@endif
 
-    {{-- KONTEN UTAMA --}}
-    <main class="min-h-screen">
-        @yield('content')
-    </main>
+{{-- KONTEN UTAMA --}}
+<main class="min-h-screen">
+    @yield('content')
+</main>
 
-    {{-- FOOTER --}}
+{{-- FOOTER --}}
+@if (!request()->routeIs('login', 'register'))
     <x-public.footer />
+@endif
 
 </body>
 </html>

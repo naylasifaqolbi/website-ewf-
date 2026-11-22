@@ -1,3 +1,4 @@
+
 @extends('layouts.public')
 
 @section('title', 'Badan Regulasi | PT Equityworld Futures')
@@ -11,49 +12,52 @@
     <section class="relative isolate overflow-hidden bg-linear-to-br from-[#25344F] via-[#25344F] to-[#632024] text-white">
 
         {{-- Dekorasi lengkungan --}}
-        <div class="pointer-events-none absolute -right-28 -top-32 h-12030rem] rounded-full border border-[#D5B893]/20"></div>
+        <div class="pointer-events-none absolute -right-28 -top-32 h-[30rem] w-[30rem] rounded-full border border-[#D5B893]/20"></div>
         <div class="pointer-events-none absolute -right-12 -top-16 h-88 w-88 rounded-full border border-[#D5B893]/20"></div>
         <div class="pointer-events-none absolute -bottom-32 left-[35%] h-80 w-80 rounded-full bg-[#6F4D38]/25 blur-3xl"></div>
         <div class="pointer-events-none absolute right-1/4 top-1/3 h-52 w-52 rounded-full bg-[#632024]/30 blur-3xl"></div>
 
-        <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div class="relative mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
 
             <div class="max-w-4xl">
-                <div class="inline-flex items-center gap-3 rounded-full border border-[#D5B893]/40 bg-white/5 px-5 py-2.5 backdrop-blur-sm">
+
+                <div class="inline-flex items-center gap-3 rounded-full border border-[#D5B893]/40 bg-white/5 px-4 py-2 backdrop-blur-sm">
                     <span class="h-2 w-2 rounded-full bg-[#D5B893]"></span>
-                    <span class="text-xs font-bold uppercase tracking-[0.24em] text-[#D5B893]">
+                    <span class="text-[11px] font-bold uppercase tracking-[0.24em] text-[#D5B893]">
                         Regulasi dan Pengawasan
                     </span>
                 </div>
 
-                <h1 class="mt-7 font-['Manrope'] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                <h1 class="mt-5 font-['Manrope'] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                     Badan
                     <span class="text-[#D5B893]">Regulasi</span>
                 </h1>
 
-                <div class="mt-6 h-px w-24 bg-[#D5B893]"></div>
+                <div class="mt-5 h-px w-20 bg-[#D5B893]"></div>
 
-                <p class="mt-7 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">
+                <p class="mt-4 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
                     Mengenal lembaga regulasi dan sistem informasi yang berkaitan
                     dengan industri perdagangan berjangka dan sektor keuangan di Indonesia.
                 </p>
 
                 <a href="#profil-regulasi"
-                   class="mt-9 inline-flex items-center gap-3 rounded-xl bg-[#632024] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-[#6F4D38]">
+                   class="mt-6 inline-flex items-center gap-2.5 rounded-lg bg-[#632024] px-5 py-3 text-xs font-bold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-[#6F4D38]">
                     Kenali Badan Regulasi
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/>
                     </svg>
                 </a>
+
             </div>
 
             {{-- Elemen editorial hero --}}
-            <div class="mt-16 flex items-center gap-4">
-                <span class="h-px w-12 bg-[#D5B893]"></span>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/55">
+            <div class="mt-8 flex items-center gap-3">
+                <span class="h-px w-10 bg-[#D5B893]"></span>
+                <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/55">
                     PT Equityworld Futures
                 </span>
             </div>
+
         </div>
     </section>
 
@@ -61,34 +65,35 @@
     {{-- =====================================================
         PROFIL BADAN REGULASI
     ====================================================== --}}
-    <section id="profil-regulasi" class="scroll-mt-24 bg-linear-to-b from-white via-white to-[#F5F1EC] px-6 py-16 lg:px-8 lg:py-24">
+    <section id="profil-regulasi" class="scroll-mt-24 bg-linear-to-b from-white via-white to-[#F5F1EC] px-5 py-10 sm:px-8 lg:px-10 lg:py-12">
 
         <div class="mx-auto max-w-7xl">
 
             {{-- Heading --}}
-            <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div class="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
 
                 <div>
                     <div class="flex items-center gap-3">
                         <span class="h-px w-10 bg-[#D5B893]"></span>
-                        <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-[#632024]">
+                        <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#632024]">
                             Profil Badan Regulasi
                         </p>
                     </div>
 
-                    <h2 class="mt-5 max-w-xl font-['Manrope'] text-3xl font-extrabold leading-tight text-[#25344F] sm:text-4xl">
+                    <h2 class="mt-4 max-w-xl font-['Manrope'] text-2xl font-extrabold leading-tight text-[#25344F] sm:text-3xl">
                         Mengenal Lembaga Pengawas dan Pendukung Industri Keuangan
                     </h2>
                 </div>
 
-                <div class="lg:border-l lg:border-[#D5B893]/70 lg:pl-8">
-                    <p class="text-base leading-8 text-[#6F4D38]">
+                <div class="lg:border-l lg:border-[#D5B893]/70 lg:pl-6">
+                    <p class="text-sm leading-7 text-[#6F4D38]">
                         Berikut adalah badan-badan regulasi utama yang mengawasi industri
                         perdagangan berjangka dan sektor keuangan di Indonesia. Setiap
                         lembaga memiliki peran strategis dalam menjaga stabilitas,
                         transparansi, dan integritas pasar.
                     </p>
                 </div>
+
             </div>
 
 
@@ -110,7 +115,7 @@
                         'number' => '02',
                         'name' => 'OTORITAS JASA KEUANGAN (OJK)',
                         'short_name' => 'OJK',
-                        'logo' => 'https://www.equityworld-futures.com/_next/image?url=%2Fassets%2FOJK_Logo.png&w=3840&q=75',
+                        'logo' => asset('images/OJK_Logo.png'),
                         'alt' => 'Logo Otoritas Jasa Keuangan',
                         'description' => 'Otoritas Jasa Keuangan merupakan lembaga independen negara yang bertugas menyelenggarakan sistem pengaturan dan pengawasan terintegrasi terhadap seluruh kegiatan di sektor jasa keuangan. OJK berfungsi memastikan industri keuangan berjalan secara transparan, adil, dan stabil, sehingga mampu melindungi kepentingan konsumen serta mendukung pertumbuhan ekonomi nasional.',
                         'url' => 'https://www.ojk.go.id/',
@@ -144,19 +149,19 @@
 
 
             {{-- GRID REGULATOR --}}
-            <div class="mt-14 grid gap-7 md:grid-cols-2">
+            <div class="mt-8 grid gap-5 md:grid-cols-2">
 
                 @foreach ($regulators as $regulator)
 
-                    <article class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#D5B893]/60 bg-white shadow-[0_8px_30px_rgba(37,52,79,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#632024]/30 hover:shadow-[0_18px_45px_rgba(37,52,79,0.12)]">
+                    <article class="group relative flex h-full flex-col overflow-hidden rounded-xl border border-[#D5B893]/60 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#632024]/30 hover:shadow-lg">
 
                         {{-- Garis aksen --}}
-                        <div class="h-1.5 bg-linear-to-r from-[#25344F] via-[#632024] to-[#D5B893]"></div>
+                        <div class="h-1 bg-linear-to-r from-[#25344F] via-[#632024] to-[#D5B893]"></div>
 
                         {{-- Logo --}}
-                        <div class="relative flex h-52 items-center justify-center overflow-hidden border-b border-[#D5B893]/40 {{ $regulator['accent'] }} px-8 py-7">
+                        <div class="relative flex h-36 items-center justify-center overflow-hidden border-b border-[#D5B893]/40 {{ $regulator['accent'] }} px-6 py-5">
 
-                            <span class="absolute right-5 top-3 font-['Manrope'] text-6xl font-extrabold text-[#25344F]/6">
+                            <span class="absolute right-4 top-2 font-['Manrope'] text-5xl font-extrabold text-[#25344F]/6">
                                 {{ $regulator['number'] }}
                             </span>
 
@@ -166,34 +171,37 @@
                                 src="{{ $regulator['logo'] }}"
                                 alt="{{ $regulator['alt'] }}"
                                 loading="lazy"
-                                class="relative z-10 max-h-32 max-w-[85%] object-contain transition duration-500 group-hover:scale-105"
+                                class="relative z-10 max-h-24 max-w-[75%] object-contain transition duration-500 group-hover:scale-105"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                             >
 
-                            <div class="hidden h-24 w-24 items-center justify-center rounded-2xl border border-[#D5B893]/60 bg-white font-['Manrope'] text-xl font-extrabold text-[#25344F] shadow-sm">
+                            <div class="hidden h-16 w-16 items-center justify-center rounded-xl border border-[#D5B893]/60 bg-white font-['Manrope'] text-base font-extrabold text-[#25344F] shadow-sm">
                                 {{ $regulator['short_name'] }}
                             </div>
+
                         </div>
 
 
                         {{-- Informasi --}}
-                        <div class="flex flex-1 flex-col p-7 sm:p-8">
+                        <div class="flex flex-1 flex-col p-5">
 
                             <div class="flex items-center gap-3">
-                                <span class="text-xs font-extrabold tracking-[0.2em] text-[#632024]">
+                                <span class="text-[10px] font-extrabold tracking-[0.2em] text-[#632024]">
                                     {{ $regulator['number'] }}
                                 </span>
+
                                 <span class="h-px flex-1 bg-[#D5B893]/70"></span>
-                                <span class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#617891]">
+
+                                <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-[#617891]">
                                     {{ $regulator['short_name'] }}
                                 </span>
                             </div>
 
-                            <h3 class="mt-5 font-['Manrope'] text-xl font-extrabold leading-7 text-[#25344F]">
+                            <h3 class="mt-3 font-['Manrope'] text-base font-extrabold leading-6 text-[#25344F]">
                                 {{ $regulator['name'] }}
                             </h3>
 
-                            <p class="mt-4 flex-1 text-sm leading-8 text-[#6F4D38]">
+                            <p class="mt-3 flex-1 text-xs leading-6 text-[#6F4D38]">
                                 {{ $regulator['description'] }}
                             </p>
 
@@ -202,17 +210,17 @@
                                     href="{{ $regulator['url'] }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="mt-7 inline-flex w-fit items-center gap-3 rounded-lg bg-[#632024] px-5 py-3 text-sm font-bold text-white transition duration-300 hover:bg-[#25344F]"
+                                    class="mt-5 inline-flex w-fit items-center gap-2 rounded-lg bg-[#632024] px-4 py-2.5 text-xs font-bold text-white transition duration-300 hover:bg-[#25344F]"
                                 >
                                     {{ $regulator['button'] }}
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/>
                                     </svg>
                                 </a>
                             @else
-                                <div class="mt-7 inline-flex w-fit items-center gap-3 rounded-lg border border-[#D5B893]/70 bg-[#F5F1EC] px-5 py-3 text-sm font-semibold text-[#617891]">
-                                    <span class="h-2 w-2 rounded-full bg-[#D5B893]"></span>
+                                <div class="mt-5 inline-flex w-fit items-center gap-2 rounded-lg border border-[#D5B893]/70 bg-[#F5F1EC] px-4 py-2.5 text-xs font-semibold text-[#617891]">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-[#D5B893]"></span>
                                     Sistem Informasi Transaksi
                                 </div>
                             @endif
@@ -226,23 +234,24 @@
 
 
             {{-- CATATAN INFORMASI --}}
-            <div class="relative mt-10 overflow-hidden rounded-2xl border border-[#D5B893]/70 bg-linear-to-r from-white to-[#F5F1EC] p-6 sm:p-8">
+            <div class="relative mt-6 overflow-hidden rounded-xl border border-[#D5B893]/70 bg-linear-to-r from-white to-[#F5F1EC] p-5">
 
-                <div class="absolute right-0 top-0 h-full w-1.5 bg-[#D5B893]"></div>
+                <div class="absolute right-0 top-0 h-full w-1 bg-[#D5B893]"></div>
 
-                <div class="flex items-start gap-5">
-                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25344F] text-[#D5B893]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <div class="flex items-start gap-3">
+
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#25344F] text-[#D5B893]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                         </svg>
                     </div>
 
-                    <div class="pr-4">
-                        <h3 class="font-['Manrope'] text-lg font-extrabold text-[#25344F]">
+                    <div class="pr-3">
+                        <h3 class="font-['Manrope'] text-base font-extrabold text-[#25344F]">
                             Catatan Informasi
                         </h3>
 
-                        <p class="mt-2 text-sm leading-8 text-[#6F4D38]">
+                        <p class="mt-1.5 text-xs leading-6 text-[#6F4D38]">
                             Setiap lembaga memiliki mandat dan ruang lingkup kewenangan
                             yang berbeda. Informasi di halaman ini merupakan pengenalan
                             umum; keterkaitan pengawasan dengan produk atau kegiatan
@@ -250,6 +259,7 @@
                             yang berlaku.
                         </p>
                     </div>
+
                 </div>
             </div>
 
@@ -260,41 +270,42 @@
     {{-- =====================================================
         PERINGATAN PENIPUAN
     ====================================================== --}}
-    <section class="bg-white px-6 py-16 lg:px-8 lg:py-20">
+    <section class="bg-white px-5 py-10 sm:px-8 lg:px-10 lg:py-12">
 
         <div class="mx-auto max-w-7xl">
 
-            <div class="relative overflow-hidden rounded-2xl border border-[#632024]/20 bg-white shadow-[0_12px_40px_rgba(37,52,79,0.08)]">
+            <div class="relative overflow-hidden rounded-xl border border-[#632024]/20 bg-white shadow-sm">
 
-                <div class="h-1.5 bg-linear-to-r from-[#632024] via-[#6F4D38] to-[#D5B893]"></div>
+                <div class="h-1 bg-linear-to-r from-[#632024] via-[#6F4D38] to-[#D5B893]"></div>
 
-                <div class="grid lg:grid-cols-[0.35fr_1.65fr]">
+                <div class="grid lg:grid-cols-[180px_1fr]">
 
-                    <div class="relative flex min-h-48 items-center justify-center overflow-hidden bg-[#25344F] p-8 text-[#D5B893]">
+                    <div class="relative flex min-h-32 items-center justify-center overflow-hidden bg-[#25344F] p-6 text-[#D5B893]">
 
                         <div class="absolute -right-12 -top-12 h-44 w-44 rounded-full border border-[#D5B893]/20"></div>
                         <div class="absolute -bottom-16 -left-10 h-44 w-44 rounded-full border border-[#D5B893]/20"></div>
 
-                        <div class="relative flex h-20 w-20 items-center justify-center rounded-2xl border border-[#D5B893]/40 bg-white/5">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+                        <div class="relative flex h-14 w-14 items-center justify-center rounded-xl border border-[#D5B893]/40 bg-white/5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 4h.01M10.3 3.9L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/>
                             </svg>
                         </div>
+
                     </div>
 
-                    <div class="p-7 sm:p-9 lg:p-11">
+                    <div class="p-5 sm:p-7">
 
-                        <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-[#632024]">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#632024]">
                             Pemberitahuan Penting
                         </p>
 
-                        <h2 class="mt-3 font-['Manrope'] text-3xl font-extrabold text-[#25344F]">
+                        <h2 class="mt-2 font-['Manrope'] text-2xl font-extrabold text-[#25344F]">
                             PERHATIAN
                         </h2>
 
-                        <div class="mt-4 h-px w-16 bg-[#D5B893]"></div>
+                        <div class="mt-3 h-px w-14 bg-[#D5B893]"></div>
 
-                        <p class="mt-6 leading-8 text-[#6F4D38]">
+                        <p class="mt-4 text-sm leading-7 text-[#6F4D38]">
                             PT Equityworld Futures mengingatkan masyarakat untuk selalu
                             waspada terhadap penipuan yang mengatasnamakan perusahaan
                             melalui media apa pun. Pastikan seluruh transaksi dan setoran
@@ -302,8 +313,8 @@
                             resmi atas nama PT Equityworld Futures, bukan perseorangan.
                         </p>
 
-                        <div class="mt-6 rounded-xl border-l-4 border-[#632024] bg-[#F5F1EC] p-5">
-                            <p class="text-sm leading-7 text-[#25344F]">
+                        <div class="mt-4 rounded-lg border-l-4 border-[#632024] bg-[#F5F1EC] p-4">
+                            <p class="text-xs leading-6 text-[#25344F]">
                                 Verifikasi informasi rekening dan identitas pihak yang
                                 menghubungi kamu melalui saluran resmi perusahaan
                                 sebelum melakukan transaksi atau penyetoran dana.
