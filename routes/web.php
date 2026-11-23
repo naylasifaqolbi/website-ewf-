@@ -9,6 +9,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ApplicantPageController;
 
 
 /*
@@ -147,3 +148,10 @@ Route::get('/dashboard/admin', [DashboardController::class, 'admin'])
 Route::get('/dashboard/hr', [DashboardController::class, 'hr'])
     ->name('dashboard.hr');
 
+// Halaman Formulir Pendaftaran Magang
+Route::get('/pendaftaran-magang', [ApplicantPageController::class, 'pendaftaranMagang'])
+    ->name('pendaftaran.magang');
+
+// Halaman Formulir Lamaran Kerja
+Route::get('/lamaran-kerja', [ApplicantPageController::class, 'lamaranKerja'])
+    ->name('lamaran.kerja');
