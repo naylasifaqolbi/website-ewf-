@@ -1,320 +1,266 @@
+
 @extends('layouts.public')
 
 @section('title', 'Data Historis | PT Equityworld Futures')
 
 @section('content')
 
-<main class="min-h-screen bg-white">
+{{-- =========================================================
+     HERO SECTION
+========================================================= --}}
+<section class="bg-[#951A21] text-white">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:py-24">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-ewf-hawkbit">
+            Informasi Pasar
+        </p>
 
-    {{-- =========================================================
-        HERO SECTION
-    ========================================================== --}}
-    <section class="relative isolate overflow-hidden bg-linear-to-br from-[#25344F] via-[#25344F] to-[#632024] text-white">
+        <h1 class="mt-4 text-4xl font-extrabold sm:text-5xl">
+            Data Historis
+        </h1>
 
-        {{-- DEKORASI LATAR --}}
-        <div class="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full border border-[#D5B893]/20"></div>
-        <div class="pointer-events-none absolute -right-12 -top-16 h-72 w-72 rounded-full border border-[#D5B893]/15"></div>
-        <div class="pointer-events-none absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-[#D5B893]/10 blur-3xl"></div>
+        <p class="mt-6 max-w-2xl leading-8 text-white/85">
+            Halaman untuk melihat data historis produk berdasarkan instrumen
+            dan periode waktu.
+        </p>
+    </div>
+</section>
 
-        <div class="relative mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-14">
 
-            <div class="max-w-3xl">
+{{-- =========================================================
+     HISTORICAL DATA CONTENT
+========================================================= --}}
+<section class="bg-[#FFF9F0] px-6 py-16 lg:py-20">
+    <div class="mx-auto max-w-7xl">
 
-                <div class="inline-flex items-center gap-3">
-                    <span class="h-px w-10 bg-[#D5B893]"></span>
-                    <p class="text-xs font-bold uppercase tracking-[0.24em] text-[#D5B893]">
-                        Informasi Pasar
-                    </p>
-                </div>
+        {{-- INTRODUCTION --}}
+        <div class="max-w-3xl">
+            <p class="text-sm font-bold uppercase tracking-widest text-[#951A21]">
+                Riwayat Harga
+            </p>
 
-                <h1 class="mt-4 font-['Manrope'] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                    Data Historis
-                </h1>
+            <h2 class="mt-3 text-3xl font-extrabold text-[#951A21]">
+                Jelajahi Data Pasar
+            </h2>
 
-                <p class="mt-4 max-w-2xl font-['DM_Sans'] text-base leading-8 text-white/80 sm:text-lg">
-                    Halaman untuk melihat data historis produk berdasarkan instrumen
-                    dan periode waktu setelah sumber data terhubung.
-                </p>
-
-                <div class="mt-9 flex items-center gap-3">
-                    <span class="h-1 w-12 rounded-full bg-[#D5B893]"></span>
-                    <span class="h-1 w-3 rounded-full bg-white/40"></span>
-                    <span class="h-1 w-3 rounded-full bg-white/20"></span>
-                </div>
-
-            </div>
-
+            <p class="mt-5 leading-8 text-[#51413E]">
+                Data historis dapat digunakan untuk mempelajari pergerakan
+                harga pada periode sebelumnya. Data tersebut merupakan
+                informasi masa lalu dan tidak menjamin pergerakan harga
+                pada masa mendatang.
+            </p>
         </div>
-    </section>
 
 
-    {{-- =========================================================
-        HISTORICAL DATA CONTENT
-    ========================================================== --}}
-    <section class="bg-linear-to-b from-white to-[#D5B893]/10 px-5 py-10 lg:px-8 lg:py-12">
+        {{-- =====================================================
+             PANEL FILTER
+        ====================================================== --}}
+        <div class="mt-10 rounded-2xl border border-[#951A21]/10 bg-white p-6 shadow-sm sm:p-8">
 
-        <div class="mx-auto max-w-7xl">
+            <h3 class="text-xl font-extrabold text-[#951A21]">
+                Filter Data
+            </h3>
 
-            {{-- INTRODUCTION --}}
-            <div class="max-w-3xl">
-
-                <div class="inline-flex items-center gap-3">
-                    <span class="h-px w-8 bg-[#6F4D38]"></span>
-                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#6F4D38]">
-                        Riwayat Harga
-                    </p>
-                </div>
-
-                <h2 class="mt-4 font-['Manrope'] text-3xl font-extrabold leading-tight text-[#25344F] sm:text-4xl">
-                    Jelajahi Data Pasar
-                </h2>
-
-                <p class="mt-5 font-['DM_Sans'] leading-8 text-[#617891]">
-                    Data historis dapat digunakan untuk mempelajari pergerakan
-                    harga pada periode sebelumnya. Data tersebut merupakan
-                    informasi masa lalu dan tidak menjamin pergerakan harga
-                    pada masa mendatang.
-                </p>
-
-                <div class="mt-6 h-px w-24 bg-[#D5B893]"></div>
-
-            </div>
-
-
-            {{-- =====================================================
-                PANEL FILTER
-            ====================================================== --}}
-            <div class="mt-10 overflow-hidden rounded-2xl border border-[#D5B893]/60 bg-white shadow-[0_12px_40px_rgba(37,52,79,0.06)]">
-
-                {{-- PANEL HEADER --}}
-                <div class="border-b border-[#D5B893]/40 bg-linear-to-r from-[#25344F]/4 to-white px-6 py-6 sm:px-8">
-
-                    <div class="flex items-center gap-4">
-
-                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25344F] text-[#D5B893]">
-
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="h-6 w-6"
-                                 fill="none"
-                                 viewBox="0 0 24 24"
-                                 stroke="currentColor"
-                                 stroke-width="1.7"
-                                 aria-hidden="true">
-
-                                <path stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      d="M4 5h16M7 12h10m-7 7h4"/>
-
-                            </svg>
-
-                        </div>
-
-                        <div>
-                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#6F4D38]">
-                                Pencarian Data
-                            </p>
-
-                            <h3 class="mt-1 font-['Manrope'] text-xl font-extrabold text-[#25344F]">
-                                Filter Data
-                            </h3>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                {{-- FILTER FORM --}}
-                <div class="p-6 sm:p-8">
-
-                    <form id="historical-filter"
-                          class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
+            <form id="historical-filter"
+                  action="{{ route('historical-data') }}"
+                  method="GET"
+                  class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
                 {{-- INSTRUMENT --}}
                 <div>
-
-                     <label for="instrument"
-                        class="mb-2 block font-['DM_Sans'] text-sm font-bold text-[#25344F]">
+                    <label for="instrument"
+                           class="mb-2 block text-sm font-semibold text-[#51413E]">
                         Instrumen
                     </label>
 
-                <div class="relative">
                     <select id="instrument"
-                    name="instrument"
-                    class="w-full appearance-none rounded-lg border border-[#D5B893]/70 bg-white px-4 py-3.5 pr-11 font-['DM_Sans'] text-sm text-[#25344F] outline-none transition duration-200 hover:border-[#617891] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10">
+                            name="instrument"
+                            required
+                            class="w-full rounded-lg border border-[#951A21]/20 bg-[#FFF9F0] px-4 py-3 text-sm text-[#51413E] outline-none transition focus:border-[#951A21] focus:ring-2 focus:ring-[#951A21]/10">
 
-                <option value="">Pilih instrumen</option>
-                <option value="emas">Emas</option>
-                <option value="hang-seng">Hang Seng</option>
-                <option value="nikkei">Nikkei</option>
+                        <option value="">Pilih instrumen</option>
 
-                </select>
+                        <option value="lgd" {{ ($instrument ?? 'lgd') === 'lgd' ? 'selected' : '' }}>
+                            LGD - Gold
+                        </option>
 
-                {{-- CUSTOM DROPDOWN ICON --}}
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#617891]"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        aria-hidden="true">
-                    <path stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m6 9 6 6 6-6"/>
-                        </svg>
+                        <option value="hsi" {{ ($instrument ?? '') === 'hsi' ? 'selected' : '' }}>
+                            HSI - Hang Seng
+                        </option>
 
-                    </div>
-
+                        <option value="sni" {{ ($instrument ?? '') === 'sni' ? 'selected' : '' }}>
+                            SNI - Nikkei
+                        </option>
+                    </select>
                 </div>
 
-                        {{-- START DATE --}}
-                        <div>
 
-                            <label for="start-date"
-                                   class="mb-2 block font-['DM_Sans'] text-sm font-bold text-[#25344F]">
-                                Tanggal Mulai
-                            </label>
+                {{-- START DATE --}}
+                <div>
+                    <label for="start-date"
+                           class="mb-2 block text-sm font-semibold text-[#51413E]">
+                        Tanggal Mulai
+                    </label>
 
-                            <input id="start-date"
-                                   name="start_date"
-                                   type="date"
-                                   class="w-full rounded-lg border border-[#D5B893]/70 bg-white px-4 py-3.5 font-['DM_Sans'] text-sm text-[#25344F] outline-none transition duration-200 hover:border-[#617891] focus:border-[#25344F] focus:ring-4 focus:ring-[#25344F]/10">
-
-                        </div>
-
-
-                        {{-- END DATE --}}
-                        <div>
-
-                            <label for="end-date"
-                                   class="mb-2 block font-['DM_Sans'] text-sm font-bold text-[#25344F]">
-                                Tanggal Akhir
-                            </label>
-
-                            <input id="end-date"
-                                   name="end_date"
-                                   type="date"
-                                   class="w-full rounded-lg border border-[#D5B893]/70 bg-white px-4 py-3.5 font-['DM_Sans'] text-sm text-[#25344F] outline-none transition duration-200 hover:border-[#617891] focus:border-[#25344F] focus:ring-4 focus:ring-[#25344F]/10">
-
-                        </div>
-
-
-                        {{-- SUBMIT BUTTON --}}
-                        <div class="flex items-end">
-
-                            <button type="submit"
-                                    class="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#632024] px-5 py-3.5 font-['DM_Sans'] text-sm font-bold text-white shadow-sm transition duration-300 hover:bg-[#25344F] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#632024]/20">
-
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     class="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
-                                     fill="none"
-                                     viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     stroke-width="2"
-                                     aria-hidden="true">
-
-                                    <circle cx="11" cy="11" r="7"/>
-                                    <path stroke-linecap="round" d="m16 16 4 4"/>
-
-                                </svg>
-
-                                Tampilkan Data
-
-                            </button>
-
-                        </div>
-
-                    </form>
-
-
-                    {{-- FILTER MESSAGE --}}
-                    <p id="filter-message"
-                       class="mt-5 hidden rounded-xl border border-[#D5B893]/60 bg-[#D5B893]/15 p-4 font-['DM_Sans'] text-sm leading-6 text-[#25344F]"
-                       role="status"></p>
-
+                    <input id="start-date"
+                           name="start_date"
+                           type="date"
+                           value="{{ $startDate ?? '' }}"
+                           max="{{ $endDate ?? '' }}"
+                           class="w-full rounded-lg border border-[#951A21]/20 bg-[#FFF9F0] px-4 py-3 text-sm text-[#51413E] outline-none transition focus:border-[#951A21] focus:ring-2 focus:ring-[#951A21]/10">
                 </div>
+
+
+                {{-- END DATE --}}
+                <div>
+                    <label for="end-date"
+                           class="mb-2 block text-sm font-semibold text-[#51413E]">
+                        Tanggal Akhir
+                    </label>
+
+                    <input id="end-date"
+                           name="end_date"
+                           type="date"
+                           value="{{ $endDate ?? '' }}"
+                           min="{{ $startDate ?? '' }}"
+                           class="w-full rounded-lg border border-[#951A21]/20 bg-[#FFF9F0] px-4 py-3 text-sm text-[#51413E] outline-none transition focus:border-[#951A21] focus:ring-2 focus:ring-[#951A21]/10">
+                </div>
+
+
+                {{-- SUBMIT BUTTON --}}
+                <div class="flex items-end">
+                    <button type="submit"
+                            class="w-full rounded-lg bg-[#951A21] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#74141A] focus:outline-none focus:ring-2 focus:ring-[#951A21]/30 focus:ring-offset-2">
+                        Tampilkan Data
+                    </button>
+                </div>
+
+            </form>
+
+
+            {{-- FILTER MESSAGE --}}
+            <p id="filter-message"
+               class="mt-4 hidden rounded-lg bg-ewf-hawkbit/25 p-4 text-sm leading-6 text-[#951A21]"
+               role="status"></p>
+
+        </div>
+
+
+        {{-- =====================================================
+             TABEL DATA HISTORIS
+        ====================================================== --}}
+        <div class="mt-8 overflow-hidden rounded-2xl border border-[#951A21]/10 bg-white shadow-sm">
+
+            {{-- TABLE HEADER --}}
+            <div class="flex flex-col gap-2 border-b border-[#951A21]/10 p-6 sm:flex-row sm:items-center sm:justify-between">
+
+                <div>
+    <h3 class="text-xl font-extrabold text-[#951A21]">
+        Riwayat Harga
+    </h3>
+
+    <div class="mt-2 space-y-1">
+        <p class="text-sm font-medium text-[#51413E]">
+            Data historis
+            <span class="font-bold text-[#951A21]">
+                {{ strtoupper($instrument) }}
+            </span>
+            <span class="text-gray-400">•</span>
+            {{ $historicalData->total() }} data tersedia
+        </p>
+
+        @if($periodStart && $periodEnd)
+            <p class="text-xs text-gray-500">
+                Periode data:
+                {{ \Carbon\Carbon::parse($periodStart)->format('d/m/Y') }}
+                –
+                {{ \Carbon\Carbon::parse($periodEnd)->format('d/m/Y') }}
+            </p>
+        @endif
+    </div>
+</div>
+
+
+                {{-- API STATUS --}}
+                @if($apiAvailable ?? false)
+                    <span class="inline-flex w-fit items-center gap-2 rounded-full bg-green-100 px-3 py-1.5 text-xs font-bold text-green-700">
+                        <span class="h-2 w-2 rounded-full bg-green-500"></span>
+                        Sumber data terhubung
+                    </span>
+                @else
+                    <span class="inline-flex w-fit items-center gap-2 rounded-full bg-red-100 px-3 py-1.5 text-xs font-bold text-red-700">
+                        <span class="h-2 w-2 rounded-full bg-red-500"></span>
+                        Sumber data tidak tersedia
+                    </span>
+                @endif
 
             </div>
 
 
-            {{-- =====================================================
-                TABEL DATA HISTORIS
-            ====================================================== --}}
-            <div class="mt-8 overflow-hidden rounded-2xl border border-[#D5B893]/60 bg-white shadow-[0_12px_40px_rgba(37,52,79,0.05)]">
+            {{-- TABLE CONTENT --}}
+            <div class="overflow-x-auto">
 
-                {{-- TABLE HEADER --}}
-                <div class="flex flex-col gap-4 border-b border-[#D5B893]/40 bg-white p-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+                <table class="w-full min-w-175 text-left text-sm">
 
-                    <div>
+                    <thead class="bg-[#FFF9F0] text-[#951A21]">
+                        <tr>
+                            <th scope="col" class="px-6 py-4 font-bold">
+                                Tanggal
+                            </th>
 
-                        <div class="flex items-center gap-3">
-                            <span class="h-8 w-1 rounded-full bg-[#632024]"></span>
+                            <th scope="col" class="px-6 py-4 font-bold">
+                                Pembukaan
+                            </th>
 
-                            <h3 class="font-['Manrope'] text-xl font-extrabold text-[#25344F]">
-                                Riwayat Harga
-                            </h3>
-                        </div>
+                            <th scope="col" class="px-6 py-4 font-bold">
+                                Tertinggi
+                            </th>
 
-                        <p class="mt-2 pl-4 font-['DM_Sans'] text-sm text-[#617891]">
-                            Data akan muncul setelah sumber data historis terhubung.
-                        </p>
+                            <th scope="col" class="px-6 py-4 font-bold">
+                                Terendah
+                            </th>
 
-                    </div>
-
-                    <span class="inline-flex w-fit items-center gap-2 rounded-full border border-[#D5B893]/60 bg-[#D5B893]/15 px-4 py-2 font-['DM_Sans'] text-xs font-bold text-[#6F4D38]">
-
-                        <span class="h-2 w-2 rounded-full bg-[#D5B893]"></span>
-
-                        Menunggu sumber data
-
-                    </span>
-
-                </div>
+                            <th scope="col" class="px-6 py-4 font-bold">
+                                Penutupan
+                            </th>
+                        </tr>
+                    </thead>
 
 
-                {{-- TABLE CONTENT --}}
-                <div class="overflow-x-auto">
+                    <tbody class="divide-y divide-[#D5B893]/30">
 
-                    <table class="w-full min-w-175 text-left font-['DM_Sans'] text-sm">
+                        @forelse($historicalData as $item)
 
-                        <thead class="bg-[#25344F] text-white">
+                            <tr class="transition hover:bg-[#D5B893]/10">
 
-                            <tr>
+                                <td class="whitespace-nowrap px-6 py-4 font-medium text-[#51413E]">
+                                    {{ \Carbon\Carbon::parse($item['tanggal'])->format('d/m/Y') }}
+                                </td>
 
-                                <th scope="col" class="px-6 py-5 font-bold">
-                                    Tanggal
-                                </th>
+                                <td class="whitespace-nowrap px-6 py-4 text-[#51413E]">
+                                    {{ number_format((float) $item['open'], $instrument === 'lgd' ? 2 : 0, ',', '') }}
+                                </td>
 
-                                <th scope="col" class="px-6 py-5 font-bold">
-                                    Pembukaan
-                                </th>
+                                <td class="whitespace-nowrap px-6 py-4 text-[#51413E]">
+                                    {{ number_format((float) $item['high'], $instrument === 'lgd' ? 2 : 0, ',', '') }}
+                                </td>
 
-                                <th scope="col" class="px-6 py-5 font-bold">
-                                    Tertinggi
-                                </th>
+                                <td class="whitespace-nowrap px-6 py-4 text-[#51413E]">
+                                    {{ number_format((float) $item['low'], $instrument === 'lgd' ? 2 : 0, ',', '') }}
+                                </td>
 
-                                <th scope="col" class="px-6 py-5 font-bold">
-                                    Terendah
-                                </th>
-
-                                <th scope="col" class="px-6 py-5 font-bold">
-                                    Penutupan
-                                </th>
+                                <td class="whitespace-nowrap px-6 py-4 font-semibold text-[#951A21]">
+                                    {{ number_format((float) $item['close'], $instrument === 'lgd' ? 2 : 0, ',', '') }}
+                                </td>
 
                             </tr>
 
-                        </thead>
-
-
-                        <tbody>
+                        @empty
 
                             <tr>
-
                                 <td colspan="5" class="px-6 py-16 text-center">
 
                                     {{-- EMPTY STATE ICON --}}
-                                    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#D5B893]/60 bg-[#D5B893]/15 text-[#25344F]">
+                                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#951A21]/5 text-[#951A21]">
 
                                         <svg class="h-7 w-7"
                                              viewBox="0 0 24 24"
@@ -325,7 +271,7 @@
 
                                             <path stroke-linecap="round"
                                                   stroke-linejoin="round"
-                                                  d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6"/>
+                                                  d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6" />
 
                                         </svg>
 
@@ -333,97 +279,179 @@
 
 
                                     {{-- EMPTY STATE TITLE --}}
-                                    <h4 class="mt-5 font-['Manrope'] text-lg font-extrabold text-[#25344F]">
-                                        Data historis belum tersedia
+                                    <h4 class="mt-4 font-bold text-[#951A21]">
+                                        @if(!($apiAvailable ?? false))
+                                            Data historis belum dapat dimuat
+                                        @else
+                                            Data historis tidak ditemukan
+                                        @endif
                                     </h4>
 
 
                                     {{-- EMPTY STATE DESCRIPTION --}}
-                                    <p class="mx-auto mt-3 max-w-lg font-['DM_Sans'] leading-7 text-[#617891]">
-                                        Hubungkan halaman ini ke API atau basis data
-                                        historis terlebih dahulu agar harga pembukaan,
-                                        tertinggi, terendah, dan penutupan dapat
-                                        ditampilkan berdasarkan tanggal.
+                                    <p class="mx-auto mt-2 max-w-lg leading-7 text-gray-500">
+                                        @if(!($apiAvailable ?? false))
+                                            Sumber data sedang tidak dapat diakses.
+                                            Silakan coba kembali beberapa saat lagi.
+                                        @else
+                                            Tidak ditemukan data historis yang sesuai
+                                            dengan instrumen atau periode tanggal yang dipilih.
+                                        @endif
                                     </p>
 
                                 </td>
-
                             </tr>
 
-                        </tbody>
+                        @endforelse
 
-                    </table>
+                    </tbody>
 
-                </div>
+                </table>
+
 
             </div>
 
 
-            {{-- =====================================================
-                CATATAN DATA
-            ====================================================== --}}
-            <div class="relative mt-5 overflow-hidden rounded-xl border border-[#D5B893]/70 bg-[#D5B893]/15 p-4 sm:p-5">
+           
+{{-- =====================================================
+     PAGINATION
+====================================================== --}}
+@if($historicalData->hasPages())
 
-                <div class="absolute right-0 top-0 h-full w-1.5 bg-[#6F4D38]"></div>
+    <div class="flex flex-col gap-4 border-t border-[#951A21]/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
 
-                <div class="flex items-start gap-4">
+        {{-- JUMLAH DATA --}}
+        <p class="text-sm text-gray-500">
+            Menampilkan
+            {{ $historicalData->firstItem() }}
+            –
+            {{ $historicalData->lastItem() }}
+            dari
+            {{ $historicalData->total() }} data
+        </p>
 
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#632024] text-white">
+        {{-- NAVIGASI HALAMAN --}}
+        <div class="flex items-center justify-between gap-3">
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             class="h-5 w-5"
-                             fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor"
-                             stroke-width="1.8"
-                             aria-hidden="true">
+            {{-- PREVIOUS --}}
+            @if($historicalData->previousPageUrl())
+                <a href="{{ $historicalData->previousPageUrl() }}"
+                   class="inline-flex items-center gap-1 rounded-lg border border-[#951A21]/20 px-3 py-2 text-sm font-semibold text-[#951A21] transition hover:bg-[#951A21] hover:text-white">
 
-                            <path stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M12 9v3m0 4h.01M10.3 3.9L1.8 18.2A2 2 0 003.5 21h17a2 2 0 001.7-2.8L13.7 3.9a2 2 0 00-3.4 0z"/>
+                    <svg class="h-4 w-4"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 19l-7-7 7-7"/>
+                    </svg>
 
-                        </svg>
+                    Sebelumnya
+                </a>
+            @else
+                <span class="inline-flex cursor-not-allowed items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-300">
+                    <svg class="h-4 w-4"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    Sebelumnya
+                </span>
+            @endif
 
-                    </div>
 
-                    <div>
+            {{-- CURRENT PAGE --}}
+            <span class="whitespace-nowrap text-sm font-semibold text-[#951A21]">
+                {{ $historicalData->currentPage() }}
+                / 
+                {{ $historicalData->lastPage() }}
+            </span>
 
-                        <h3 class="font-['Manrope'] text-base font-extrabold text-[#25344F]">
-                            Catatan Data
-                        </h3>
 
-                        <p class="mt-2 font-['DM_Sans'] text-sm leading-7 text-[#617891]">
-                            Data historis pada halaman ini belum terhubung ke penyedia data.
-                            Jangan menggunakan halaman ini sebagai sumber harga transaksi
-                            sebelum integrasi data, satuan harga, zona waktu, dan validasi
-                            data selesai dilakukan.
-                        </p>
+            {{-- NEXT --}}
+            @if($historicalData->nextPageUrl())
+                <a href="{{ $historicalData->nextPageUrl() }}"
+                   class="inline-flex items-center gap-1 rounded-lg bg-[#951A21] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#74141A]">
 
-                    </div>
+                    Selanjutnya
 
-                </div>
-
-            </div>
+                    <svg class="h-4 w-4"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            @else
+                <span class="inline-flex cursor-not-allowed items-center gap-1 rounded-lg bg-gray-200 px-3 py-2 text-sm font-semibold text-gray-400">
+                    Selanjutnya
+                    <svg class="h-4 w-4"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            @endif
 
         </div>
 
-    </section>
+    </div>
 
-</main>
+@endif
+
+
+        </div>
+
+
+        {{-- =====================================================
+             CATATAN DATA
+        ====================================================== --}}
+        <div class="mt-6 rounded-xl border border-[#EFBB55] bg-ewf-hawkbit/20 p-5">
+
+            <h3 class="font-bold text-[#951A21]">
+                Catatan data
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-[#51413E]">
+                Data historis pada halaman ini bersumber dari NewsMaker.
+                Data merupakan informasi harga pada periode sebelumnya dan
+                digunakan untuk keperluan informasi. Pastikan satuan harga,
+                zona waktu, serta validitas data diperhatikan sebelum digunakan
+                sebagai referensi.
+            </p>
+
+        </div>
+
+    </div>
+</section>
 
 
 {{-- =========================================================
-    JAVASCRIPT FILTER
+     JAVASCRIPT FILTER
 ========================================================= --}}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
     const form = document.getElementById('historical-filter');
+    const instrument = document.getElementById('instrument');
     const startDate = document.getElementById('start-date');
     const endDate = document.getElementById('end-date');
     const message = document.getElementById('filter-message');
 
-    if (!form || !startDate || !endDate || !message) {
+    if (!form || !instrument || !startDate || !endDate || !message) {
         return;
     }
 
@@ -439,28 +467,59 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // Validasi tanggal akhir
+    endDate.addEventListener('change', function () {
+
+        if (startDate.value) {
+            endDate.min = startDate.value;
+        }
+
+    });
+
+    // Otomatis tampilkan data saat instrumen diganti
+instrument.addEventListener('change', function () {
+    form.submit();
+});
+
+
     // Proses submit filter
     form.addEventListener('submit', function (event) {
 
-        event.preventDefault();
-
-        message.classList.remove('hidden');
+        message.classList.add('hidden');
+        message.textContent = '';
 
         // Validasi instrumen
-        if (!form.instrument.value) {
+        if (!instrument.value) {
+
+            event.preventDefault();
+
             message.textContent = 'Silakan pilih instrumen terlebih dahulu.';
+            message.classList.remove('hidden');
+
+            instrument.focus();
+
             return;
         }
+
 
         // Validasi rentang tanggal
-        if (startDate.value && endDate.value && endDate.value < startDate.value) {
+        if (
+            startDate.value &&
+            endDate.value &&
+            endDate.value < startDate.value
+        ) {
+
+            event.preventDefault();
+
             message.textContent = 'Tanggal akhir tidak boleh lebih awal dari tanggal mulai.';
+            message.classList.remove('hidden');
+
+            endDate.focus();
+
             return;
         }
 
-        // Informasi integrasi data
-        message.textContent =
-            'Filter sudah diisi, tetapi data belum dapat ditampilkan karena API atau basis data historis belum terhubung.';
+        // Jika valid, form dikirim menggunakan GET ke Laravel.
 
     });
 
