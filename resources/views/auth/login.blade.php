@@ -102,7 +102,7 @@
                     </h2>
 
                     <p class="mt-2 text-sm leading-6 text-[#617891]">
-                        Silakan masuk menggunakan username dan password akun Anda.
+                        Silakan masuk menggunakan email dan password akun Anda.
                     </p>
 
                 </div>
@@ -138,37 +138,35 @@
                 >
                     @csrf
 
-                    {{-- USERNAME --}}
-                    <div>
+                    
+{{-- EMAIL --}}
+<div>
+    <label for="email" class="mb-1.5 block text-sm font-semibold text-[#25344F]">
+        Email
+    </label>
 
-                        <label for="username" class="mb-1.5 block text-sm font-semibold text-[#25344F]">
-                            Username
-                        </label>
+    <div class="relative">
+        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-[#617891]">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                    d="M3 6l9 7 9-7M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/>
+            </svg>
+        </div>
 
-                        <div class="relative">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            value="{{ old('email') }}"
+            placeholder="Masukkan email"
+            autocomplete="email"
+            required
+            autofocus
+            class="w-full rounded-lg border border-[#D5B893]/60 bg-white py-2.5 pl-11 pr-4 text-sm text-[#25344F] outline-none transition duration-200 placeholder:text-[#617891]/60 hover:border-[#6F4D38] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10"
+        >
+    </div>
+</div>
 
-                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-[#617891]">
-                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
-                                        d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z"/>
-                                </svg>
-                            </div>
-
-                            <input
-                                type="text"
-                                id="username"
-                                name="username"
-                                value="{{ old('username') }}"
-                                placeholder="Masukkan username"
-                                autocomplete="username"
-                                required
-                                autofocus
-                                class="w-full rounded-lg border border-[#D5B893]/60 bg-white py-2.5 pl-11 pr-4 text-sm text-[#25344F] outline-none transition duration-200 placeholder:text-[#617891]/60 hover:border-[#6F4D38] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10"
-                            >
-
-                        </div>
-
-                    </div>
 
                     {{-- PASSWORD --}}
                     <div>
@@ -192,6 +190,7 @@
                                 name="password"
                                 placeholder="Masukkan password"
                                 autocomplete="current-password"
+                                required
                                 class="w-full rounded-lg border border-[#D5B893]/60 bg-white py-2.5 pl-11 pr-11 text-sm text-[#25344F] outline-none transition duration-200 placeholder:text-[#617891]/60 hover:border-[#6F4D38] focus:border-[#632024] focus:ring-4 focus:ring-[#632024]/10"
                             >
 
@@ -246,34 +245,7 @@
 
                 </form>
 
-                {{-- DEMO LOGIN INFORMATION --}}
-                <div class="mt-4 rounded-lg border border-[#D5B893]/50 bg-[#D5B893]/10 p-3.5">
 
-                    <p class="text-[11px] font-bold uppercase tracking-wider text-[#632024]">
-                        Informasi Login Sementara
-                    </p>
-
-                    <div class="mt-2.5 flex flex-wrap gap-2">
-
-                        <span class="rounded-md bg-white px-2.5 py-1.5 text-[11px] text-[#6F4D38]">
-                            User: <strong class="text-[#25344F]">user</strong>
-                        </span>
-
-                        <span class="rounded-md bg-white px-2.5 py-1.5 text-[11px] text-[#6F4D38]">
-                            Admin: <strong class="text-[#25344F]">admin</strong>
-                        </span>
-
-                        <span class="rounded-md bg-white px-2.5 py-1.5 text-[11px] text-[#6F4D38]">
-                            HR: <strong class="text-[#25344F]">hr</strong>
-                        </span>
-
-                    </div>
-
-                    <p class="mt-2 text-[10px] leading-4 text-[#617891]">
-                        Password belum digunakan dalam proses login simulasi ini.
-                    </p>
-
-                </div>
 
                 {{-- REGISTRATION LINK --}}
                 <div class="mt-4 text-center">

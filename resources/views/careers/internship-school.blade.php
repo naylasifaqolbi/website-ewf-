@@ -237,13 +237,15 @@
                         dari perusahaan.
                     </p>
 
-                    <a href="{{ route('login') }}"
-                       class="mt-7 inline-flex items-center gap-3 rounded-lg bg-[#D5B893] px-6 py-3.5 font-['DM_Sans'] text-sm font-extrabold text-[#25344F] transition duration-300 hover:bg-white">
+                    
+                    <a href="{{ route('pendaftaran.magang') }}"
+                    class="mt-7 inline-flex items-center gap-3 rounded-lg bg-[#D5B893] px-6 py-3.5 font-['DM_Sans'] text-sm font-extrabold text-[#25344F] transition duration-300 hover:bg-white">
 
                         Daftar Sekarang
                         <span aria-hidden="true">→</span>
 
                     </a>
+
 
                 </div>
 

@@ -112,8 +112,8 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/register', 'register')
         ->name('register.process');
 
-    // Logout sementara.
-    Route::get('/logout', 'logout')
+    // Proses Logout.
+    Route::post('/logout', 'logout')
         ->name('logout');
 
 });
@@ -126,8 +126,14 @@ Route::controller(AuthController::class)->group(function () {
 */
 
 Route::get('/dashboard/user', [DashboardController::class, 'user'])
+    ->middleware('role:user')
     ->name('dashboard.user');
 
+
+Route::get('/riwayat-pengajuan', [ApplicantPageController::class, 'riwayatPengajuan'])
+    ->middleware('auth')
+    ->name('riwayat.pengajuan');
+    
 
 /*
 |--------------------------------------------------------------------------
@@ -136,6 +142,7 @@ Route::get('/dashboard/user', [DashboardController::class, 'user'])
 */
 
 Route::get('/dashboard/admin', [DashboardController::class, 'admin'])
+    ->middleware('role:admin')
     ->name('dashboard.admin');
 
 
@@ -146,12 +153,26 @@ Route::get('/dashboard/admin', [DashboardController::class, 'admin'])
 */
 
 Route::get('/dashboard/hr', [DashboardController::class, 'hr'])
+    ->middleware('role:hr')
     ->name('dashboard.hr');
+
 
 // Halaman Formulir Pendaftaran Magang
 Route::get('/pendaftaran-magang', [ApplicantPageController::class, 'pendaftaranMagang'])
+    ->middleware('auth')
     ->name('pendaftaran.magang');
+
+// Proses Pengiriman Formulir Pendaftaran Magang
+Route::post('/pendaftaran-magang', [ApplicantPageController::class, 'storeInternship'])
+    ->middleware('auth')
+    ->name('pendaftaran.magang.store');
+
 
 // Halaman Formulir Lamaran Kerja
 Route::get('/lamaran-kerja', [ApplicantPageController::class, 'lamaranKerja'])
+    ->middleware('auth')
     ->name('lamaran.kerja');
+
+    Route::post('/lamaran-kerja', [ApplicantPageController::class, 'storeJob'])
+    ->middleware('auth')
+    ->name('lamaran.kerja.store');

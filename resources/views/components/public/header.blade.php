@@ -1,6 +1,17 @@
 
 <header class="sticky top-0 z-50 border-b border-[#D5B893]/40 bg-white shadow-[0_5px_24px_rgba(37,52,79,0.09)]">
 
+    @php
+        $currentUser = Auth::user();
+
+        $dashboardRoute = match ($currentUser?->role) {
+            'admin' => route('dashboard.admin'),
+            'hr' => route('dashboard.hr'),
+            'user' => route('dashboard.user'),
+            default => route('home'),
+        };
+    @endphp
+
     {{-- AKSEN BAGIAN ATAS --}}
     <div class="h-1 w-full bg-linear-to-r from-[#632024] via-[#D5B893] to-[#6F4D38]"></div>
 
@@ -303,14 +314,101 @@
 
 
             {{-- =================================================
-                LOGIN DESKTOP
+                LOGIN / AKUN DESKTOP
             ================================================== --}}
-            <a href="{{ route('login') }}"
-               class="hidden shrink-0 items-center justify-center gap-2 rounded-xl border border-[#632024] bg-[#632024] px-5 py-3 text-sm font-extrabold text-white shadow-md shadow-[#632024]/15 transition duration-300 hover:-translate-y-0.5 hover:border-[#6F4D38] hover:bg-[#6F4D38] hover:shadow-lg xl:inline-flex">
+            
+            @if ($currentUser)
+                <div class="relative hidden xl:block">
+
+                    <details class="group relative">
+
+                        {{-- TOMBOL AKUN --}}
+                        <summary class="flex cursor-pointer list-none items-center gap-3 rounded-xl border border-[#D5B893]/60 bg-[#F5F1EB] px-4 py-2.5 text-[#632024] transition hover:bg-[#EAD9C5]">
+
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#632024] text-sm font-bold text-white">
+                                {{ strtoupper(substr($currentUser->name, 0, 1)) }}
+                            </span>
+
+                            <span class="text-left">
+                                <span class="block text-sm font-bold">
+                                    {{ $currentUser->name }}
+                                </span>
+                                <span class="block text-xs text-[#617891]">
+                                    {{ ucfirst($currentUser->role) }}
+                                </span>
+                            </span>
+
+                            <svg class="h-4 w-4 transition-transform duration-200 group-open:rotate-180"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </summary>
+
+                        {{-- DROPDOWN MENU --}}
+                        <div class="absolute right-0 top-full z-50 mt-3 w-64 overflow-hidden rounded-2xl border border-[#D5B893]/50 bg-white p-2 shadow-[0_18px_45px_rgba(37,52,79,0.16)]">
+
+                            <div class="rounded-xl bg-linear-to-r from-[#25344F] to-[#354A67] px-4 py-3">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D5B893]">
+                                    Account Menu
+                                </p>
+                                <p class="mt-1 text-sm font-bold text-white">
+                                    {{ $currentUser->name }}
+                                </p>
+                            </div>
+
+                            {{-- DASHBOARD --}}
+                            <a href="{{ $dashboardRoute }}"
+                            class="mt-2 flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-[#25344F] transition hover:bg-[#F5F1EB] hover:text-[#632024]">
+
+                                <svg class="h-5 w-5" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <rect x="3" y="3" width="8" height="8" rx="1.5"/>
+                                    <rect x="13" y="3" width="8" height="5" rx="1.5"/>
+                                    <rect x="13" y="10" width="8" height="11" rx="1.5"/>
+                                    <rect x="3" y="13" width="8" height="8" rx="1.5"/>
+                                </svg>
+
+                                Dashboard Saya
+                            </a>
+
+                            <div class="my-2 border-t border-[#E9ECF0]"></div>
+
+                            {{-- LOGOUT --}}
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+
+                                <button type="submit"
+                                        class="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-red-700 transition hover:bg-red-50">
+
+                                    <svg class="h-5 w-5" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.8">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 17l5-5-5-5M15 12H3m9-9h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/>
+                                    </svg>
+
+                                    Keluar
+                                </button>
+                            </form>
+
+                        </div>
+
+                    </details>
+
+                </div>
 
 
-                Login
-            </a>
+            @else
+                <a href="{{ route('login', ['destination' => 'dashboard']) }}"
+                class="hidden shrink-0 items-center justify-center gap-2 rounded-xl border border-[#632024] bg-[#632024] px-5 py-3 text-sm font-extrabold text-white shadow-md shadow-[#632024]/15 transition duration-300 hover:-translate-y-0.5 hover:border-[#6F4D38] hover:bg-[#6F4D38] hover:shadow-lg xl:inline-flex">
+                    Login
+                </a>
+
+            @endif
 
 
             {{-- =================================================
@@ -520,14 +618,40 @@
                 </a>
 
 
-                {{-- LOGIN MOBILE --}}
-                <a href="{{ route('login') }}"
-                   class="mt-3 flex items-center justify-center gap-2 rounded-xl border border-[#632024] bg-[#632024] px-4 py-3.5 text-sm font-extrabold text-white shadow-md shadow-[#632024]/15 transition duration-300 hover:border-[#6F4D38] hover:bg-[#6F4D38]">
+                {{-- LOGIN / AKUN MOBILE --}}
+                    @if ($currentUser)
+                        <div class="mt-3 border-t border-[#D5B893]/40 pt-4">
 
-                   
+                            <div class="mb-3 rounded-xl bg-[#F5F1EB] px-4 py-3">
+                                <p class="text-xs text-[#617891]">Sedang login sebagai</p>
+                                <p class="mt-1 font-bold text-[#632024]">
+                                    {{ $currentUser->name }}
+                                </p>
+                                <p class="text-xs text-[#617891]">
+                                    {{ ucfirst($currentUser->role) }}
+                                </p>
+                            </div>
 
-                    Login
-                </a>
+                            <a href="{{ $dashboardRoute }}"
+                            class="flex items-center justify-center rounded-xl border border-[#D5B893] px-4 py-3 text-sm font-bold text-[#632024] transition hover:bg-[#F5F1EB]">
+                                Dashboard
+                            </a>
+
+                            <form action="{{ route('logout') }}" method="POST" class="mt-2">
+                                @csrf
+                                <button type="submit"
+                                        class="flex w-full items-center justify-center rounded-xl bg-[#632024] px-4 py-3.5 text-sm font-extrabold text-white transition hover:bg-[#6F4D38]">
+                                    Keluar
+                                </button>
+                            </form>
+
+                        </div>
+                    @else
+                        <a href="{{ route('login', ['destination' => 'dashboard']) }}"
+                        class="mt-3 flex items-center justify-center gap-2 rounded-xl border border-[#632024] bg-[#632024] px-4 py-3.5 text-sm font-extrabold text-white shadow-md shadow-[#632024]/15 transition duration-300 hover:border-[#6F4D38] hover:bg-[#6F4D38]">
+                            Login
+                        </a>
+                    @endif
 
             </nav>
 
@@ -552,33 +676,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // BUKA DAN TUTUP MENU UTAMA MOBILE
-    if (menuButton && mobileMenu) {
-
-        menuButton.addEventListener('click', function () {
-
-            const isExpanded =
-                menuButton.getAttribute('aria-expanded') === 'true';
-
-            menuButton.setAttribute('aria-expanded', String(!isExpanded));
-
-            mobileMenu.classList.toggle('hidden', isExpanded);
-
-            if (openIcon) {
-                openIcon.classList.toggle('hidden', !isExpanded);
-            }
-
-            if (closeIcon) {
-                closeIcon.classList.toggle('hidden', isExpanded);
-            }
-
-            menuButton.setAttribute(
-                'aria-label',
-                isExpanded ? 'Buka menu navigasi' : 'Tutup menu navigasi'
-            );
-
-        });
-
-    }
+    
 
 
     // BUKA DAN TUTUP SETIAP SUBMENU MOBILE
