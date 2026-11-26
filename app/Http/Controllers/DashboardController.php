@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Application;
 use Illuminate\View\View;
 
 class DashboardController extends Controller
@@ -11,96 +13,101 @@ class DashboardController extends Controller
     /**
      * Menampilkan Dashboard User.
      */
-    public function user(Request $request): View|RedirectResponse
+    public function user(): View|RedirectResponse
     {
-        return $this->checkRole(
-            $request,
-            'user',
-            'dashboard.user'
-        );
+        return $this->checkRole('user', 'dashboard.user');
     }
 
     /**
      * Menampilkan Dashboard Admin.
      */
-    public function admin(Request $request): View|RedirectResponse
+    public function admin(): View|RedirectResponse
     {
-        return $this->checkRole(
-            $request,
-            'admin',
-            'dashboard.admin'
-        );
+        return $this->checkRole('admin', 'dashboard.admin');
     }
 
     /**
      * Menampilkan Dashboard HR.
      */
-    public function hr(Request $request): View|RedirectResponse
+    public function hr(): View|RedirectResponse
     {
-        return $this->checkRole(
-            $request,
-            'hr',
-            'dashboard.hr'
-        );
+        return $this->checkRole('hr', 'dashboard.hr');
     }
 
     /**
-     * Memeriksa session dan role pengguna.
+     * Memeriksa autentikasi dan role pengguna.
      */
     private function checkRole(
-        Request $request,
         string $requiredRole,
         string $view
     ): View|RedirectResponse {
 
-        // Memeriksa apakah pengguna sudah login.
-        $currentRole = $request->session()->get('demo_role');
+        $user = Auth::user();
 
-        if (!$currentRole) {
+        // Memeriksa apakah pengguna sudah login.
+        if (!$user) {
+            return redirect()
+                ->route('login')
+                ->with('login_error', 'Silakan login terlebih dahulu.');
+        }
+
+        // Memeriksa status akun.
+        if (!$user->is_active) {
+            Auth::logout();
 
             return redirect()
                 ->route('login')
-                ->with(
-                    'login_error',
-                    'Silakan login terlebih dahulu.'
-                );
+                ->with('login_error', 'Akun kamu sedang dinonaktifkan.');
         }
 
-        // Memeriksa apakah role sesuai.
-        if ($currentRole !== $requiredRole) {
-
-            // Memastikan role session merupakan role yang valid.
-            $validRoles = [
-                'user',
-                'admin',
-                'hr',
-            ];
-
-            if (!in_array($currentRole, $validRoles, true)) {
-
-                $request->session()->forget([
-                    'demo_role',
-                    'demo_username',
-                ]);
-
-                return redirect()
+        // Memeriksa kesesuaian role.
+        if ($user->role !== $requiredRole) {
+            return match ($user->role) {
+                'user' => redirect()->route('dashboard.user'),
+                'admin' => redirect()->route('dashboard.admin'),
+                'hr' => redirect()->route('dashboard.hr'),
+                default => redirect()
                     ->route('login')
-                    ->with(
-                        'login_error',
-                        'Session tidak valid. Silakan login kembali.'
-                    );
-            }
+                    ->with('login_error', 'Role akun tidak dikenali.'),
+            };
+        }
+        
+        // Data dasar pengguna.
+        $dashboardData = [
+            'username' => $user->name,
+            'role' => $user->role,
+            'isActive' => $user->is_active,
+        ];
 
-            // Mengarahkan pengguna ke dashboard miliknya.
-            return redirect()->route(
-                'dashboard.' . $currentRole
-            );
+        // Mengambil data pengajuan khusus Dashboard User.
+        if ($requiredRole === 'user') {
+
+            $userApplications = Application::where('user_id', $user->id);
+
+            $dashboardData['totalApplications'] = (clone $userApplications)->count();
+
+            $dashboardData['pendingApplications'] = (clone $userApplications)
+                ->where('status', 'pending')
+                ->count();
+
+            $dashboardData['processingApplications'] = (clone $userApplications)
+                ->where('status', 'in_selection')
+                ->count();
+
+            $dashboardData['completedApplications'] = (clone $userApplications)
+                ->whereIn('status', ['accepted', 'rejected', 'completed'])
+                ->count();
+
+            // Mengambil lima pengajuan terbaru.
+            $dashboardData['latestApplications'] = (clone $userApplications)
+                ->with(['internshipDetail', 'jobDetail'])
+                ->orderByDesc('submitted_at')
+                ->orderByDesc('id')
+                ->limit(5)
+                ->get();
         }
 
-        // Mengirim data pengguna ke View.
-        return view($view, [
-            'username' => $request->session()->get('demo_username'),
-            'role' => $currentRole,
-        ]);
+        return view($view, $dashboardData);
+
     }
 }

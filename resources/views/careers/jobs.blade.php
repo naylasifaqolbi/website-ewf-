@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Magang Mahasiswa | PT Equityworld Futures')
+@section('title', 'Lowongan Kerja | PT Equityworld Futures')
 
 @section('content')
 <main class="min-h-screen bg-white">
@@ -24,18 +24,18 @@
             <div class="mt-9 inline-flex items-center gap-3">
                 <span class="h-px w-9 bg-[#D5B893]"></span>
                 <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#D5B893]">
-                    Program Pengembangan Mahasiswa
+                    Peluang Karier
                 </p>
             </div>
 
             <h1 class="mt-5 font-['Manrope'] text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                Magang Mahasiswa
+                Lowongan Kerja
             </h1>
 
             <p class="mt-5 max-w-2xl font-['DM_Sans'] leading-8 text-white/80">
-                Dapatkan informasi mengenai program magang mahasiswa
-                dan persiapkan dokumen yang diperlukan untuk mengajukan
-                permohonan magang.
+                Temukan informasi mengenai peluang karier di PT Equityworld Futures.
+                Persiapkan diri dan dokumen pendukung untuk mengajukan lamaran pekerjaan
+                sesuai dengan kualifikasi yang dibutuhkan.
             </p>
 
             <div class="mt-8 h-1 w-16 rounded-full bg-[#D5B893]"></div>
@@ -54,19 +54,20 @@
                 <div class="inline-flex items-center gap-3">
                     <span class="h-px w-8 bg-[#6F4D38]"></span>
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#6F4D38]">
-                        Informasi Program
+                        Informasi Karier
                     </span>
                 </div>
 
                 <h2 class="mt-4 font-['Manrope'] text-3xl font-extrabold text-[#25344F] sm:text-4xl">
-                    Program Magang untuk Mahasiswa
+                    Peluang Karier di PT Equityworld Futures
                 </h2>
 
                 <p class="mt-4 font-['DM_Sans'] leading-8 text-[#617891]">
-                    Halaman ini ditujukan bagi mahasiswa yang ingin memperoleh
-                    informasi mengenai kesempatan magang di PT Equityworld
-                    Futures. Pelaksanaan program mengikuti ketentuan dan
-                    kebutuhan perusahaan.
+                    Halaman ini menyediakan informasi mengenai peluang karier
+                    di PT Equityworld Futures bagi calon pelamar yang ingin
+                    mengembangkan kemampuan dan pengalaman profesional.
+                    Informasi posisi dan persyaratan mengikuti kebutuhan
+                    serta ketentuan resmi perusahaan.
                 </p>
 
                 <div class="mt-6 h-px w-24 bg-[#D5B893]"></div>
@@ -117,22 +118,22 @@
 
                             <li class="flex gap-4">
                                 <span class="shrink-0 font-bold text-[#632024]">01.</span>
-                                <span>Berstatus mahasiswa aktif dari perguruan tinggi.</span>
+                                <span>Memiliki pendidikan dan kualifikasi sesuai dengan posisi yang dilamar.</span>
                             </li>
 
                             <li class="flex gap-4">
                                 <span class="shrink-0 font-bold text-[#632024]">02.</span>
-                                <span>Menyiapkan surat pengantar atau surat permohonan magang apabila dipersyaratkan.</span>
+                                <span>Memiliki kemampuan komunikasi dan kerja sama yang baik.</span>
                             </li>
 
                             <li class="flex gap-4">
                                 <span class="shrink-0 font-bold text-[#632024]">03.</span>
-                                <span>Menyiapkan CV dan dokumen pendukung sesuai ketentuan pendaftaran.</span>
+                                <span>Menyiapkan CV dan dokumen pendukung yang diperlukan.</span>
                             </li>
 
                             <li class="flex gap-4">
                                 <span class="shrink-0 font-bold text-[#632024]">04.</span>
-                                <span>Mengikuti proses seleksi dan ketentuan program yang berlaku.</span>
+                                <span>Bersedia mengikuti proses seleksi sesuai ketentuan perusahaan.</span>
                             </li>
 
                         </ul>
@@ -177,7 +178,7 @@
                             </div>
 
                             <h3 class="font-['Manrope'] text-xl font-extrabold text-[#25344F]">
-                                Dokumen dan Alur Pendaftaran
+                                Dokumen dan Tahapan Lamaran
                             </h3>
 
                         </div>
@@ -188,24 +189,24 @@
 
                         <ol class="space-y-5 font-['DM_Sans'] text-sm leading-7 text-[#617891]">
 
-                            <li class="flex gap-4">
+                           <li class="flex gap-4">
                                 <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#D5B893]/25 font-bold text-[#632024]">1</span>
-                                <span>Pelajari informasi dan persyaratan program magang.</span>
+                                <span>Pelajari informasi dan kualifikasi posisi pekerjaan yang ingin dilamar.</span>
                             </li>
 
                             <li class="flex gap-4">
                                 <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#D5B893]/25 font-bold text-[#632024]">2</span>
-                                <span>Siapkan identitas, CV, surat pengantar, dan dokumen yang diminta.</span>
+                                <span>Siapkan CV, surat lamaran, dan dokumen pendukung lainnya.</span>
                             </li>
 
                             <li class="flex gap-4">
                                 <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#D5B893]/25 font-bold text-[#632024]">3</span>
-                                <span>Ajukan pendaftaran melalui mekanisme resmi yang ditetapkan perusahaan.</span>
+                                <span>Lengkapi formulir lamaran kerja dengan data yang benar.</span>
                             </li>
 
                             <li class="flex gap-4">
                                 <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#D5B893]/25 font-bold text-[#632024]">4</span>
-                                <span>Tunggu informasi hasil pemeriksaan berkas atau tahapan seleksi berikutnya.</span>
+                                <span>Tunggu informasi mengenai pemeriksaan berkas dan proses seleksi.</span>
                             </li>
 
                         </ol>
@@ -225,23 +226,24 @@
                 <div class="relative max-w-3xl">
 
                     <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#D5B893]">
-                        Informasi Pendaftaran
+                        Informasi Karier
                     </p>
 
                     <h2 class="mt-3 font-['Manrope'] text-2xl font-extrabold">
-                        Informasi Pendaftaran
+                        Siapkan Langkah Karier Anda
                     </h2>
 
                     <p class="mt-3 font-['DM_Sans'] leading-7 text-white/80">
-                        Informasi periode pendaftaran, kuota, dan mekanisme
-                        pengajuan perlu disesuaikan dengan program magang yang
-                        benar-benar dibuka oleh perusahaan.
+                        Lengkapi data diri, riwayat pendidikan, pengalaman,
+                        dan dokumen pendukung melalui formulir lamaran kerja.
+                        Ketersediaan posisi mengikuti informasi resmi perusahaan.
                     </p>
 
-                    <a href="{{ route('login') }}"
-                       class="mt-7 inline-flex items-center gap-3 rounded-lg bg-[#D5B893] px-6 py-3.5 font-['DM_Sans'] text-sm font-extrabold text-[#25344F] transition duration-300 hover:bg-white">
+                    
+                    <a href="{{ route('lamaran.kerja') }}"
+                    class="mt-7 inline-flex items-center gap-3 rounded-lg bg-[#D5B893] px-6 py-3.5 font-['DM_Sans'] text-sm font-extrabold text-[#25344F] transition duration-300 hover:bg-white">
 
-                        Daftar Sekarang
+                        Lamar Sekarang
                         <span aria-hidden="true">→</span>
 
                     </a>

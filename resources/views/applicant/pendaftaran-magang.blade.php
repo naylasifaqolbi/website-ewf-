@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <div class="mx-auto -mt-6 max-w-5xl px-4 sm:px-6">
+    <div class="mx-auto mt-8 max-w-5xl px-4 sm:px-6">
 
         {{-- =====================================================
              INFORMASI PENDAFTARAN
@@ -63,7 +63,42 @@
             </div>
         </div>
 
-        <form id="internshipForm" class="space-y-7">
+        <form id="internshipForm"
+            action="{{ route('pendaftaran.magang.store') }}"
+            method="POST"
+            enctype="multipart/form-data"
+            class="space-y-7">
+
+         @csrf
+
+         {{-- NOTIFIKASI BERHASIL --}}
+            @if (session('success'))
+                <div class="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800">
+                    <div class="font-bold">Pendaftaran Berhasil!</div>
+                    <p class="mt-1">{{ session('success') }}</p>
+                </div>
+            @endif
+
+        {{-- NOTIFIKASI GAGAL --}}
+            @if (session('error'))
+                <div class="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+                    <div class="font-bold">Pendaftaran Gagal!</div>
+                    <p class="mt-1">{{ session('error') }}</p>
+                </div>
+            @endif
+
+        {{-- NOTIFIKASI VALIDASI --}}
+            @if ($errors->any())
+                <div class="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+                    <div class="font-bold">Periksa kembali formulir kamu.</div>
+
+                    <ul class="mt-2 list-inside list-disc space-y-1">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             {{-- =================================================
                  01. PILIH JENIS MAGANG
@@ -362,22 +397,22 @@
 
                     <div>
                         <label for="school_supervisor" class="form-label">
-                            Nama Guru Pembimbing
+                            Nama Guru Pembimbing <span class="required">*</span>
                         </label>
 
                         <input id="school_supervisor" name="guru_pembimbing" type="text"
                                placeholder="Masukkan nama guru pembimbing"
-                               class="form-input">
+                                class="form-input conditional-required">
                     </div>
 
                     <div>
                         <label for="school_supervisor_phone" class="form-label">
-                            Nomor Telepon Guru Pembimbing
+                            Nomor Telepon Guru Pembimbing <span class="required">*</span>
                         </label>
 
                         <input id="school_supervisor_phone" name="telepon_guru_pembimbing" type="tel"
                                placeholder="Nomor telepon guru"
-                               class="form-input">
+                                class="form-input conditional-required">
                     </div>
 
                     <div>
@@ -1125,41 +1160,7 @@
              * Formulir masih berupa frontend.
              * Data belum disimpan ke database.
              */
-            form.addEventListener('submit', function (event) {
-
-                event.preventDefault();
-
-                const selectedCategory = document.querySelector(
-                    'input[name="kategori_magang"]:checked'
-                );
-
-                if (!selectedCategory) {
-                    alert('Silakan pilih jenis program magang terlebih dahulu.');
-                    return;
-                }
-
-                if (
-                    startDate &&
-                    endDate &&
-                    startDate.value &&
-                    endDate.value &&
-                    endDate.value < startDate.value
-                ) {
-
-                    alert('Tanggal selesai magang tidak boleh lebih awal dari tanggal mulai.');
-
-                    endDate.focus();
-
-                    return;
-                }
-
-                alert(
-                    'Formulir ' + selectedCategory.value +
-                    ' telah berhasil melewati validasi browser. ' +
-                    'Fitur pengiriman belum tersedia karena halaman ini belum terhubung dengan database.'
-                );
-
-            });
+            
 
         }
 

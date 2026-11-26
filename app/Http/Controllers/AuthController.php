@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 
 class AuthController extends Controller
@@ -11,9 +14,13 @@ class AuthController extends Controller
     /**
      * Menampilkan halaman login.
      */
-    public function showLogin(): View
+    public function showLogin(Request $request): View
     {
-        return view('auth.login');
+    if ($request->query('destination') === 'dashboard') {
+        $request->session()->put('login_destination', 'dashboard');
+    }
+
+    return view('auth.login');
     }
 
     /**
@@ -25,70 +32,106 @@ class AuthController extends Controller
     }
 
     /**
-     * Memproses login sementara tanpa database.
+     * Memproses registrasi pengguna.
+     */
+    public function register(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'phone' => ['required', 'string', 'max:20'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'terms' => ['accepted'],
+        ], [
+            'name.required' => 'Nama wajib diisi.',
+            'email.required' => 'Email wajib diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'email.unique' => 'Email sudah terdaftar.',
+            'phone.required' => 'Nomor telepon wajib diisi.',
+            'password.required' => 'Password wajib diisi.',
+            'password.min' => 'Password minimal 8 karakter.',
+            'password.confirmed' => 'Konfirmasi password tidak sesuai.',
+            'terms.accepted' => 'Kamu harus menyetujui syarat dan ketentuan.',
+        ]);
+
+        User::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'password' => Hash::make($validated['password']),
+        ]);
+
+        return redirect()
+            ->route('login')
+            ->with('success', 'Registrasi berhasil. Silakan login menggunakan akun kamu.');
+    }
+
+    /**
+     * Memproses login pengguna.
      */
     public function login(Request $request): RedirectResponse
     {
-        // Validasi username.
-        $validated = $request->validate([
-            'username' => ['required', 'string', 'max:100'],
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required', 'string'],
         ], [
-            'username.required' => 'Username wajib diisi.',
+            'email.required' => 'Email wajib diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'password.required' => 'Password wajib diisi.',
         ]);
 
-        // Mengambil username dan mengubahnya menjadi huruf kecil.
-        $username = strtolower(trim($validated['username']));
-
-        // Menentukan role berdasarkan username.
-        $roles = [
-            'user' => 'user',
-            'admin' => 'admin',
-            'hr' => 'hr',
-        ];
-
-        // Memeriksa apakah username dikenali.
-        if (!isset($roles[$username])) {
-
+        if (!Auth::attempt($credentials)) {
             return back()
-                ->withInput()
-                ->with(
-                    'login_error',
-                    'Username tidak dikenali. Silakan gunakan user, admin, atau hr.'
-                );
+                ->withInput($request->only('email'))
+                ->with('login_error', 'Email atau password tidak sesuai.');
         }
 
-        // Menentukan role pengguna.
-        $role = $roles[$username];
-
-        // Memperbarui session untuk keamanan.
         $request->session()->regenerate();
 
-        // Menyimpan informasi login ke session.
-        $request->session()->put([
-            'demo_role' => $role,
-            'demo_username' => $username,
-        ]);
+        $user = Auth::user();
 
-        // Mengarahkan pengguna sesuai role.
-        switch ($role) {
+        if (!$user->is_active) {
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
 
-            case 'user':
-                return redirect()->route('dashboard.user');
-
-            case 'admin':
-                return redirect()->route('dashboard.admin');
-
-            case 'hr':
-                return redirect()->route('dashboard.hr');
-
-            default:
-                return back()
-                    ->withInput()
-                    ->with(
-                        'login_error',
-                        'Role pengguna tidak dikenali.'
-                    );
+            return redirect()
+                ->route('login')
+                ->with('login_error', 'Akun kamu sedang dinonaktifkan.');
         }
+
+        $defaultDashboard = match ($user->role) {
+            'user' => route('dashboard.user'),
+            'admin' => route('dashboard.admin'),
+            'hr' => route('dashboard.hr'),
+            default => null,
+        };
+
+        if (!$defaultDashboard) {
+            return $this->logoutInvalidRole($request);
+        }
+
+        if ($request->session()->pull('login_destination') === 'dashboard') {
+            $request->session()->forget('url.intended');
+
+            return redirect()->to($defaultDashboard);
+        }
+
+        return redirect()->intended($defaultDashboard);
+    }
+
+    /**
+     * Logout jika role tidak dikenali.
+     */
+    private function logoutInvalidRole(Request $request): RedirectResponse
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()
+            ->route('login')
+            ->with('login_error', 'Role akun tidak dikenali.');
     }
 
     /**
@@ -96,21 +139,14 @@ class AuthController extends Controller
      */
     public function logout(Request $request): RedirectResponse
     {
-        // Menghapus session login sementara.
-        $request->session()->forget([
-            'demo_role',
-            'demo_username',
-        ]);
+        Auth::logout();
 
-        // Memperbarui token session.
+        $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        // Kembali ke halaman login.
+
         return redirect()
             ->route('login')
-            ->with(
-                'success',
-                'Anda berhasil keluar dari sistem.'
-            );
+            ->with('success', 'Anda berhasil keluar dari sistem.');
     }
 }
